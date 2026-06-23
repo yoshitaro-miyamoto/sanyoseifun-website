@@ -20,10 +20,10 @@ body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--t
 
 /* HEADER */
 header{background:var(--navy);position:fixed;top:0;left:0;right:0;z-index:1000;border-bottom:2px solid var(--gold);}
-.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;}
 .logo{display:flex;flex-direction:column;line-height:1.2;cursor:pointer;text-decoration:none;}
-.logo-ja{font-family:'Noto Serif JP',serif;font-size:22px;font-weight:700;color:var(--white);letter-spacing:.05em;}
-.logo-en{font-size:10px;color:var(--gold-light);letter-spacing:.2em;}
+.logo-ja{font-family:'Noto Serif JP',serif;font-size:32px;font-weight:700;color:var(--white);letter-spacing:.05em;}
+.logo-en{font-size:11px;color:var(--gold-light);letter-spacing:.2em;}
 nav{display:flex;align-items:center;gap:2px;}
 nav a{color:rgba(255,255,255,.82);text-decoration:none;font-size:12.5px;padding:6px 10px;border-radius:3px;transition:color .2s;cursor:pointer;white-space:nowrap;}
 nav a:hover{color:var(--gold-light);}
@@ -39,7 +39,7 @@ nav a:hover{color:var(--gold-light);}
 /* PAGES */
 .page{display:none;}
 .page.active{display:block;}
-main{padding-top:72px;min-height:100vh;}
+main{padding-top:80px;min-height:100vh;}
 
 /* HERO */
 .hero{position:relative;height:520px;overflow:hidden;}
@@ -204,7 +204,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 .footer-bottom p{font-size:12px;color:rgba(255,255,255,.35);}
 
 /* MOBILE NAV */
-.mobile-nav{display:none;position:fixed;top:72px;left:0;right:0;background:var(--navy-light);border-top:1px solid rgba(200,146,10,.3);z-index:999;padding:16px 0;max-height:calc(100vh - 64px);overflow-y:auto;}
+.mobile-nav{display:none;position:fixed;top:80px;left:0;right:0;background:var(--navy-light);border-top:1px solid rgba(200,146,10,.3);z-index:999;padding:16px 0;max-height:calc(100vh - 64px);overflow-y:auto;}
 .mobile-nav.open{display:block;}
 .mobile-nav a{display:block;padding:12px 28px;font-size:14px;color:rgba(255,255,255,.82);cursor:pointer;border-bottom:1px solid rgba(255,255,255,.05);text-decoration:none;}
 .mobile-nav a.sub{padding-left:48px;font-size:13px;color:rgba(255,255,255,.6);}
