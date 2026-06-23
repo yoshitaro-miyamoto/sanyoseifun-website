@@ -752,7 +752,7 @@ function submitForm(){
   var msg=document.getElementById('fmessage').value.trim();
   if(!name||!email||!type||!msg){alert('必須項目をすべてご入力ください。');return;}
   // Formspree: YOUR_FORM_ID を取得後に差し替えてください
-  fetch('https://formspree.io/f/YOUR_FORM_ID',{
+  fetch('https://formspree.io/f/xjgqkybw',{
     method:'POST',
     headers:{'Content-Type':'application/json','Accept':'application/json'},
     body:JSON.stringify({name:name,company:document.getElementById('fcompany').value,email:email,tel:document.getElementById('ftel').value,type:type,message:msg})
