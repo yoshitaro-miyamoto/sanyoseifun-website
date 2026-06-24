@@ -247,19 +247,19 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       <a onclick="showPage('home')" data-i18n="nav-home-txt">ホーム</a>
       <a onclick="showPage('business')" data-i18n="nav-business-txt">事業内容</a>
       <div class="nav-dropdown">
-        <a onclick="showPage('company')">会社概要</a>
+        <a onclick="showPage('company')" data-i18n="nav-company-txt">会社概要</a>
         <div class="dropdown-menu">
-          <a onclick="showPage('company')">会社概要</a>
-          <a onclick="showPage('history')">沿革</a>
-          <a onclick="showPage('philosophy')">企業理念</a>
-          <a onclick="showPage('factory')">工場・倉庫案内</a>
+          <a onclick="showPage('company')" data-i18n="nav-company-txt">会社概要</a>
+          <a onclick="showPage('history')" data-i18n="nav-history-txt">沿革</a>
+          <a onclick="showPage('philosophy')" data-i18n="nav-philosophy-txt">企業理念</a>
+          <a onclick="showPage('factory')" data-i18n="nav-factory-txt">工場・倉庫案内</a>
         </div>
       </div>
       <div class="nav-dropdown">
-        <a onclick="showPage('grits')">製品紹介</a>
+        <a onclick="showPage('grits')" data-i18n="nav-products-txt">製品紹介</a>
         <div class="dropdown-menu">
-          <a onclick="showPage('grits')">コーングリッツ</a>
-          <a onclick="showPage('hominy')">ホミニーフィード</a>
+          <a onclick="showPage('grits')" data-i18n="nav-grits-txt">コーングリッツ</a>
+          <a onclick="showPage('hominy')" data-i18n="nav-hominy-txt">ホミニーフィード</a>
         </div>
       </div>
       <a onclick="showPage('sustainability')" data-i18n="nav-sustainability-txt">サステナビリティ</a>
@@ -279,12 +279,12 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
 <div class="mobile-nav" id="mobileNav">
   <a onclick="nav('home')">ホーム</a>
   <a onclick="nav('business')">事業内容</a>
-  <a onclick="nav('company')">会社概要</a>
-  <a class="sub" onclick="nav('history')">沿革</a>
-  <a class="sub" onclick="nav('philosophy')">企業理念</a>
-  <a class="sub" onclick="nav('factory')">工場・倉庫案内</a>
-  <a onclick="nav('grits')">コーングリッツ</a>
-  <a onclick="nav('hominy')">ホミニーフィード</a>
+  <a onclick="nav('company')" data-i18n="nav-company-txt">会社概要</a>
+  <a class="sub" onclick="nav('history')" data-i18n="nav-history-txt">沿革</a>
+  <a class="sub" onclick="nav('philosophy')" data-i18n="nav-philosophy-txt">企業理念</a>
+  <a class="sub" onclick="nav('factory')" data-i18n="nav-factory-txt">工場・倉庫案内</a>
+  <a onclick="nav('grits')" data-i18n="nav-grits-txt">コーングリッツ</a>
+  <a onclick="nav('hominy')" data-i18n="nav-hominy-txt">ホミニーフィード</a>
   <a onclick="nav('sustainability')">サステナビリティ</a>
   <a onclick="nav('silo')">姫路港サイロ</a>
   <a onclick="nav('recruit')">採用情報</a>
@@ -300,12 +300,12 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
     <img class="hero-img" src="top.JPG" alt="山陽製粉">
     <div class="hero-grad"></div>
     <div class="hero-inner">
-      <div class="hero-eyebrow">Since 1937 — Himeji, Japan</div>
+      <div class="hero-eyebrow" data-i18n="home-eyebrow">Since 1937 — Himeji, Japan</div>
       <h1 data-i18n="home-h1">GOOD CORN<br>FOR GOOD FOOD</h1>
       <p class="hero-tagline" data-i18n="home-tagline">アメリカ産NON-GMOとうもろこしを原料に、<br>コーングリッツ・ホミニーフィードを製造。<br>食のおいしさの土台を、姫路から全国へ。</p>
       <div class="hero-cta">
-        <button class="btn-primary" onclick="showPage('grits')">製品紹介を見る</button>
-        <button class="btn-outline" onclick="showPage('contact')">お問い合わせ</button>
+        <button class="btn-primary" onclick="showPage('grits')" data-i18n="home-btn1">製品紹介を見る</button>
+        <button class="btn-outline" onclick="showPage('contact')" data-i18n="home-btn2">お問い合わせ</button>
       </div>
     </div>
   </div>
@@ -315,7 +315,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
   </div>
 
   <div class="section">
-    <span class="section-eyebrow">About Us</span>
+    <span class="section-eyebrow" data-i18n="home-eyebrow-about">About Us</span>
     <h2 class="section-title" data-i18n="home-about-title">穀物加工約90年の技術と誠実さ</h2>
     <p class="section-lead" data-i18n="home-about-lead">当社は創業以来、小麦製粉を事業の柱としてまいりました。時代の変化とともにコーングリッツ製造へと事業を転換し、約90年にわたり穀物加工に携わっております。信頼できる生産者から穀物を輸入し、当社の技術でひと手間加えることで、おいしさの可能性を広げています。</p>
     <div class="feature-grid">
@@ -418,18 +418,18 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       <tr><th data-i18n="co-president-th">代表者</th><td data-i18n="co-president-td">代表取締役　宮本義太郎</td></tr>
       <tr><th data-i18n="co-hq-th">本社所在地</th><td>
         <div style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;">
-          <div>〒670-0935　兵庫県姫路市北条口2丁目18番地 宮本ビル<br>
+          <div><span data-i18n="co-hq-addr">〒670-0935　兵庫県姫路市北条口2丁目18番地 宮本ビル</span><br>
           <span style="font-size:13px;color:var(--text-light);line-height:2;display:block;margin-top:6px;"><span data-i18n="co-hq-access">JR姫路駅より徒歩5分<br>お車でお越しの方は、隣接する立体駐車場をご利用ください。</span></span>
           <a href="https://maps.app.goo.gl/sRq1u9985K5PDWQW6" target="_blank" style="display:inline-block;margin-top:8px;background:var(--gold);color:#fff;font-size:12px;padding:5px 14px;text-decoration:none;letter-spacing:.05em;" data-i18n="co-hq-map">📍 Googleマップで開く</a></div>
           <img src="%E5%86%99%E7%9C%9F3.JPG" alt="山陽製粉本社" style="width:200px;height:auto;display:block;flex-shrink:0;border:1px solid var(--border);">
         </div>
       </td></tr>
-      <tr><th data-i18n="co-factory-th">工場所在地</th><td>〒672-8064　兵庫県姫路市飾磨区細江字浜万才1296番地<br>
+      <tr><th data-i18n="co-factory-th">工場所在地</th><td><span data-i18n="co-factory-addr">〒672-8064　兵庫県姫路市飾磨区細江字浜万才1296番地</span><br>
       <span style="font-size:13px;color:var(--text-light);line-height:2;display:block;margin-top:6px;"><span data-i18n="co-factory-access">JR姫路駅より車で15分　山陽電車飾磨駅より車で10分</span></span>
       <a href="https://maps.app.goo.gl/REeQN5i9b5EJSngv5" target="_blank" style="display:inline-block;margin-top:8px;background:var(--gold);color:#fff;font-size:12px;padding:5px 14px;text-decoration:none;letter-spacing:.05em;" data-i18n="co-factory-map">📍 Googleマップで開く</a></td></tr>
-      <tr><th data-i18n="co-business-th">事業内容</th><td data-i18n="co-business-td">コーングリッツ及びその加工品の製造販売業<br>倉庫業（保税蔵置場指定）</td></tr>
+      <tr><th data-i18n="co-business-th">事業内容</th><td data-i18n="co-business-td">コーングリッツ及びその副産物の製造販売業<br>倉庫業（保税蔵置場指定）</td></tr>
       <tr><th data-i18n="co-bank-th">取引銀行</th><td data-i18n="co-bank-td">播州信用金庫　駅前支店<br>三井住友銀行　姫路支店</td></tr>
-      <tr><th data-i18n="co-org-th">所属団体</th><td data-i18n="co-org-td">一般社団法人 日本コーングリッツ協会<br>一般社団法人 日本倉庫協会（兵庫県倉庫協会）<br>一般社団法人 姫路植物検疫協会<br>姫路商工会議所<br>飾磨港振興会</td></tr>
+      <tr><th data-i18n="co-org-th">所属団体</th><td data-i18n="co-org-td">一般社団法人 日本コーングリッツ協会<br>一般社団法人 日本倉庫協会（兵庫県倉庫協会）<br>一般社団法人 姫路植物検疫協会<br>姫路商工会議所</td></tr>
       <tr><th data-i18n="co-related-th">関連会社</th><td><span data-i18n="co-related-td">宮本産業株式会社</span><br><a onclick="showPage('silo')" style="color:var(--gold);cursor:pointer;text-decoration:underline;" data-i18n="co-silo-link">姫路港サイロ株式会社 →</a></td></tr>
     </table>
   </div>
@@ -505,25 +505,25 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
   <div class="section">
     <div style="display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;">
       <div class="timeline">
-      <div class="tl-item"><span class="tl-year">昭和12年</span><span class="tl-event" data-i18n="history-1937">山陽興業株式会社を設立（素麺穀物小麦粉販売）</span></div>
-      <div class="tl-item"><span class="tl-year">昭和21年</span><span class="tl-event" data-i18n="history-1946">小麦製粉の製造へ進出</span></div>
-      <div class="tl-item"><span class="tl-year">昭和29年</span><span class="tl-event" data-i18n="history-1954">商号を山陽製粉株式会社へ変更。代表取締役に宮本義郎が就任</span></div>
-      <div class="tl-item"><span class="tl-year">昭和33年</span><span class="tl-event" data-i18n="history-1958">農林省より飼料小麦加工専門工場に指定</span></div>
-      <div class="tl-item"><span class="tl-year">昭和35年</span><span class="tl-event" data-i18n="history-1960">本社ビル竣工</span></div>
-      <div class="tl-item"><span class="tl-year">昭和42年</span><span class="tl-event" data-i18n="history-1967">資本金を2,000万円とする</span></div>
-      <div class="tl-item"><span class="tl-year">昭和44年</span><span class="tl-event" data-i18n="history-1969">姫路製粉サイロ株式会社の設立に参画（現在の姫路港サイロ株式会社）</span></div>
-      <div class="tl-item"><span class="tl-year">昭和56年</span><span class="tl-event" data-i18n="history-1981">神戸海運局より営業倉庫（保税蔵置場）の運営許可</span></div>
-      <div class="tl-item"><span class="tl-year">昭和57年</span><span class="tl-event" data-i18n="history-1982">製粉工場及び営業倉庫を移転、竣工</span></div>
-      <div class="tl-item"><span class="tl-year">昭和59年</span><span class="tl-event" data-i18n="history-1984">代表取締役に宮本義人が就任</span></div>
-      <div class="tl-item"><span class="tl-year">平成17年</span><span class="tl-event" data-i18n="history-2005">小麦粉製造業から現在のコーングリッツ製造業へ転換</span></div>
-      <div class="tl-item"><span class="tl-year">平成19年</span><span class="tl-event" data-i18n="history-2007">色彩選別機を導入</span></div>
-      <div class="tl-item"><span class="tl-year">平成20年</span><span class="tl-event" data-i18n="history-2008">乾燥設備を導入</span></div>
-      <div class="tl-item"><span class="tl-year">平成22年</span><span class="tl-event" data-i18n="history-2010">自社所有タンクローリーを2台体制に</span></div>
-      <div class="tl-item"><span class="tl-year">平成26年</span><span class="tl-event" data-i18n="history-2014">色彩選別機を更新し製造品質を強化</span></div>
-      <div class="tl-item"><span class="tl-year">令和元年</span><span class="tl-event" data-i18n="history-2019">全フォークリフトをエンジン車からバッテリー車へ更新</span></div>
-      <div class="tl-item"><span class="tl-year">令和4年</span><span class="tl-event" data-i18n="history-2022">代表取締役に宮本義太郎が就任</span></div>
-      <div class="tl-item"><span class="tl-year">令和6年</span><span class="tl-event" data-i18n="history-2024">製品倉庫リニューアル</span></div>
-      <div class="tl-item"><span class="tl-year">令和8年</span><span class="tl-event" data-i18n="history-2026">グリッツ包装設備リニューアル</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-s12">昭和12年</span><span class="tl-event" data-i18n="history-1937">山陽興業株式会社を設立（素麺穀物小麦粉販売）</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-s21">昭和21年</span><span class="tl-event" data-i18n="history-1946">小麦製粉の製造へ進出</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-s29">昭和29年</span><span class="tl-event" data-i18n="history-1954">商号を山陽製粉株式会社へ変更。代表取締役に宮本義郎が就任</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-s33">昭和33年</span><span class="tl-event" data-i18n="history-1958">農林省より飼料小麦加工専門工場に指定</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-s35">昭和35年</span><span class="tl-event" data-i18n="history-1960">本社ビル竣工</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-s42">昭和42年</span><span class="tl-event" data-i18n="history-1967">資本金を2,000万円とする</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-s44">昭和44年</span><span class="tl-event" data-i18n="history-1969">姫路製粉サイロ株式会社の設立に参画（現在の姫路港サイロ株式会社）</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-s56">昭和56年</span><span class="tl-event" data-i18n="history-1981">神戸海運局より営業倉庫（保税蔵置場）の運営許可</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-s57">昭和57年</span><span class="tl-event" data-i18n="history-1982">製粉工場及び営業倉庫を移転、竣工</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-s59">昭和59年</span><span class="tl-event" data-i18n="history-1984">代表取締役に宮本義人が就任</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-h17">平成17年</span><span class="tl-event" data-i18n="history-2005">小麦粉製造業から現在のコーングリッツ製造業へ転換</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-h19">平成19年</span><span class="tl-event" data-i18n="history-2007">色彩選別機を導入</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-h20">平成20年</span><span class="tl-event" data-i18n="history-2008">乾燥設備を導入</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-h22">平成22年</span><span class="tl-event" data-i18n="history-2010">自社所有タンクローリーを2台体制に</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-h26">平成26年</span><span class="tl-event" data-i18n="history-2014">色彩選別機を更新し製造品質を強化</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-r01">令和元年</span><span class="tl-event" data-i18n="history-2019">全フォークリフトをエンジン車からバッテリー車へ更新</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-r04">令和4年</span><span class="tl-event" data-i18n="history-2022">代表取締役に宮本義太郎が就任</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-r06">令和6年</span><span class="tl-event" data-i18n="history-2024">製品倉庫リニューアル</span></div>
+      <div class="tl-item"><span class="tl-year" data-i18n="tl-r08">令和8年</span><span class="tl-event" data-i18n="history-2026">グリッツ包装設備リニューアル</span></div>
     </div>
       <img src="enkaku.JPG" alt="沿革" style="width:280px;object-fit:cover;display:block;border:1px solid var(--border);">
     </div>
@@ -535,7 +535,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
   <div class="phil-hero">
     <img src="top.JPG" alt="山陽製粉">
     <div class="phil-hero-inner">
-      <div class="phil-tagline" data-i18n="phil-h2">「礎を研ぎ、<span>命を繋ぐ</span>」</div>
+      <div class="phil-tagline" data-i18n="phil-h2">「礎を研ぎ、<span data-i18n="phil-span-life">命を繋ぐ</span>」</div>
       <div class="phil-sub" data-i18n="phil-sub">企業理念</div>
     </div>
   </div>
@@ -544,12 +544,12 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
     <span class="section-eyebrow">Principles</span>
     <h2 class="section-title">行 動 規 範</h2>
     <div class="principle-list" style="margin-top:28px;">
-      <div class="principle-item"><div class="principle-num">01</div><h3>感性を磨き、期待を超える</h3><p>数値化できない「色・香り・手触り」を大切にします。機械に使われるのではなく、長年培った技術で機械を使いこなし、原料の個性を最大限に引き出します。</p></div>
-      <div class="principle-item"><div class="principle-num">02</div><h3>誠実な循環を築く</h3><p>産地からお客様まで、食のバトンを繋ぐすべての方々を大切なパートナーと考えます。透明性の高い対話と誠実な商いを通じて、永く信頼される関係を築きます。</p></div>
-      <div class="principle-item"><div class="principle-num">03</div><h3>互いの個性を尊重する</h3><p>障がいの有無や背景に関わらず、一人ひとりが持つ固有の才能を尊重します。適材適所を追求し、「誰もが主役になれる職場」を共創します。</p></div>
-      <div class="principle-item"><div class="principle-num">04</div><h3>資源への畏敬と環境への配慮</h3><p>皮一つ、粉塵一つに至るまで価値を見出し、無駄なく使い切る「全利用」を追求します。次世代に豊かな大地を引き継ぐため、環境負荷の低減に努めます。</p></div>
-      <div class="principle-item"><div class="principle-num">05</div><h3>変化を恐れず、本質を守る</h3><p>時代のニーズや技術の進化には柔軟に応えます。しかし、「誠実に作る」という根底の魂は、創業以来、そしてこれからも決して変えることはありません。</p></div>
-      <div class="principle-item"><div class="principle-num">06</div><h3>働く仲間を、最大の財産として大切にする</h3><p>会社の根幹を支えるのは、一人ひとりの従業員です。安全で働きやすい環境を整えることはもちろん、長く安心して働き続けられるよう、待遇・職場環境・人間関係のすべてに真摯に向き合います。社員の成長が会社の成長であり、社員の喜びが会社の喜びであると信じています。</p></div>
+      <div class="principle-item"><div class="principle-num" data-i18n="phil-p01-num">01</div><h3 data-i18n="phil-p01-h3">感性を磨き、期待を超える</h3><p data-i18n="phil-p01-p">数値化できない「色・香り・手触り」を大切にします。機械に使われるのではなく、長年培った技術で機械を使いこなし、原料の個性を最大限に引き出します。</p></div>
+      <div class="principle-item"><div class="principle-num" data-i18n="phil-p02-num">02</div><h3 data-i18n="phil-p02-h3">誠実な循環を築く</h3><p data-i18n="phil-p02-p">産地からお客様まで、食のバトンを繋ぐすべての方々を大切なパートナーと考えます。透明性の高い対話と誠実な商いを通じて、永く信頼される関係を築きます。</p></div>
+      <div class="principle-item"><div class="principle-num" data-i18n="phil-p03-num">03</div><h3 data-i18n="phil-p03-h3">互いの個性を尊重する</h3><p data-i18n="phil-p03-p">障がいの有無や背景に関わらず、一人ひとりが持つ固有の才能を尊重します。適材適所を追求し、「誰もが主役になれる職場」を共創します。</p></div>
+      <div class="principle-item"><div class="principle-num" data-i18n="phil-p04-num">04</div><h3 data-i18n="phil-p04-h3">資源への畏敬と環境への配慮</h3><p data-i18n="phil-p04-p">皮一つ、粉塵一つに至るまで価値を見出し、無駄なく使い切る「全利用」を追求します。次世代に豊かな大地を引き継ぐため、環境負荷の低減に努めます。</p></div>
+      <div class="principle-item"><div class="principle-num" data-i18n="phil-p05-num">05</div><h3 data-i18n="phil-p05-h3">変化を恐れず、本質を守る</h3><p data-i18n="phil-p05-p">時代のニーズや技術の進化には柔軟に応えます。しかし、「誠実に作る」という根底の魂は、創業以来、そしてこれからも決して変えることはありません。</p></div>
+      <div class="principle-item"><div class="principle-num" data-i18n="phil-p06-num">06</div><h3 data-i18n="phil-p06-h3">働く仲間を、最大の財産として大切にする</h3><p data-i18n="phil-p06b-p">会社の根幹を支えるのは、一人ひとりの従業員です。安全で働きやすい環境を整えることはもちろん、長く安心して働き続けられるよう、待遇・職場環境・人間関係のすべてに真摯に向き合います。社員の成長が会社の成長であり、社員の喜びが会社の喜びであると信じています。</p></div>
     </div>
   </div>
 </div>
@@ -567,50 +567,50 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
         <!-- 差し替え: src="images/nozomi_h.jpg" -->
         <img src="nozomih.avif" alt="のぞみH">
         <div class="product-card-body">
-          <div class="product-mesh">8-12 mesh pass</div>
-          <h3>のぞみH</h3>
-          <p>主にお菓子や食品添加物の原料としてご使用いただいております。</p>
-          <div class="product-size">中心粒度：約2〜3mm</div>
+          <div class="product-mesh" data-i18n="grits-nozomih-mesh">8-12 mesh pass</div>
+          <h3 data-i18n="grits-nozomih-name">のぞみH</h3>
+          <p data-i18n="grits-nozomih-desc">主にお菓子や食品添加物の原料としてご使用いただいております。</p>
+          <div class="product-size" data-i18n="grits-nozomih-size">中心粒度：約2〜3mm</div>
         </div>
       </div>
       <div class="product-card">
         <!-- 差し替え: src="images/nozomi.jpg" -->
         <img src="nozomi.avif" alt="のぞみ">
         <div class="product-card-body">
-          <div class="product-mesh">12-20 mesh pass</div>
-          <h3>のぞみ</h3>
-          <p>主にお菓子やコーンパフの原料としてご使用いただいております。</p>
-          <div class="product-size">中心粒度：約1〜1.5mm</div>
+          <div class="product-mesh" data-i18n="grits-nozomi-mesh">12-20 mesh pass</div>
+          <h3 data-i18n="grits-nozomi-name">のぞみ</h3>
+          <p data-i18n="grits-nozomi-desc">主にお菓子やコーンパフの原料としてご使用いただいております。</p>
+          <div class="product-size" data-i18n="grits-nozomi-size">中心粒度：約1〜1.5mm</div>
         </div>
       </div>
       <div class="product-card">
         <!-- 差し替え: src="images/speed.jpg" -->
         <img src="SPEED.avif" alt="SPEED">
         <div class="product-card-body">
-          <div class="product-mesh">22-26 mesh pass</div>
-          <h3>SPEED</h3>
-          <p>主にお菓子や食品添加物の原料としてご使用いただいております。</p>
-          <div class="product-size">中心粒度：約0.5〜1mm</div>
+          <div class="product-mesh" data-i18n="grits-speed-mesh">22-26 mesh pass</div>
+          <h3 data-i18n="grits-speed-name">SPEED</h3>
+          <p data-i18n="grits-speed-desc">主にお菓子や食品添加物の原料としてご使用いただいております。</p>
+          <div class="product-size" data-i18n="grits-speed-size">中心粒度：約0.5〜1mm</div>
         </div>
       </div>
       <div class="product-card">
         <!-- 差し替え: src="images/hikari.jpg" -->
         <img src="hikari.avif" alt="ひかり">
         <div class="product-card-body">
-          <div class="product-mesh">28-48 mesh pass</div>
-          <h3>ひかり</h3>
-          <p>主にビール・ウイスキー・焼酎の醸造用原料としてご使用いただいております。</p>
-          <div class="product-size">中心粒度：約0.3〜0.5mm</div>
+          <div class="product-mesh" data-i18n="grits-hikari-mesh">28-48 mesh pass</div>
+          <h3 data-i18n="grits-hikari-name">ひかり</h3>
+          <p data-i18n="grits-hikari-desc">主にビール・ウイスキー・焼酎の醸造用原料としてご使用いただいております。</p>
+          <div class="product-size" data-i18n="grits-hikari-size">中心粒度：約0.3〜0.5mm</div>
         </div>
       </div>
       <div class="product-card">
         <!-- 差し替え: src="images/flour.jpg" -->
         <img src="CF.avif" alt="コーンフラワー">
         <div class="product-card-body">
-          <div class="product-mesh">100 mesh pass</div>
-          <h3>コーンフラワー</h3>
-          <p>食品添加物等の原料にご使用いただいております。粒度は微粉体となります。</p>
-          <div class="product-size">微粉体</div>
+          <div class="product-mesh" data-i18n="grits-cf-mesh">100 mesh pass</div>
+          <h3 data-i18n="grits-cf-name">コーンフラワー</h3>
+          <p data-i18n="grits-cf-desc">食品添加物等の原料にご使用いただいております。粒度は微粉体となります。</p>
+          <div class="product-size" data-i18n="grits-cf-size">微粉体</div>
         </div>
       </div>
     </div>
@@ -649,11 +649,11 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       </div>
     </div>
     <div class="info-box">
-      <h3>出荷形態</h3>
-      <p>バラ・20kg紙袋・500kgフレコンでの出荷が可能です。ご要望に応じてご対応いたします。</p>
+      <h3 data-i18n="hominy-shipping-h3">出荷形態</h3>
+      <p data-i18n="hominy-shipping-p">バラ・20kg紙袋・500kgフレコンでの出荷が可能です。ご要望に応じてご対応いたします。</p>
     </div>
     <div style="margin-top:36px;text-align:center;">
-      <button class="btn-primary" onclick="showPage('contact')">お問い合わせ・ご相談</button>
+      <button class="btn-primary" onclick="showPage('contact')" data-i18n="hominy-btn">お問い合わせ・ご相談</button>
     </div>
   </div>
 </div>
@@ -669,9 +669,9 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
   </div>
 
   <div class="section">
-    <span class="section-eyebrow">Sustainability</span>
+    <span class="section-eyebrow" data-i18n="sus-eyebrow2">Sustainability</span>
     <h2 class="section-title" data-i18n="sus-title">私たちの取り組み</h2>
-    <p class="section-lead">山陽製粉は創業以来、地域と共に歩んできた食品原材料メーカーです。食の安全・安心を守り、環境への負荷を低減しながら、次世代に豊かな社会を引き継ぐことが私たちの責務と考えています。</p>
+    <p class="section-lead" data-i18n="sus-lead">山陽製粉は創業以来、地域と共に歩んできた食品原材料メーカーです。食の安全・安心を守り、環境への負荷を低減しながら、次世代に豊かな社会を引き継ぐことが私たちの責務と考えています。</p>
 
     <!-- 5つのテーマ -->
     <div style="display:grid;gap:32px;">
@@ -680,7 +680,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       <div class="principle-item">
         <div class="principle-num" data-i18n="sus-01-num">01　食の安全・安心</div>
         <h3 data-i18n="sus-01-h3">安全で高品質な製品の安定供給</h3>
-        <p>
+        <p data-i18n="sus-01-p">
           お客様に安心してお使いいただける製品をお届けすることが、私たちの最も重要な使命です。アメリカ産の分別生産流通管理済み（NON-GMO）コーンのみを原料として使用し、製造工程における品質管理を徹底しています。<br><br>
           アレルギー反応が極めて少ないとうもろこしを原料とした製品は、食品メーカー・醸造メーカー・飼料メーカーなど幅広いお取引先に安定してお届けできるよう、生産体制の維持・強化に継続して取り組んでいます。
         </p>
@@ -693,7 +693,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       <div class="principle-item">
         <div class="principle-num" data-i18n="sus-02-num">02　持続可能な原料調達</div>
         <h3 data-i18n="sus-02-h3">責任ある原材料の調達</h3>
-        <p>
+        <p data-i18n="sus-02-p">
           原料となるとうもろこしはアメリカの契約農場にて生産された分別生産流通管理済みコーンを使用しています。調達先との長期的な信頼関係を築きながら、安定的かつ持続可能な原料確保に努めています。<br><br>
           気候変動や地政学リスクが原料調達に影響を与える可能性を認識しており、複数の調達ルートの確保と在庫管理の最適化により、お客様への安定供給体制を維持しています。
         </p>
@@ -706,7 +706,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       <div class="principle-item">
         <div class="principle-num" data-i18n="sus-03-num">03　環境への配慮</div>
         <h3 data-i18n="sus-03-h3">廃棄物ゼロへの挑戦と省エネ推進</h3>
-        <p>
+        <p data-i18n="sus-03-p">
           とうもろこしはすべての部位を活用できる穀物です。コーングリッツの製造で生じる胚芽・皮・デンプン質はホミニーフィードとして飼料に活用しており、廃棄物をほぼ出さない製造体制を実現しています。<br><br>
           また、全フォークリフトのバッテリー車への転換（令和元年完了）を皮切りに、省エネ設備の導入・更新を継続的に推進しています。製品倉庫・包装設備のリニューアルを通じてエネルギー効率の改善にも取り組んでいます。
         </p>
@@ -719,7 +719,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       <div class="principle-item">
         <div class="principle-num" data-i18n="sus-04-num">04　地域社会との共生</div>
         <h3 data-i18n="sus-04-h3">姫路・播磨地域の産業と食を支える</h3>
-        <p>
+        <p data-i18n="sus-04-p">
           昭和12年の創業以来、兵庫県姫路市に根ざした企業として、地域経済・雇用・産業の維持発展に貢献してまいりました。姫路港に隣接する立地を活かした物流体制と、姫路港サイロ株式会社を通じた穀物保管・通関機能は、西播磨地域の食品産業を支えるインフラの一翼を担っています。<br><br>
           姫路商工会議所・兵庫県倉庫協会・日本コーングリッツ協会などの業界団体への参加を通じて、地域・業界全体の発展にも積極的に関与しています。
         </p>
@@ -732,7 +732,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       <div class="principle-item">
         <div class="principle-num" data-i18n="sus-05-num">05　従業員への責任</div>
         <h3 data-i18n="sus-05-h3">働きがいのある職場づくり</h3>
-        <p>
+        <p data-i18n="sus-05-p">
           平均勤続年数約25年という実績が示すように、山陽製粉は従業員が長く安心して働き続けられる職場環境の整備に取り組んでいます。残業ゼロ・充実した福利厚生・永年勤続表彰制度など、従業員の生活と健康を大切にする制度を整備しています。<br><br>
           障がいの有無や背景に関わらず、一人ひとりの個性と能力を尊重する「誰もが主役になれる職場」の実現を目指し、適材適所の人材配置と相互補完のできる組織づくりを推進しています。
         </p>
@@ -746,7 +746,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
     <!-- 姫路市SDGs宣言 -->
     <div style="margin-top:56px;">
       <span class="section-eyebrow">SDGs Declaration</span>
-      <h2 class="section-title">姫路市SDGs宣言</h2>
+      <h2 class="section-title" data-i18n="sus-sdgs-declaration-title">姫路市SDGs宣言</h2>
     </div>
 
     <div style="background:var(--navy);border:3px solid var(--gold);padding:40px;margin-top:8px;text-align:center;position:relative;overflow:hidden;">
@@ -754,7 +754,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       <div style="position:relative;z-index:1;">
         <p style="font-size:12px;letter-spacing:.25em;color:var(--gold-light);margin-bottom:12px;" data-i18n="sus-sdgs-eyebrow">SDGs Declaration</p>
         <p style="font-family:'Noto Serif JP',serif;font-size:clamp(20px,3vw,28px);font-weight:700;color:#fff;letter-spacing:.15em;margin-bottom:8px;" data-i18n="sus-sdgs-declaration-title">姫路市SDGs宣言</p>
-        <p style="font-family:'Noto Serif JP',serif;font-size:clamp(16px,2.5vw,22px);font-weight:600;color:var(--gold-light);letter-spacing:.1em;margin-bottom:32px;">山陽製粉株式会社　はＳＤＧｓ宣言します</p>
+        <p style="font-family:'Noto Serif JP',serif;font-size:clamp(16px,2.5vw,22px);font-weight:600;color:var(--gold-light);letter-spacing:.1em;margin-bottom:32px;" data-i18n="sus-sdgs-declare">山陽製粉株式会社　はＳＤＧｓ宣言します</p>
 
         <!-- SDGs13バッジ -->
         <div style="display:inline-block;background:#3F7E44;padding:20px 32px;margin-bottom:32px;">
@@ -773,8 +773,8 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
 
     <!-- SDGs貢献目標 -->
     <div class="info-box" style="margin-top:32px;text-align:center;">
-      <h3>事業活動を通じたSDGsへの貢献</h3>
-      <p style="margin-top:12px;">山陽製粉は、姫路市SDGs宣言をはじめ、事業活動全体を通じて以下の目標達成に貢献します。</p>
+      <h3 data-i18n="sus-sdgs-h3">事業活動を通じたSDGsへの貢献</h3>
+      <p style="margin-top:12px;" data-i18n="sus-sdgs-p">山陽製粉は、姫路市SDGs宣言をはじめ、事業活動全体を通じて以下の目標達成に貢献します。</p>
       <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px;">
         <div style="background:var(--navy);color:#fff;width:100px;height:100px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;text-align:center;padding:8px;">
           <div style="font-size:22px;font-weight:700;color:var(--gold-light);">2</div>飢餓を<br>ゼロに
@@ -804,14 +804,14 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
     <div class="page-header-inner"><h2 data-i18n="silo-h2">姫路港サイロ株式会社</h2><p data-i18n="silo-sub">西播磨最大の穀物サイロ — 保管・輸送・通関をワンストップで</p></div>
   </div>
   <div class="section">
-    <p class="section-lead">西播磨最大の穀物サイロを保有し、コーンをはじめ小麦・大麦・大豆・大豆ミール・粗飼料などを保管しております。グループ・提携企業と連携し、穀物の陸上輸送・海上輸送・通関業務など多様なオーダーにお応えします。常温・定温倉庫も保有しており、貨物の形態を問わず最適な状態での保管が可能です。</p>
+    <p class="section-lead" data-i18n="silo-lead">西播磨最大の穀物サイロを保有し、コーンをはじめ小麦・大麦・大豆・大豆ミール・粗飼料などを保管しております。グループ・提携企業と連携し、穀物の陸上輸送・海上輸送・通関業務など多様なオーダーにお応えします。常温・定温倉庫も保有しており、貨物の形態を問わず最適な状態での保管が可能です。</p>
     <table class="co-table">
       <tr><th data-i18n="silo-founded-th">創立</th><td data-i18n="silo-founded-td">昭和44年3月27日</td></tr>
       <tr><th data-i18n="silo-capital-th">資本金</th><td data-i18n="silo-capital-td">6,000万円</td></tr>
       <tr><th data-i18n="co-president-th">代表者</th><td data-i18n="co-president-td">代表取締役　宮本義太郎</td></tr>
-      <tr><th>本社</th><td>〒670-0935　姫路市北条口2丁目18番地 宮本ビル　TEL：079-222-2003</td></tr>
-      <tr><th>サイロ</th><td>〒672-8064　姫路市飾磨区細江5号岸壁　TEL：079-235-7021</td></tr>
-      <tr><th>定温倉庫</th><td>〒672-8043　姫路市飾磨区中島字宝来3067-14</td></tr>
+      <tr><th data-i18n="silo-hq-th">本社</th><td data-i18n="silo-hq-td">〒670-0935　姫路市北条口2丁目18番地 宮本ビル　TEL：079-222-2003</td></tr>
+      <tr><th data-i18n="silo-silo-th">サイロ</th><td data-i18n="silo-silo-td">〒672-8064　姫路市飾磨区細江5号岸壁　TEL：079-235-7021</td></tr>
+      <tr><th data-i18n="silo-cold-th">定温倉庫</th><td data-i18n="silo-cold-td">〒672-8043　姫路市飾磨区中島字宝来3067-14</td></tr>
       <tr><th data-i18n="silo-items-th">取扱品目</th><td data-i18n="silo-items-td">食品穀物・飼料穀物・食品原材料・肥料等</td></tr>
       <tr><th data-i18n="silo-shareholder-th">株主</th><td data-i18n="silo-shareholder-td">山陽製粉株式会社</td></tr>
       <tr><th data-i18n="co-bank-th">取引銀行</th><td data-i18n="co-bank-td">播州信用金庫　駅前支店<br>三井住友銀行　姫路支店</td></tr>
@@ -869,15 +869,15 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
   </div>
   <div class="section">
     <div class="contact-wrap">
-      <div class="contact-note">お電話でのお問い合わせは業務部（TEL：079-233-0022）まで。フォームからのお問い合わせは3営業日以内にご返信いたします。</div>
+      <div class="contact-note" data-i18n="contact-note">お電話でのお問い合わせは業務部（TEL：079-233-0022）まで。フォームからのお問い合わせは3営業日以内にご返信いたします。</div>
       <div id="successMsg" class="success-msg" data-i18n="contact-success">お問い合わせありがとうございます。内容を確認の上、ご連絡いたします。</div>
       <div class="contact-form" id="contactForm">
-        <div class="form-group"><label class="form-label">お名前<span>必須</span></label><input type="text" class="form-input" id="fname" placeholder="山陽　太郎"></div>
-        <div class="form-group"><label class="form-label">会社名</label><input type="text" class="form-input" id="fcompany" placeholder="株式会社○○"></div>
-        <div class="form-group"><label class="form-label">メールアドレス<span>必須</span></label><input type="email" class="form-input" id="femail" placeholder="info@example.com"></div>
-        <div class="form-group"><label class="form-label">電話番号</label><input type="tel" class="form-input" id="ftel" placeholder="079-000-0000"></div>
+        <div class="form-group"><label class="form-label" data-i18n="contact-name">お名前<span>必須</span></label><input type="text" class="form-input" id="fname" placeholder="山陽　太郎"></div>
+        <div class="form-group"><label class="form-label" data-i18n="contact-company">会社名</label><input type="text" class="form-input" id="fcompany" placeholder="株式会社○○"></div>
+        <div class="form-group"><label class="form-label" data-i18n="contact-email">メールアドレス<span>必須</span></label><input type="email" class="form-input" id="femail" placeholder="info@example.com"></div>
+        <div class="form-group"><label class="form-label" data-i18n="contact-tel">電話番号</label><input type="tel" class="form-input" id="ftel" placeholder="079-000-0000"></div>
         <div class="form-group">
-          <label class="form-label">お問い合わせ種別<span>必須</span></label>
+          <label class="form-label" data-i18n="contact-type">お問い合わせ種別<span>必須</span></label>
           <select class="form-select" id="ftype">
             <option value="">選択してください</option>
             <option>製品について</option>
@@ -886,7 +886,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
             <option>その他</option>
           </select>
         </div>
-        <div class="form-group"><label class="form-label">お問い合わせ内容<span>必須</span></label><textarea class="form-textarea" id="fmessage" placeholder="お問い合わせ内容をご記入ください。"></textarea></div>
+        <div class="form-group"><label class="form-label" data-i18n="contact-msg">お問い合わせ内容<span>必須</span></label><textarea class="form-textarea" id="fmessage" placeholder="お問い合わせ内容をご記入ください。"></textarea></div>
         <button class="form-submit" onclick="submitForm()" data-i18n="contact-submit">送　信</button>
       </div>
 
@@ -895,9 +895,9 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
         <p style="font-size:13.5px;color:#c0392b;font-weight:500;line-height:1.9;margin-bottom:16px;" data-i18n="contact-warn-body">当フォームへの営業・勧誘・サービス紹介を目的としたお問い合わせは、固くお断りいたします。<br>該当するお問い合わせへの返信は一切行いません。また、送信者情報を記録・保管する場合があります。</p>
         <p style="font-size:13px;font-weight:500;color:var(--navy);margin-bottom:10px;" data-i18n="contact-warn-other">【その他注意事項】</p>
         <ol style="font-size:13px;color:var(--text);line-height:2.2;padding-left:18px;">
-          <li>内容確認のためにお電話させていただく場合もありますので、お電話番号のご記入をお願いします。</li>
-          <li>内容によりましては、ご返事までにお時間がかかる場合、またはご返事を差し上げられない場合がございますのでご了承下さい。</li>
-          <li>弊社からの返信を転載・二次利用することはお断り致します。</li>
+          <li data-i18n="contact-note1">内容確認のためにお電話させていただく場合もありますので、お電話番号のご記入をお願いします。</li>
+          <li data-i18n="contact-note2">内容によりましては、ご返事までにお時間がかかる場合、またはご返事を差し上げられない場合がございますのでご了承下さい。</li>
+          <li data-i18n="contact-note3">弊社からの返信を転載・二次利用することはお断り致します。</li>
         </ol>
       </div>
 
@@ -910,49 +910,49 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
   <div class="page-header">
     <img class="page-header-img" src="top.JPG" alt="プライバシーポリシー">
     <div class="page-header-inner">
-      <h2>プライバシーポリシー</h2>
-      <p>個人情報保護方針</p>
+      <h2 data-i18n="privacy-h2">プライバシーポリシー</h2>
+      <p data-i18n="privacy-sub">個人情報保護方針</p>
     </div>
   </div>
   <div class="section">
-    <p style="font-size:14px;color:var(--text-light);margin-bottom:40px;">山陽製粉株式会社（以下「当社」）は、お客様の個人情報の保護を重要な責務と認識し、以下の方針に基づき適切に取り扱います。</p>
+    <p style="font-size:14px;color:var(--text-light);margin-bottom:40px;" data-i18n="privacy-intro">山陽製粉株式会社（以下「当社」）は、お客様の個人情報の保護を重要な責務と認識し、以下の方針に基づき適切に取り扱います。</p>
 
     <div style="display:grid;gap:28px;">
 
       <div class="principle-item">
         <div class="principle-num">1　個人情報の収集について</div>
-        <h3>取得する情報と目的</h3>
-        <p>当社は、お問い合わせフォームを通じて、お名前・会社名・メールアドレス・電話番号・お問い合わせ内容を収集しております。収集した個人情報は、お問い合わせへの回答および当社からのご連絡のみに使用し、その他の目的には使用しません。</p>
+        <h3 data-i18n="privacy-01-h3">取得する情報と目的</h3>
+        <p data-i18n="privacy-01-p">当社は、お問い合わせフォームを通じて、お名前・会社名・メールアドレス・電話番号・お問い合わせ内容を収集しております。収集した個人情報は、お問い合わせへの回答および当社からのご連絡のみに使用し、その他の目的には使用しません。</p>
       </div>
 
       <div class="principle-item">
         <div class="principle-num">2　個人情報の第三者提供について</div>
-        <h3>第三者への提供の禁止</h3>
-        <p>当社は、法令に基づく場合を除き、お客様の個人情報を事前の同意なく第三者に提供・開示することはありません。</p>
+        <h3 data-i18n="privacy-02-h3">第三者への提供の禁止</h3>
+        <p data-i18n="privacy-02-p">当社は、法令に基づく場合を除き、お客様の個人情報を事前の同意なく第三者に提供・開示することはありません。</p>
       </div>
 
       <div class="principle-item">
         <div class="principle-num">3　個人情報の管理について</div>
-        <h3>安全管理措置</h3>
-        <p>当社は、収集した個人情報の漏洩・滅失・毀損の防止に努め、適切な安全管理措置を講じます。個人情報へのアクセスは必要最小限の担当者に限定し、適切に管理します。</p>
+        <h3 data-i18n="privacy-03-h3">安全管理措置</h3>
+        <p data-i18n="privacy-03-p">当社は、収集した個人情報の漏洩・滅失・毀損の防止に努め、適切な安全管理措置を講じます。個人情報へのアクセスは必要最小限の担当者に限定し、適切に管理します。</p>
       </div>
 
       <div class="principle-item">
         <div class="principle-num">4　個人情報の開示・訂正・削除について</div>
-        <h3>ご本人からの請求への対応</h3>
-        <p>お客様ご本人から個人情報の開示・訂正・削除のご請求があった場合は、ご本人であることを確認の上、速やかに対応いたします。お問い合わせは下記の窓口までご連絡ください。</p>
+        <h3 data-i18n="privacy-04-h3">ご本人からの請求への対応</h3>
+        <p data-i18n="privacy-04-p">お客様ご本人から個人情報の開示・訂正・削除のご請求があった場合は、ご本人であることを確認の上、速やかに対応いたします。お問い合わせは下記の窓口までご連絡ください。</p>
       </div>
 
       <div class="principle-item">
         <div class="principle-num">5　Cookieの使用について</div>
-        <h3>Cookieに関する方針</h3>
-        <p>当社ウェブサイトでは、サービス向上を目的としてCookieを使用する場合があります。ブラウザの設定によりCookieを無効にすることができますが、一部機能がご利用いただけない場合があります。</p>
+        <h3 data-i18n="privacy-05-h3">Cookieに関する方針</h3>
+        <p data-i18n="privacy-05-p">当社ウェブサイトでは、サービス向上を目的としてCookieを使用する場合があります。ブラウザの設定によりCookieを無効にすることができますが、一部機能がご利用いただけない場合があります。</p>
       </div>
 
       <div class="principle-item">
         <div class="principle-num">6　プライバシーポリシーの変更について</div>
-        <h3>方針の改定</h3>
-        <p>当社は、法令の変更やサービス内容の変更に伴い、本プライバシーポリシーを予告なく変更する場合があります。変更後の内容は本ページに掲載した時点で効力を生じるものとします。</p>
+        <h3 data-i18n="privacy-06-h3">方針の改定</h3>
+        <p data-i18n="privacy-06-p">当社は、法令の変更やサービス内容の変更に伴い、本プライバシーポリシーを予告なく変更する場合があります。変更後の内容は本ページに掲載した時点で効力を生じるものとします。</p>
       </div>
 
     </div>
@@ -960,7 +960,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
     <div class="recruit-note" style="margin-top:40px;">
       <strong style="display:block;margin-bottom:8px;color:var(--navy);">個人情報に関するお問い合わせ窓口</strong>
       山陽製粉株式会社<br>
-      〒670-0935　兵庫県姫路市北条口2丁目18番地 宮本ビル<br>
+      <span data-i18n="co-hq-addr">〒670-0935　兵庫県姫路市北条口2丁目18番地 宮本ビル</span><br>
       TEL：079-222-2003　FAX：079-223-0430<br>
       受付時間：平日 8:00〜17:00
     </div>
@@ -975,43 +975,43 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
   <div class="page-header">
     <img class="page-header-img" src="top.JPG" alt="免責事項">
     <div class="page-header-inner">
-      <h2>免 責 事 項</h2>
-      <p>Disclaimer</p>
+      <h2 data-i18n="disclaimer-h2">免 責 事 項</h2>
+      <p data-i18n="disclaimer-sub">Disclaimer</p>
     </div>
   </div>
   <div class="section">
-    <p style="font-size:14px;color:var(--text-light);margin-bottom:40px;">山陽製粉株式会社（以下「当社」）は、本ウェブサイトのご利用に関して、以下の免責事項を定めております。本サイトをご利用いただく前に必ずお読みください。</p>
+    <p style="font-size:14px;color:var(--text-light);margin-bottom:40px;" data-i18n="disclaimer-intro">山陽製粉株式会社（以下「当社」）は、本ウェブサイトのご利用に関して、以下の免責事項を定めております。本サイトをご利用いただく前に必ずお読みください。</p>
 
     <div style="display:grid;gap:24px;">
 
       <div class="principle-item">
         <div class="principle-num">1　掲載情報の正確性について</div>
-        <h3>情報の保証について</h3>
-        <p>当社は、本ウェブサイトに掲載する情報の正確性・完全性・有用性について万全を期しておりますが、その内容を保証するものではありません。掲載情報は予告なく変更・削除される場合があります。</p>
+        <h3 data-i18n="disc-01-h3">情報の保証について</h3>
+        <p data-i18n="disc-01-p">当社は、本ウェブサイトに掲載する情報の正確性・完全性・有用性について万全を期しておりますが、その内容を保証するものではありません。掲載情報は予告なく変更・削除される場合があります。</p>
       </div>
 
       <div class="principle-item">
         <div class="principle-num">2　損害について</div>
-        <h3>損害賠償の免責</h3>
-        <p>本ウェブサイトのご利用、または利用不能により生じたいかなる損害についても、当社は一切の責任を負いません。また、本サイトに掲載された情報を利用したことによって生じた損害についても同様とします。</p>
+        <h3 data-i18n="disc-02-h3">損害賠償の免責</h3>
+        <p data-i18n="disc-02-p">本ウェブサイトのご利用、または利用不能により生じたいかなる損害についても、当社は一切の責任を負いません。また、本サイトに掲載された情報を利用したことによって生じた損害についても同様とします。</p>
       </div>
 
       <div class="principle-item">
         <div class="principle-num">3　リンクについて</div>
-        <h3>外部リンクに関する免責</h3>
-        <p>本ウェブサイトからリンクされている外部サイトの内容については、当社は一切の責任を負いません。リンク先のウェブサイトのご利用は、お客様ご自身の判断と責任においてお願いいたします。</p>
+        <h3 data-i18n="disc-03-h3">外部リンクに関する免責</h3>
+        <p data-i18n="disc-03-p">本ウェブサイトからリンクされている外部サイトの内容については、当社は一切の責任を負いません。リンク先のウェブサイトのご利用は、お客様ご自身の判断と責任においてお願いいたします。</p>
       </div>
 
       <div class="principle-item">
         <div class="principle-num">4　著作権について</div>
-        <h3>コンテンツの著作権</h3>
-        <p>本ウェブサイトに掲載されているすべてのコンテンツ（文章・画像・デザイン等）の著作権は、山陽製粉株式会社に帰属します。無断転載・複製・改変等はお断りいたします。</p>
+        <h3 data-i18n="disc-04-h3">コンテンツの著作権</h3>
+        <p data-i18n="disc-04-p">本ウェブサイトに掲載されているすべてのコンテンツ（文章・画像・デザイン等）の著作権は、山陽製粉株式会社に帰属します。無断転載・複製・改変等はお断りいたします。</p>
       </div>
 
       <div class="principle-item">
         <div class="principle-num">5　準拠法・管轄裁判所</div>
-        <h3>法的事項</h3>
-        <p>本免責事項の解釈および適用は、日本法に準拠するものとします。本サイトに関して生じた紛争については、神戸地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+        <h3 data-i18n="disc-05-h3">法的事項</h3>
+        <p data-i18n="disc-05-p">本免責事項の解釈および適用は、日本法に準拠するものとします。本サイトに関して生じた紛争については、神戸地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
       </div>
 
     </div>
@@ -1113,12 +1113,12 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       <ul>
         <li><a onclick="showPage('home')" data-i18n="nav-home-txt">ホーム</a></li>
         <li><a onclick="showPage('business')" data-i18n="nav-business-txt">事業内容</a></li>
-        <li><a onclick="showPage('company')">会社概要</a></li>
-        <li><a onclick="showPage('history')">沿革</a></li>
-        <li><a onclick="showPage('philosophy')">企業理念</a></li>
-        <li><a onclick="showPage('factory')">工場・倉庫案内</a></li>
-        <li><a onclick="showPage('grits')">コーングリッツ</a></li>
-        <li><a onclick="showPage('hominy')">ホミニーフィード</a></li>
+        <li><a onclick="showPage('company')" data-i18n="nav-company-txt">会社概要</a></li>
+        <li><a onclick="showPage('history')" data-i18n="nav-history-txt">沿革</a></li>
+        <li><a onclick="showPage('philosophy')" data-i18n="nav-philosophy-txt">企業理念</a></li>
+        <li><a onclick="showPage('factory')" data-i18n="nav-factory-txt">工場・倉庫案内</a></li>
+        <li><a onclick="showPage('grits')" data-i18n="nav-grits-txt">コーングリッツ</a></li>
+        <li><a onclick="showPage('hominy')" data-i18n="nav-hominy-txt">ホミニーフィード</a></li>
         <li><a onclick="showPage('sustainability')" data-i18n="nav-sustainability-txt">サステナビリティ</a></li>
         <li><a onclick="showPage('silo')" data-i18n="nav-silo-txt">姫路港サイロ</a></li>
         <li><a onclick="showPage('recruit')" data-i18n="nav-recruit-txt">採用情報</a></li>
@@ -1154,6 +1154,8 @@ const translations = {
   "nav-silo-txt": {"ja":"姫路港サイロ","en":"Himeji Port Silo","tw":"姬路港穀物筒倉"},
   "nav-recruit-txt": {"ja":"採用情報","en":"Careers","tw":"招募資訊"},
   "nav-contact-txt": {"ja":"お問い合わせ","en":"Contact","tw":"聯絡我們"},
+  "nav-products-txt": {"ja":"製品紹介","en":"Products","tw":"產品介紹"},
+  "nav-access-txt": {"ja":"ACCESS","en":"ACCESS","tw":"ACCESS"},
   "home-h1": {"ja":"GOOD CORN<br>FOR GOOD FOOD","en":"GOOD CORN<br>FOR GOOD FOOD","tw":"優質玉米<br>成就美味食品"},
   "home-tagline": {"ja":"アメリカ産NON-GMOとうもろこしを原料に、<br>コーングリッツ・ホミニーフィードを製造。<br>食のおいしさの土台を、姫路から全国へ。","en":"Using 100% American NON-GMO corn,<br>we manufacture corn grits and hominy feed.<br>From Himeji, supporting the foundation of good food across Japan.","tw":"以美國產非基因改造玉米為原料，<br>製造玉米粗粉與玉米飼料。<br>從姬路出發，為日本全國食品美味奠定基礎。"},
   "home-usage": {"ja":"スナック菓子 ／ ビール原料 ／ 焼酎・ウイスキー原料 ／ ピザ打ち粉 ／ 雑穀原料 ／ パン原料 ／ 唐揚げ粉・天ぷら粉 ／ コーンフラワー ／ ホミニーフィード","en":"Snacks / Beer / Shochu & Whisky / Pizza flour / Multigrain / Bread / Fried food coating / Corn flour / Hominy feed","tw":"零食 ／ 啤酒原料 ／ 燒酎・威士忌原料 ／ 披薩粉 ／ 雜穀原料 ／ 麵包原料 ／ 炸粉・天婦羅粉 ／ 玉米粉 ／ 玉米飼料"},
@@ -1253,11 +1255,11 @@ const translations = {
   "co-factory-access": {"ja":"JR姫路駅より車で15分　山陽電車飾磨駅より車で10分","en":"15 min by car from JR Himeji Station / 10 min by car from Sanyo Electric Railway Shikama Station","tw":"距JR姬路站開車15分鐘　距山陽電車飾磨站開車10分鐘"},
   "co-factory-map": {"ja":"📍 Googleマップで開く","en":"📍 Open in Google Maps","tw":"📍 在Google地圖開啟"},
   "co-business-th": {"ja":"事業内容","en":"Business","tw":"業務內容"},
-  "co-business-td": {"ja":"コーングリッツ及びその加工品の製造販売業<br>倉庫業（保税蔵置場指定）","en":"Manufacturing and sales of corn grits and processed products<br>Warehousing (bonded warehouse)","tw":"玉米粗粉及其加工品的製造銷售業<br>倉儲業（保稅倉庫指定）"},
+  "co-business-td": {"ja":"コーングリッツ及びその副産物の製造販売業<br>倉庫業（保税蔵置場指定）","en":"Manufacturing and sales of corn grits and its by-products<br>Warehousing (bonded warehouse)","tw":"玉米粗粉及其副產品的製造銷售業<br>倉儲業（保稅倉庫指定）"},
   "co-bank-th": {"ja":"取引銀行","en":"Banks","tw":"往來銀行"},
   "co-bank-td": {"ja":"播州信用金庫　駅前支店<br>三井住友銀行　姫路支店","en":"Banshu Credit Union, Ekimae Branch<br>Sumitomo Mitsui Banking Corporation, Himeji Branch","tw":"播州信用金庫　駅前支店<br>三井住友銀行　姬路支店"},
   "co-org-th": {"ja":"所属団体","en":"Memberships","tw":"所屬團體"},
-  "co-org-td": {"ja":"一般社団法人 日本コーングリッツ協会<br>一般社団法人 日本倉庫協会（兵庫県倉庫協会）<br>一般社団法人 姫路植物検疫協会<br>姫路商工会議所<br>飾磨港振興会","en":"Japan Corn Grits Association<br>Japan Warehousing Association (Hyogo Warehousing Association)<br>Himeji Plant Quarantine Association<br>Himeji Chamber of Commerce and Industry<br>Shikama Port Promotion Association","tw":"一般社團法人 日本玉米粗粉協會<br>一般社團法人 日本倉庫協會（兵庫縣倉庫協會）<br>一般社團法人 姬路植物檢疫協會<br>姬路商工會議所<br>飾磨港振興會"},
+  "co-org-td": {"ja":"一般社団法人 日本コーングリッツ協会<br>一般社団法人 日本倉庫協会（兵庫県倉庫協会）<br>一般社団法人 姫路植物検疫協会<br>姫路商工会議所","en":"Japan Corn Grits Association<br>Japan Warehousing Association (Hyogo Warehousing Association)<br>Himeji Plant Quarantine Association<br>Himeji Chamber of Commerce and Industry<br>Shikama Port Promotion Association","tw":"一般社團法人 日本玉米粗粉協會<br>一般社團法人 日本倉庫協會（兵庫縣倉庫協會）<br>一般社團法人 姬路植物檢疫協會<br>姬路商工會議所<br>飾磨港振興會"},
   "co-related-th": {"ja":"関連会社","en":"Affiliates","tw":"關聯公司"},
   "co-related-td": {"ja":"宮本産業株式会社","en":"Miyamoto Sangyo Co., Ltd.","tw":"宮本產業株式會社"},
   "co-silo-link": {"ja":"姫路港サイロ株式会社 →","en":"Himeji Port Silo Co., Ltd. →","tw":"姬路港穀物筒倉株式會社 →"},
@@ -1375,10 +1377,10 @@ const translations = {
   "silo-capacity-th": {"ja":"保管能力","en":"Storage Capacity","tw":"保管能力"},
   "silo-capacity-td": {"ja":"サイロ：52,784トン　／　常温倉庫：1,800トン　／　定温倉庫：9,200トン","en":"Silo: 52,784 tons / Ambient warehouse: 1,800 tons / Temperature-controlled warehouse: 9,200 tons","tw":"穀物筒倉：52,784噸　／　常溫倉庫：1,800噸　／　定溫倉庫：9,200噸"},
   "silo-facility1-h3": {"ja":"サイロ事業所","en":"Silo Facility","tw":"穀物筒倉事業所"},
-  "silo-facility1-body": {"ja":"<strong>コンクリートサイロ</strong>　46基（24,012t）<br><strong>鋼板サイロ</strong>　50基（28,772t）<br><strong>常温倉庫</strong>　延床 983㎡（1,800t）<br><br><span style='font-size:13px;'>付属設備：サイロ冷却装置 / ニューマ式アンローダー / 粗飼料粉砕機 / 選別精選機械 / くん蒸設備（検疫くん蒸）/ 集塵設備 / 強制換気設備</span>","en":"<strong>Concrete silos</strong>: 46 units (24,012t)<br><strong>Steel silos</strong>: 50 units (28,772t)<br><strong>Ambient warehouse</strong>: 983㎡ (1,800t)<br><br><span style='font-size:13px;'>Equipment: Silo cooling system / Pneumatic unloader / Roughage crusher / Sorting machine / Fumigation (quarantine) / Dust collector / Forced ventilation</span>","tw":"<strong>混凝土筒倉</strong>　46基（24,012t）<br><strong>鋼板筒倉</strong>　50基（28,772t）<br><strong>常溫倉庫</strong>　總樓板 983㎡（1,800t）<br><br><span style='font-size:13px;'>附屬設備：筒倉冷卻裝置 / 氣動式卸料機 / 粗飼料粉碎機 / 選別精選機械 / 燻蒸設備（檢疫燻蒸）/ 集塵設備 / 強制換氣設備</span>"},
+  "silo-facility1-body": {"ja":"<strong>コンクリートサイロ</strong>　46基（24,012t）<br><strong>鋼板サイロ</strong>　50基（28,772t）<br><strong>常温倉庫</strong>　延床 983㎡（1,800t）<br><br>付属設備：サイロ冷却装置 / ニューマ式アンローダー / 粗飼料粉砕機 / 選別精選機械 / くん蒸設備（検疫くん蒸）/ 集塵設備 / 強制換気設備","en":"<strong>Concrete silos</strong>: 46 units (24,012t)<br><strong>Steel silos</strong>: 50 units (28,772t)<br><strong>Ambient warehouse</strong>: 983sqm (1,800t)<br><br>Equipment: Silo cooling / Pneumatic unloader / Roughage crusher / Sorting machine / Fumigation / Dust collector / Forced ventilation","tw":"<strong>混凝土筒倉</strong>　46基（24,012t）<br><strong>鋼板筒倉</strong>　50基（28,772t）<br><strong>常溫倉庫</strong>　總樓板 983㎡（1,800t）<br><br>附屬設備：筒倉冷卻裝置 / 氣動式卸料機 / 粗飼料粉碎機 / 選別精選機械 / 燻蒸設備（檢疫燻蒸）/ 集塵設備 / 強制換氣設備"},
   "silo-facility2-h3": {"ja":"中島定温倉庫","en":"Nakashima Temperature-controlled Warehouse","tw":"中島定溫倉庫"},
-  "silo-facility2-body": {"ja":"<strong>延床面積</strong>　4,927.230㎡<br><strong>建築構造</strong>　1・2階 鉄筋コンクリート、3階 鉄骨構造<br><strong>冷却設備</strong>　定温（10〜15℃）/ 冷蔵（-2℃）<br><strong>くん蒸設備</strong>　特A級 短時間くん蒸（検疫くん蒸）<br><br><span style='font-size:13px;'>付属設備：超音波式加湿設備 / オムニリフター</span>","en":"<strong>Total Floor Area</strong>: 4,927.230㎡<br><strong>Structure</strong>: 1F & 2F reinforced concrete, 3F steel<br><strong>Cooling</strong>: Temperature-controlled (10-15°C) / Refrigerated (-2°C)<br><strong>Fumigation</strong>: Special Grade A short-time fumigation (quarantine)<br><br><span style='font-size:13px;'>Equipment: Ultrasonic humidifier / Omni-lifter</span>","tw":"<strong>總樓板面積</strong>　4,927.230㎡<br><strong>建築構造</strong>　1・2樓 鋼筋混凝土、3樓 鋼骨構造<br><strong>冷卻設備</strong>　定溫（10〜15℃）/ 冷藏（-2℃）<br><strong>燻蒸設備</strong>　特A級 短時間燻蒸（檢疫燻蒸）<br><br><span style='font-size:13px;'>附屬設備：超音波式加濕設備 / 升降機</span>"},
-  "silo-map1-btn": {"ja":"📍 サイロをGoogleマップで開く","en":"📍 Open Silo in Google Maps","tw":"📍 在Google地圖開啟穀物筒倉"},
+  "silo-facility2-body": {"ja":"<strong>延床面積</strong>　4,927.230㎡<br><strong>建築構造</strong>　1・2階 鉄筋コンクリート、3階 鉄骨構造<br><strong>冷却設備</strong>　定温（10〜15℃）/ 冷蔵（-2℃）<br><strong>くん蒸設備</strong>　特A級 短時間くん蒸（検疫くん蒸）<br><br>付属設備：超音波式加湿設備 / オムニリフター","en":"<strong>Total Floor Area</strong>: 4,927.230sqm<br><strong>Structure</strong>: 1F-2F reinforced concrete, 3F steel<br><strong>Cooling</strong>: Temperature-controlled (10-15C) / Refrigerated (-2C)<br><strong>Fumigation</strong>: Special Grade A short-time fumigation<br><br>Equipment: Ultrasonic humidifier / Omni-lifter","tw":"<strong>總樓板面積</strong>　4,927.230㎡<br><strong>建築構造</strong>　1・2樓 鋼筋混凝土、3樓 鋼骨構造<br><strong>冷卻設備</strong>　定溫（10〜15℃）/ 冷藏（-2℃）<br><strong>燻蒸設備</strong>　特A級 短時間燻蒸（檢疫燻蒸）<br><br>附屬設備：超音波式加濕設備 / 升降機"},
+"silo-map1-btn": {"ja":"📍 サイロをGoogleマップで開く","en":"📍 Open Silo in Google Maps","tw":"📍 在Google地圖開啟穀物筒倉"},
   "silo-map2-btn": {"ja":"📍 定温倉庫をGoogleマップで開く","en":"📍 Open Warehouse in Google Maps","tw":"📍 在Google地圖開啟定溫倉庫"},
 
   // お問い合わせ
@@ -1404,7 +1406,105 @@ const translations = {
   "footer-silo": {"ja":"【姫路港サイロ】","en":"[Himeji Port Silo]","tw":"【姬路港穀物筒倉】"},
   "footer-privacy": {"ja":"プライバシーポリシー","en":"Privacy Policy","tw":"隱私權政策"},
   "footer-disclaimer": {"ja":"免責事項","en":"Disclaimer","tw":"免責聲明"},
-  "footer-sitemap": {"ja":"サイトマップ","en":"Site Map","tw":"網站地圖"}
+  "footer-sitemap": {"ja":"サイトマップ","en":"Site Map","tw":"網站地圖"},
+
+  "home-eyebrow": {"ja":"Since 1937 — Himeji, Japan","en":"Since 1937 — Himeji, Japan","tw":"Since 1937 — Himeji, Japan"},
+  "home-btn1": {"ja":"製品紹介を見る","en":"Our Products","tw":"查看產品介紹"},
+  "home-btn2": {"ja":"お問い合わせ","en":"Contact Us","tw":"聯絡我們"},
+  "home-eyebrow-about": {"ja":"About Us","en":"About Us","tw":"關於我們"},
+  "co-hq-addr": {"ja":"〒670-0935　兵庫県姫路市北条口2丁目18番地 宮本ビル","en":"2-18 Hojoguchi, Himeji, Hyogo 670-0935 (Miyamoto Bldg.)","tw":"〒670-0935　兵庫縣姬路市北條口2丁目18番地 宮本大樓"},
+  "co-factory-addr": {"ja":"〒672-8064　兵庫県姫路市飾磨区細江字浜万才1296番地","en":"1296 Hamanzai, Hosoe, Shikama-ku, Himeji, Hyogo 672-8064","tw":"〒672-8064　兵庫縣姬路市飾磨區細江字濱萬才1296番地"},
+  "tl-s12": {"ja":"昭和12年","en":"1937","tw":"1937年"},
+  "tl-s21": {"ja":"昭和21年","en":"1946","tw":"1946年"},
+  "tl-s29": {"ja":"昭和29年","en":"1954","tw":"1954年"},
+  "tl-s33": {"ja":"昭和33年","en":"1958","tw":"1958年"},
+  "tl-s35": {"ja":"昭和35年","en":"1960","tw":"1960年"},
+  "tl-s42": {"ja":"昭和42年","en":"1967","tw":"1967年"},
+  "tl-s44": {"ja":"昭和44年","en":"1969","tw":"1969年"},
+  "tl-s56": {"ja":"昭和56年","en":"1981","tw":"1981年"},
+  "tl-s57": {"ja":"昭和57年","en":"1982","tw":"1982年"},
+  "tl-s59": {"ja":"昭和59年","en":"1984","tw":"1984年"},
+  "tl-h17": {"ja":"平成17年","en":"2005","tw":"2005年"},
+  "tl-h19": {"ja":"平成19年","en":"2007","tw":"2007年"},
+  "tl-h20": {"ja":"平成20年","en":"2008","tw":"2008年"},
+  "tl-h22": {"ja":"平成22年","en":"2010","tw":"2010年"},
+  "tl-h26": {"ja":"平成26年","en":"2014","tw":"2014年"},
+  "tl-r01": {"ja":"令和元年","en":"2019","tw":"2019年"},
+  "tl-r04": {"ja":"令和4年","en":"2022","tw":"2022年"},
+  "tl-r06": {"ja":"令和6年","en":"2024","tw":"2024年"},
+  "tl-r08": {"ja":"令和8年","en":"2026","tw":"2026年"},
+  "phil-p01-num": {"ja":"01","en":"01","tw":"01"},
+  "phil-p02-num": {"ja":"02","en":"02","tw":"02"},
+  "phil-p03-num": {"ja":"03","en":"03","tw":"03"},
+  "phil-p04-num": {"ja":"04","en":"04","tw":"04"},
+  "phil-p05-num": {"ja":"05","en":"05","tw":"05"},
+  "phil-p06-num": {"ja":"06","en":"06","tw":"06"},
+  "grits-speed-desc": {"ja":"主にお菓子や食品添加物の原料としてご使用いただいております。","en":"Mainly used as an ingredient for snacks and food additives.","tw":"主要用作零食及食品添加劑的原料。"},
+  "silo-hq-td": {"ja":"〒670-0935　姫路市北条口2丁目18番地 宮本ビル　TEL：079-222-2003","en":"2-18 Hojoguchi, Himeji, Hyogo 670-0935 / TEL: 079-222-2003","tw":"〒670-0935　姬路市北條口2丁目18番地 宮本大樓　TEL：079-222-2003"},
+  "silo-silo-td": {"ja":"〒672-8064　姫路市飾磨区細江5号岸壁　TEL：079-235-7021","en":"5-go Kashi, Hosoe, Shikama-ku, Himeji 672-8064 / TEL: 079-235-7021","tw":"〒672-8064　姬路市飾磨區細江5號岸壁　TEL：079-235-7021"},
+  "silo-cold-td": {"ja":"〒672-8043　姫路市飾磨区中島字宝来3067-14","en":"3067-14 Horai, Nakajima, Shikama-ku, Himeji 672-8043","tw":"〒672-8043　姬路市飾磨區中島字寶來3067-14"},
+  "contact-name": {"ja":"お名前","en":"Name","tw":"姓名"},
+  "contact-company": {"ja":"会社名","en":"Company","tw":"公司名稱"},
+  "contact-email": {"ja":"メールアドレス","en":"Email","tw":"電子郵件"},
+  "contact-tel": {"ja":"電話番号","en":"Phone","tw":"電話號碼"},
+  "contact-type": {"ja":"お問い合わせ種別","en":"Inquiry Type","tw":"問詢類別"},
+  "contact-msg": {"ja":"お問い合わせ内容","en":"Message","tw":"問詢內容"},
+  "contact-note1": {"ja":"内容確認のためにお電話させていただく場合もありますので、お電話番号のご記入をお願いします。","en":"We may contact you by phone to confirm your inquiry. Please provide your phone number.","tw":"我們可能會致電確認問詢內容，請務必填寫您的電話號碼。"},
+  "contact-note2": {"ja":"内容によりましては、ご返事までにお時間がかかる場合、またはご返事を差し上げられない場合がございますのでご了承下さい。","en":"Please note that depending on the content, it may take some time to respond, or we may not be able to respond at all.","tw":"視問詢內容而定，可能需要一些時間回覆，或可能無法回覆，敬請見諒。"},
+  "contact-note3": {"ja":"弊社からの返信を転載・二次利用することはお断り致します。","en":"Reproduction or secondary use of our replies is not permitted.","tw":"不允許轉載或二次利用本公司的回覆。"},
+
+  "phil-span-life": {"ja":"命を繋ぐ","en":"Connect Life","tw":"傳承生命"},
+  "phil-p06b-p": {"ja":"会社の根幹を支えるのは、一人ひとりの従業員です。安全で働きやすい環境を整えることはもちろん、長く安心して働き続けられるよう、待遇・職場環境・人間関係のすべてに真摯に向き合います。社員の成長が会社の成長であり、社員の喜びが会社の喜びであると信じています。","en":"Our employees are the backbone of this company. We are committed to providing a safe and comfortable working environment, and sincerely address all aspects of compensation, workplace environment, and human relationships so that employees can work with confidence for the long term. We believe that our employees growth is our growth, and their happiness is our happiness.","tw":"支撐公司根基的是每一位員工。我們不僅致力於提供安全舒適的工作環境，更對待遇、職場環境、人際關係等所有方面認真面對，讓員工能夠長期安心工作。我們相信員工的成長就是公司的成長，員工的喜悅就是公司的喜悅。"},
+  "silo-equip1": {"ja":"付属設備：サイロ冷却装置 / ニューマ式アンローダー / 粗飼料粉砕機 / 選別精選機械 / くん蒸設備（検疫くん蒸）/ 集塵設備 / 強制換気設備","en":"Equipment: Silo cooling system / Pneumatic unloader / Roughage crusher / Sorting machine / Fumigation (quarantine) / Dust collector / Forced ventilation","tw":"附屬設備：筒倉冷卻裝置 / 氣動式卸料機 / 粗飼料粉碎機 / 選別精選機械 / 燻蒸設備（檢疫燻蒸）/ 集塵設備 / 強制換氣設備"},
+  "silo-equip2": {"ja":"付属設備：超音波式加湿設備 / オムニリフター","en":"Equipment: Ultrasonic humidifier / Omni-lifter","tw":"附屬設備：超音波式加濕設備 / 升降機"},
+  "privacy-h2": {"ja":"プライバシーポリシー","en":"Privacy Policy","tw":"隱私權政策"},
+  "privacy-sub": {"ja":"個人情報保護方針","en":"Personal Information Protection Policy","tw":"個人資訊保護方針"},
+  "privacy-intro": {"ja":"山陽製粉株式会社（以下「当社」）は、お客様の個人情報の保護を重要な責務と認識し、以下の方針に基づき適切に取り扱います。","en":"Sanyo Seifun Co., Ltd. (hereinafter the Company) recognizes the protection of personal information as an important responsibility and handles it appropriately based on the following policy.","tw":"山陽製粉株式會社（以下稱「本公司」）認識到保護客戶個人資訊是重要責任，並依照以下方針妥善處理。"},
+  "privacy-01-num": {"ja":"1　個人情報の収集について","en":"1  Collection of Personal Information","tw":"1　關於個人資訊的收集"},
+  "privacy-01-h3": {"ja":"取得する情報と目的","en":"Information Collected and Purpose","tw":"收集的資訊與目的"},
+  "privacy-01-p": {"ja":"当社は、お問い合わせフォームを通じて、お名前・会社名・メールアドレス・電話番号・お問い合わせ内容を収集しております。収集した個人情報は、お問い合わせへの回答および当社からのご連絡のみに使用し、その他の目的には使用しません。","en":"We collect your name, company name, email address, phone number, and inquiry content through our contact form. Collected personal information is used solely for responding to inquiries and contacting you, and will not be used for any other purpose.","tw":"本公司透過問詢表單收集您的姓名、公司名稱、電子郵件地址、電話號碼及問詢內容。收集的個人資訊僅用於回覆問詢及與您聯絡，不會用於其他目的。"},
+  "privacy-02-num": {"ja":"2　個人情報の第三者提供について","en":"2  Provision of Personal Information to Third Parties","tw":"2　關於向第三方提供個人資訊"},
+  "privacy-02-h3": {"ja":"第三者への提供の禁止","en":"Prohibition of Third-Party Provision","tw":"禁止向第三方提供"},
+  "privacy-02-p": {"ja":"当社は、法令に基づく場合を除き、お客様の個人情報を事前の同意なく第三者に提供・開示することはありません。","en":"Except as required by law, we will not provide or disclose your personal information to third parties without your prior consent.","tw":"除法令要求的情況外，本公司不會未經您事先同意而向第三方提供或揭露您的個人資訊。"},
+  "privacy-03-num": {"ja":"3　個人情報の管理について","en":"3  Management of Personal Information","tw":"3　關於個人資訊的管理"},
+  "privacy-03-h3": {"ja":"安全管理措置","en":"Security Management Measures","tw":"安全管理措施"},
+  "privacy-03-p": {"ja":"当社は、収集した個人情報の漏洩・滅失・毀損の防止に努め、適切な安全管理措置を講じます。個人情報へのアクセスは必要最小限の担当者に限定し、適切に管理します。","en":"We strive to prevent leakage, loss, or damage of collected personal information and implement appropriate security measures. Access to personal information is limited to the minimum necessary personnel and managed appropriately.","tw":"本公司致力於防止收集的個人資訊外洩、滅失或毀損，並採取適當的安全管理措施。對個人資訊的存取限於必要最低限度的負責人員，並妥善管理。"},
+  "privacy-04-num": {"ja":"4　個人情報の開示・訂正・削除について","en":"4  Disclosure, Correction, and Deletion of Personal Information","tw":"4　關於個人資訊的揭露、更正及刪除"},
+  "privacy-04-h3": {"ja":"ご本人からの請求への対応","en":"Responding to Requests from the Individual","tw":"回應本人的請求"},
+  "privacy-04-p": {"ja":"お客様ご本人から個人情報の開示・訂正・削除のご請求があった場合は、ご本人であることを確認の上、速やかに対応いたします。お問い合わせは下記の窓口までご連絡ください。","en":"If you request disclosure, correction, or deletion of your personal information, we will verify your identity and respond promptly. Please contact us at the contact point below.","tw":"如您本人提出個人資訊的揭露、更正或刪除請求，我們將確認您的身份後迅速回應。請透過以下聯絡窗口與我們聯繫。"},
+  "privacy-05-num": {"ja":"5　Cookieの使用について","en":"5  Use of Cookies","tw":"5　關於Cookie的使用"},
+  "privacy-05-h3": {"ja":"Cookieに関する方針","en":"Cookie Policy","tw":"Cookie政策"},
+  "privacy-05-p": {"ja":"当社ウェブサイトでは、サービス向上を目的としてCookieを使用する場合があります。ブラウザの設定によりCookieを無効にすることができますが、一部機能がご利用いただけない場合があります。","en":"Our website may use cookies for the purpose of improving our services. You can disable cookies through your browser settings, but some functions may not be available.","tw":"本公司網站可能為提升服務而使用Cookie。您可透過瀏覽器設定停用Cookie，但部分功能可能無法使用。"},
+  "privacy-06-num": {"ja":"6　プライバシーポリシーの変更について","en":"6  Changes to This Privacy Policy","tw":"6　關於隱私權政策的變更"},
+  "privacy-06-h3": {"ja":"方針の改定","en":"Policy Revisions","tw":"方針修訂"},
+  "privacy-06-p": {"ja":"当社は、法令の変更やサービス内容の変更に伴い、本プライバシーポリシーを予告なく変更する場合があります。変更後の内容は本ページに掲載した時点で効力を生じるものとします。","en":"We may change this Privacy Policy without notice due to changes in laws or service content. The revised content will take effect when posted on this page.","tw":"本公司可能因法令變更或服務內容變更而不事先通知地修改本隱私權政策。修改後的內容於本頁面公告時即生效。"},
+  "privacy-contact-h": {"ja":"個人情報に関するお問い合わせ窓口","en":"Personal Information Inquiry Contact","tw":"個人資訊相關聯絡窗口"},
+  "privacy-contact-name": {"ja":"山陽製粉株式会社","en":"Sanyo Seifun Co., Ltd.","tw":"山陽製粉株式會社"},
+  "privacy-hours": {"ja":"受付時間：平日 8:00〜17:00","en":"Hours: Weekdays 8:00-17:00","tw":"受理時間：平日 8:00〜17:00"},
+  "privacy-date": {"ja":"制定日：2026年6月　山陽製粉株式会社","en":"Established: June 2026  Sanyo Seifun Co., Ltd.","tw":"制定日：2026年6月　山陽製粉株式會社"},
+  "disclaimer-h2": {"ja":"免 責 事 項","en":"Disclaimer","tw":"免 責 聲 明"},
+  "disclaimer-sub": {"ja":"Disclaimer","en":"Disclaimer","tw":"免責聲明"},
+  "disclaimer-intro": {"ja":"山陽製粉株式会社（以下「当社」）は、本ウェブサイトのご利用に関して、以下の免責事項を定めております。本サイトをご利用いただく前に必ずお読みください。","en":"Sanyo Seifun Co., Ltd. (hereinafter the Company) has established the following disclaimer regarding the use of this website. Please read this carefully before using this site.","tw":"山陽製粉株式會社（以下稱「本公司」）就本網站的使用訂定以下免責事項。請在使用本網站前務必詳閱。"},
+  "disc-01-num": {"ja":"1　掲載情報の正確性について","en":"1  Accuracy of Posted Information","tw":"1　關於刊載資訊的正確性"},
+  "disc-01-h3": {"ja":"情報の保証について","en":"Information Warranty","tw":"關於資訊保證"},
+  "disc-01-p": {"ja":"当社は、本ウェブサイトに掲載する情報の正確性・完全性・有用性について万全を期しておりますが、その内容を保証するものではありません。掲載情報は予告なく変更・削除される場合があります。","en":"While we strive to ensure the accuracy, completeness, and usefulness of information posted on this website, we do not guarantee its content. Posted information may be changed or deleted without notice.","tw":"本公司雖盡力確保本網站刊載資訊的正確性、完整性及有用性，但不對其內容作出保證。刊載資訊可能在不事先通知的情況下變更或刪除。"},
+  "disc-02-num": {"ja":"2　損害について","en":"2  Damages","tw":"2　關於損害"},
+  "disc-02-h3": {"ja":"損害賠償の免責","en":"Disclaimer of Liability for Damages","tw":"損害賠償的免責"},
+  "disc-02-p": {"ja":"本ウェブサイトのご利用、または利用不能により生じたいかなる損害についても、当社は一切の責任を負いません。また、本サイトに掲載された情報を利用したことによって生じた損害についても同様とします。","en":"We accept no responsibility for any damages arising from the use or inability to use this website. The same applies to damages arising from the use of information posted on this site.","tw":"對於因使用或無法使用本網站而產生的任何損害，本公司概不負責。因使用本網站刊載資訊而產生的損害亦同。"},
+  "disc-03-num": {"ja":"3　リンクについて","en":"3  Links","tw":"3　關於連結"},
+  "disc-03-h3": {"ja":"外部リンクに関する免責","en":"Disclaimer Regarding External Links","tw":"關於外部連結的免責"},
+  "disc-03-p": {"ja":"本ウェブサイトからリンクされている外部サイトの内容については、当社は一切の責任を負いません。リンク先のウェブサイトのご利用は、お客様ご自身の判断と責任においてお願いいたします。","en":"We accept no responsibility for the content of external sites linked from this website. Please use linked websites at your own judgment and responsibility.","tw":"對於本網站連結的外部網站內容，本公司概不負責。請在您自己的判斷和責任下使用連結網站。"},
+  "disc-04-num": {"ja":"4　著作権について","en":"4  Copyright","tw":"4　關於著作權"},
+  "disc-04-h3": {"ja":"コンテンツの著作権","en":"Copyright of Content","tw":"內容的著作權"},
+  "disc-04-p": {"ja":"本ウェブサイトに掲載されているすべてのコンテンツ（文章・画像・デザイン等）の著作権は、山陽製粉株式会社に帰属します。無断転載・複製・改変等はお断りいたします。","en":"The copyright of all content posted on this website (text, images, design, etc.) belongs to Sanyo Seifun Co., Ltd. Unauthorized reproduction, copying, or modification is not permitted.","tw":"本網站刊載的所有內容（文章、圖片、設計等）的著作權歸山陽製粉株式會社所有。未經授權不得轉載、複製或改編。"},
+  "disc-05-num": {"ja":"5　準拠法・管轄裁判所","en":"5  Governing Law and Jurisdiction","tw":"5　準據法・管轄法院"},
+  "disc-05-h3": {"ja":"法的事項","en":"Legal Matters","tw":"法律事項"},
+  "disc-05-p": {"ja":"本免責事項の解釈および適用は、日本法に準拠するものとします。本サイトに関して生じた紛争については、神戸地方裁判所を第一審の専属的合意管轄裁判所とします。","en":"The interpretation and application of this disclaimer shall be governed by Japanese law. Any disputes arising in connection with this site shall be subject to the exclusive jurisdiction of the Kobe District Court as the court of first instance.","tw":"本免責事項的解釋及適用以日本法為準據法。因本網站產生的紛爭，以神戶地方法院為第一審專屬合意管轄法院。"},
+  "disc-date": {"ja":"制定日：2026年6月　山陽製粉株式会社","en":"Established: June 2026  Sanyo Seifun Co., Ltd.","tw":"制定日：2026年6月　山陽製粉株式會社"},
+  "sus-eyebrow2": {"ja":"Sustainability","en":"Sustainability","tw":"永續發展"},
+  "sus-sdgs-declare": {"ja":"山陽製粉株式会社　はＳＤＧｓ宣言します","en":"Sanyo Seifun Co., Ltd. declares its commitment to the SDGs","tw":"山陽製粉株式會社　宣言支持SDGs"},
+  "nav-products-txt": {"ja":"製品紹介","en":"Products","tw":"產品介紹"},
+  "nav-access-txt": {"ja":"ACCESS","en":"ACCESS","tw":"ACCESS"}
 };
 
 let currentLang = 'ja';
@@ -1425,6 +1525,15 @@ function setLang(lang) {
       el.style.border = '1px solid rgba(255,255,255,.3)';
     }
   });
+  // 採用ページをJA以外では非表示（要素自体を非表示）
+  document.querySelectorAll('[data-i18n="nav-recruit-txt"]').forEach(function(el) {
+    el.style.display = (lang === 'ja') ? '' : 'none';
+  });
+  // 採用ページ表示中にJA以外に切り替えたらホームへ
+  if (lang !== 'ja' && document.getElementById('page-recruit').classList.contains('active')) {
+    showPage('home');
+  }
+
   // テキスト切替
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
