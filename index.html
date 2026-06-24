@@ -256,8 +256,16 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       <a onclick="showPage('silo')">姫路港サイロ</a>
       <a onclick="showPage('recruit')">採用情報</a>
       <a onclick="showPage('contact')">お問い合わせ</a>
+      <div style="display:flex;gap:4px;margin-left:8px;">
+        <button onclick="setLang('ja')" id="btn-ja-pc" style="background:var(--gold);color:#fff;border:none;padding:4px 10px;font-size:11px;cursor:pointer;letter-spacing:.05em;">JA</button>
+        <button onclick="setLang('en')" id="btn-en-pc" style="background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.4);padding:4px 10px;font-size:11px;cursor:pointer;letter-spacing:.05em;">EN</button>
+      </div>
     </nav>
-    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <button onclick="setLang('ja')" id="btn-ja" style="background:var(--gold);color:#fff;border:none;padding:4px 10px;font-size:11px;cursor:pointer;letter-spacing:.05em;font-family:'Noto Sans JP',sans-serif;">JA</button>
+      <button onclick="setLang('en')" id="btn-en" style="background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.4);padding:4px 10px;font-size:11px;cursor:pointer;letter-spacing:.05em;font-family:'Noto Sans JP',sans-serif;">EN</button>
+      <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    </div>
   </div>
 </header>
 
@@ -286,8 +294,8 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div class="hero-grad"></div>
     <div class="hero-inner">
       <div class="hero-eyebrow">Since 1937 — Himeji, Japan</div>
-      <h1>GOOD CORN<br>FOR GOOD PRODUCTS</h1>
-      <p class="hero-tagline">アメリカ産NON-GMOとうもろこしを原料に、<br>コーングリッツ・ホミニーフィードを製造。<br>食のおいしさの土台を、姫路から全国へ。</p>
+      <h1 data-i18n="home-h1">GOOD CORN<br>FOR GOOD FOOD</h1>
+      <p class="hero-tagline" data-i18n="home-tagline">アメリカ産NON-GMOとうもろこしを原料に、<br>コーングリッツ・ホミニーフィードを製造。<br>食のおいしさの土台を、姫路から全国へ。</p>
       <div class="hero-cta">
         <button class="btn-primary" onclick="showPage('grits')">製品紹介を見る</button>
         <button class="btn-outline" onclick="showPage('contact')">お問い合わせ</button>
@@ -296,39 +304,39 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
   </div>
 
   <div class="usage-strip">
-    <p>スナック菓子 ／ ビール原料 ／ 焼酎・ウイスキー原料 ／ ピザ打ち粉 ／ 雑穀原料 ／ パン原料 ／ 唐揚げ粉・天ぷら粉 ／ コーンフラワー ／ ホミニーフィード</p>
+    <p data-i18n="home-usage">スナック菓子 ／ ビール原料 ／ 焼酎・ウイスキー原料 ／ ピザ打ち粉 ／ 雑穀原料 ／ パン原料 ／ 唐揚げ粉・天ぷら粉 ／ コーンフラワー ／ ホミニーフィード</p>
   </div>
 
   <div class="section">
     <span class="section-eyebrow">About Us</span>
-    <h2 class="section-title">穀物加工約90年の技術と誠実さ</h2>
-    <p class="section-lead">当社は創業以来、小麦製粉を事業の柱としてまいりました。時代の変化とともにコーングリッツ製造へと事業を転換し、約90年にわたり穀物加工に携わっております。信頼できる生産者から穀物を輸入し、当社の技術でひと手間加えることで、おいしさの可能性を広げています。</p>
+    <h2 class="section-title" data-i18n="home-about-title">穀物加工約90年の技術と誠実さ</h2>
+    <p class="section-lead" data-i18n="home-about-lead">当社は創業以来、小麦製粉を事業の柱としてまいりました。時代の変化とともにコーングリッツ製造へと事業を転換し、約90年にわたり穀物加工に携わっております。信頼できる生産者から穀物を輸入し、当社の技術でひと手間加えることで、おいしさの可能性を広げています。</p>
     <div class="feature-grid">
       <div class="feature-card" onclick="showPage('business')">
         <!-- 差し替え: src="images/grits.jpg" -->
         <img class="feature-card-img" src="corn-f.jpg" alt="コーングリッツ製造">
         <div class="feature-card-body">
-          <h3>コーングリッツ製造</h3>
-          <p>NON-GMOコーンをドライミリング製法で粉砕。用途別に様々な粒度の製品を製造しております。</p>
-          <span class="feature-link">詳しく見る →</span>
+          <h3 data-i18n="home-card1-title">コーングリッツ製造</h3>
+          <p data-i18n="home-card1-text">NON-GMOコーンをドライミリング製法で粉砕。用途別に様々な粒度の製品を製造しております。</p>
+          <span class="feature-link" data-i18n="home-card1-link">詳しく見る →</span>
         </div>
       </div>
       <div class="feature-card" onclick="showPage('hominy')">
         <!-- 差し替え: src="images/cattle.jpg" -->
         <img class="feature-card-img" src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=600&q=80" alt="ホミニーフィード・畜産">
         <div class="feature-card-body">
-          <h3>ホミニーフィード</h3>
-          <p>グリッツ製造時に分離される胚芽・皮・デンプン質を原料にした高エネルギー飼料・きのこ培地。</p>
-          <span class="feature-link">詳しく見る →</span>
+          <h3 data-i18n="home-card2-title">ホミニーフィード</h3>
+          <p data-i18n="home-card2-text">グリッツ製造時に分離される胚芽・皮・デンプン質を原料にした高エネルギー飼料・きのこ培地。</p>
+          <span class="feature-link" data-i18n="home-card2-link">詳しく見る →</span>
         </div>
       </div>
       <div class="feature-card" onclick="showPage('silo')">
         <!-- 差し替え: src="images/silo.jpg" -->
         <img class="feature-card-img" src="%E5%86%99%E7%9C%9F%201.JPG" alt="姫路港サイロ">
         <div class="feature-card-body">
-          <h3>姫路港サイロ・倉庫業</h3>
-          <p>西播磨最大の穀物サイロを保有。保税蔵置場として輸入穀物の保管・通関・輸送をワンストップで対応。</p>
-          <span class="feature-link">詳しく見る →</span>
+          <h3 data-i18n="home-card3-title">姫路港サイロ・倉庫業</h3>
+          <p data-i18n="home-card3-text">西播磨最大の穀物サイロを保有。保税蔵置場として輸入穀物の保管・通関・輸送をワンストップで対応。</p>
+          <span class="feature-link" data-i18n="home-card3-link">詳しく見る →</span>
         </div>
       </div>
     </div>
@@ -337,8 +345,8 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
   <div class="divider-gold"></div>
   <div class="section" style="text-align:center;padding-bottom:80px;">
     <span class="section-eyebrow">NON-GMO</span>
-    <h2 class="section-title" style="display:inline-block;">遺伝子組み換えではないコーンを使用</h2>
-    <p class="section-lead" style="margin:24px auto 32px;">アメリカの契約農場にて生産された「分別生産流通管理済みコーン」のみを使用。様々な粒度でご用意し、オーダーメイドも承ります。</p>
+    <h2 class="section-title" style="display:inline-block;" data-i18n="home-nongmo-title">遺伝子組み換えではないコーンを使用</h2>
+    <p class="section-lead" style="margin:24px auto 32px;" data-i18n="home-nongmo-lead">アメリカの契約農場にて生産された「分別生産流通管理済みコーン」のみを使用。様々な粒度でご用意し、オーダーメイドも承ります。</p>
     <button class="btn-primary" onclick="showPage('contact')">お気軽にご相談ください</button>
 
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:40px;">
@@ -868,11 +876,9 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
           <label class="form-label">お問い合わせ種別<span>必須</span></label>
           <select class="form-select" id="ftype">
             <option value="">選択してください</option>
-            <option>製品について（コーングリッツ）</option>
-            <option>製品について（ホミニーフィード）</option>
-            <option>オーダーメイド・特注品について</option>
+            <option>製品について</option>
             <option>姫路港サイロについて</option>
-            <option>採用について</option>
+            <option>求人について</option>
             <option>その他</option>
           </select>
         </div>
@@ -880,10 +886,14 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
         <button class="form-submit" onclick="submitForm()">送　信</button>
       </div>
 
-      <div style="margin-top:32px;padding:20px 24px;background:var(--cream);border:1px solid var(--border);border-left:3px solid var(--text-light);">
-        <p style="font-size:13px;font-weight:500;color:var(--navy);margin-bottom:10px;">【注意事項】</p>
-        <ol style="font-size:13px;color:var(--text-light);line-height:2.2;padding-left:18px;">
-          <li>このフォームを利用しての商品やサービスの売り込み・ご紹介のメールにつきましては、返信致しかねます。</li>
+      <div style="margin-top:32px;padding:24px 28px;background:#fff3f3;border:2px solid #c0392b;border-left:6px solid #c0392b;">
+        <p style="font-size:14px;font-weight:700;color:#c0392b;margin-bottom:12px;">【重要：営業・勧誘メールについて】</p>
+        <p style="font-size:13.5px;color:#c0392b;font-weight:500;line-height:1.9;margin-bottom:16px;">
+          当フォームへの営業・勧誘・サービス紹介を目的としたお問い合わせは、固くお断りいたします。<br>
+          該当するお問い合わせへの返信は一切行いません。また、送信者情報を記録・保管する場合があります。
+        </p>
+        <p style="font-size:13px;font-weight:500;color:var(--navy);margin-bottom:10px;">【その他注意事項】</p>
+        <ol style="font-size:13px;color:var(--text);line-height:2.2;padding-left:18px;">
           <li>内容確認のためにお電話させていただく場合もありますので、お電話番号のご記入をお願いします。</li>
           <li>内容によりましては、ご返事までにお時間がかかる場合、またはご返事を差し上げられない場合がございますのでご了承下さい。</li>
           <li>弊社からの返信を転載・二次利用することはお断り致します。</li>
@@ -1095,7 +1105,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div>
       <div class="footer-logo-ja">山陽製粉株式会社</div>
       <span class="footer-logo-en">SANYO SEIFUN CO., LTD.</span>
-      <p class="footer-tagline">コーングリッツ・ホミニーフィードの製造販売。<br>姫路から食のおいしさの土台を支えます。</p>
+      
     </div>
     <div class="footer-col">
       <h4>Navigation</h4>
@@ -1129,6 +1139,73 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 </footer>
 
 <script>
+// 翻訳データ
+const translations = {
+  // ナビ
+  'nav-home': {ja:'ホーム', en:'Home'},
+  'nav-business': {ja:'事業内容', en:'Business'},
+  'nav-company': {ja:'会社概要', en:'Company'},
+  'nav-history': {ja:'沿革', en:'History'},
+  'nav-philosophy': {ja:'企業理念', en:'Philosophy'},
+  'nav-factory': {ja:'工場・倉庫案内', en:'Factory & Warehouse'},
+  'nav-grits': {ja:'コーングリッツ', en:'Corn Grits'},
+  'nav-hominy': {ja:'ホミニーフィード', en:'Hominy Feed'},
+  'nav-sustainability': {ja:'サステナビリティ', en:'Sustainability'},
+  'nav-silo': {ja:'姫路港サイロ', en:'Himeji Port Silo'},
+  'nav-recruit': {ja:'採用情報', en:'Careers'},
+  'nav-contact': {ja:'お問い合わせ', en:'Contact'},
+  // ホーム
+  'home-eyebrow': {ja:'Since 1937 — Himeji, Japan', en:'Since 1937 — Himeji, Japan'},
+  'home-h1': {ja:'GOOD CORN<br>FOR GOOD FOOD', en:'GOOD CORN<br>FOR GOOD FOOD'},
+  'home-tagline': {ja:'アメリカ産NON-GMOとうもろこしを原料に、<br>コーングリッツ・ホミニーフィードを製造。<br>食のおいしさの土台を、姫路から全国へ。', en:'Using 100% American NON-GMO corn,<br>we manufacture corn grits and hominy feed.<br>From Himeji, supporting the foundation of good food across Japan.'},
+  'home-btn1': {ja:'製品紹介を見る', en:'Our Products'},
+  'home-btn2': {ja:'お問い合わせ', en:'Contact Us'},
+  'home-usage': {ja:'スナック菓子 ／ ビール原料 ／ 焼酎・ウイスキー原料 ／ ピザ打ち粉 ／ 雑穀原料 ／ パン原料 ／ 唐揚げ粉・天ぷら粉 ／ コーンフラワー ／ ホミニーフィード', en:'Snacks / Beer / Shochu & Whisky / Pizza flour / Multigrain / Bread / Fried food coating / Corn flour / Hominy feed'},
+  'home-eyebrow2': {ja:'About Us', en:'About Us'},
+  'home-about-title': {ja:'穀物加工約90年の技術と誠実さ', en:'90 Years of Grain Processing Expertise'},
+  'home-about-lead': {ja:'当社は創業以来、小麦製粉を事業の柱としてまいりました。時代の変化とともにコーングリッツ製造へと事業を転換し、約90年にわたり穀物加工に携わっております。信頼できる生産者から穀物を輸入し、当社の技術でひと手間加えることで、おいしさの可能性を広げています。', en:'Since our founding, we have been committed to grain processing. After transitioning from wheat flour milling to corn grits manufacturing, we have spent nearly 90 years refining our craft. By importing grain from trusted producers and adding our expertise, we continue to expand the possibilities of great taste.'},
+  'home-card1-title': {ja:'コーングリッツ製造', en:'Corn Grits Manufacturing'},
+  'home-card1-text': {ja:'NON-GMOコーンをドライミリング製法で粉砕。用途別に様々な粒度の製品を製造しております。', en:'We grind NON-GMO corn using the dry milling process, producing products in various particle sizes for different applications.'},
+  'home-card1-link': {ja:'詳しく見る →', en:'Learn more →'},
+  'home-card2-title': {ja:'ホミニーフィード', en:'Hominy Feed'},
+  'home-card2-text': {ja:'グリッツ製造時に分離される胚芽・皮・デンプン質を原料にした高エネルギー飼料・きのこ培地。', en:'A high-energy feed made from the germ, bran, and starch separated during grits production. Also used as mushroom cultivation substrate.'},
+  'home-card2-link': {ja:'詳しく見る →', en:'Learn more →'},
+  'home-card3-title': {ja:'姫路港サイロ・倉庫業', en:'Himeji Port Silo & Warehousing'},
+  'home-card3-text': {ja:'西播磨最大の穀物サイロを保有。保税蔵置場として輸入穀物の保管・通関・輸送をワンストップで対応。', en:"We operate the largest grain silo in the Nishi-Harima region, offering one-stop bonded warehouse services including storage, customs clearance, and transport."},
+  'home-card3-link': {ja:'詳しく見る →', en:'Learn more →'},
+  'home-nongmo-eyebrow': {ja:'NON-GMO', en:'NON-GMO'},
+  'home-nongmo-title': {ja:'遺伝子組み換えではないコーンを使用', en:'Using Non-GMO Corn'},
+  'home-nongmo-lead': {ja:'アメリカの契約農場にて生産された「分別生産流通管理済みコーン」のみを使用。様々な粒度でご用意し、オーダーメイドも承ります。', en:'We use only Identity Preserved (IP) corn grown at contracted farms in the United States. Available in various particle sizes, with custom orders accepted.'},
+  'home-nongmo-btn': {ja:'お気軽にご相談ください', en:'Contact Us'},
+};
+
+let currentLang = 'ja';
+
+function setLang(lang) {
+  currentLang = lang;
+  // ボタンのスタイル切替
+  ['btn-ja','btn-en','btn-ja-pc','btn-en-pc'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (id.includes(lang)) {
+      el.style.background = 'var(--gold)';
+      el.style.color = '#fff';
+      el.style.border = 'none';
+    } else {
+      el.style.background = 'transparent';
+      el.style.color = 'rgba(255,255,255,.7)';
+      el.style.border = '1px solid rgba(255,255,255,.4)';
+    }
+  });
+  // テキスト切替
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[key] && translations[key][lang]) {
+      el.innerHTML = translations[key][lang];
+    }
+  });
+}
+
 function showPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   var t=document.getElementById('page-'+id);
