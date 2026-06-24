@@ -43,8 +43,8 @@ main{padding-top:80px;min-height:100vh;}
 
 /* HERO */
 .hero{position:relative;height:520px;overflow:hidden;}
-.hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.42);}
-.hero-grad{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,39,68,.25),rgba(26,39,68,.7));}
+.hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.65);}
+.hero-grad{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,39,68,.1),rgba(26,39,68,.5));}
 .hero-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;}
 .hero-eyebrow{display:inline-block;font-size:11px;letter-spacing:.3em;color:var(--gold-light);border:1px solid rgba(200,146,10,.4);padding:4px 16px;margin-bottom:20px;}
 .hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(26px,5vw,46px);font-weight:700;color:var(--white);line-height:1.4;margin-bottom:22px;letter-spacing:.08em;}
@@ -53,7 +53,7 @@ main{padding-top:80px;min-height:100vh;}
 
 /* PAGE HEADER (各ページ上部) */
 .page-header{position:relative;height:240px;overflow:hidden;}
-.page-header-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.32);}
+.page-header-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.55);}
 .page-header-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
 .page-header-inner h2{font-family:'Noto Serif JP',serif;font-size:clamp(22px,4vw,34px);font-weight:700;color:var(--white);letter-spacing:.15em;margin-bottom:8px;}
 .page-header-inner p{font-size:13px;color:rgba(255,255,255,.65);letter-spacing:.1em;}
@@ -129,7 +129,7 @@ main{padding-top:80px;min-height:100vh;}
 
 /* PHILOSOPHY */
 .phil-hero{position:relative;height:280px;overflow:hidden;}
-.phil-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(.28);}
+.phil-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(.5);}
 .phil-hero-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
 .phil-tagline{font-family:'Noto Serif JP',serif;font-size:clamp(22px,4vw,36px);font-weight:700;color:var(--white);letter-spacing:.15em;margin-bottom:10px;}
 .phil-tagline span{color:var(--gold-light);}
@@ -304,7 +304,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div class="feature-grid">
       <div class="feature-card" onclick="showPage('business')">
         <!-- 差し替え: src="images/grits.jpg" -->
-        <img class="feature-card-img" src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&q=80" alt="コーングリッツ製造">
+        <img class="feature-card-img" src="corn p1.avif" alt="コーングリッツ製造">
         <div class="feature-card-body">
           <h3>コーングリッツ製造</h3>
           <p>NON-GMOコーンをドライミリング製法で粉砕。用途別に様々な粒度の製品を製造しております。</p>
@@ -390,7 +390,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       <tr><th>本社所在地</th><td>
         <div style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;">
           <div>〒670-0935　兵庫県姫路市北条口2丁目18番地 宮本ビル<br><a href="https://maps.app.goo.gl/sRq1u9985K5PDWQW6" target="_blank" style="display:inline-block;margin-top:8px;background:var(--gold);color:#fff;font-size:12px;padding:5px 14px;text-decoration:none;letter-spacing:.05em;">📍 Googleマップで開く</a></div>
-          <img src="%E5%86%99%E7%9C%9F3.JPG" alt="山陽製粉本社" style="width:220px;height:150px;object-fit:cover;display:block;flex-shrink:0;">
+          <img src="%E5%86%99%E7%9C%9F3.JPG" alt="山陽製粉本社" style="width:220px;height:200px;object-fit:cover;object-position:top;display:block;flex-shrink:0;">
         </div>
       </td></tr>
       <tr><th>工場所在地</th><td>〒672-8064　兵庫県姫路市飾磨区細江字浜万才1296番地<br><a href="https://maps.app.goo.gl/REeQN5i9b5EJSngv5" target="_blank" style="display:inline-block;margin-top:8px;background:var(--gold);color:#fff;font-size:12px;padding:5px 14px;text-decoration:none;letter-spacing:.05em;">📍 Googleマップで開く</a></td></tr>
@@ -427,7 +427,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       </div>
       <div class="content-img">
         <!-- 差し替え: src="images/factory.jpg" -->
-        <img src="sanyo factory2.avif" alt="製粉工場">
+        <img src="sanyo factory.avif" alt="製粉工場">
       </div>
     </div>
 
@@ -447,7 +447,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       </div>
       <div class="content-img">
         <!-- 差し替え: src="images/warehouse.jpg" -->
-        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=80" alt="営業倉庫">
+        <img src="sanyo factory2.avif" alt="営業倉庫">
       </div>
     </div>
 
@@ -470,8 +470,8 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div class="page-header-inner"><h2>沿 革</h2><p>昭和12年創業から現在まで</p></div>
   </div>
   <div class="section">
-    <img src="enkaku.JPG" alt="沿革" style="width:100%;max-height:300px;object-fit:cover;display:block;margin-bottom:40px;">
-    <div class="timeline">
+    <div style="display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;">
+      <div class="timeline">
       <div class="tl-item"><span class="tl-year">昭和12年</span><span class="tl-event">山陽興業株式会社を設立（素麺穀物小麦粉販売）</span></div>
       <div class="tl-item"><span class="tl-year">昭和21年</span><span class="tl-event">小麦製粉の製造へ進出</span></div>
       <div class="tl-item"><span class="tl-year">昭和29年</span><span class="tl-event">商号を山陽製粉株式会社へ変更。代表取締役に宮本義郎が就任</span></div>
@@ -489,6 +489,8 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       <div class="tl-item"><span class="tl-year">平成26年</span><span class="tl-event">色彩選別機を更新し製造品質を強化</span></div>
       <div class="tl-item"><span class="tl-year">令和元年</span><span class="tl-event">全フォークリフトをエンジン車からバッテリー車へ更新</span></div>
       <div class="tl-item"><span class="tl-year">令和4年</span><span class="tl-event">代表取締役に宮本義太郎が就任</span></div>
+    </div>
+      <img src="enkaku.JPG" alt="沿革" style="width:280px;object-fit:cover;display:block;border:1px solid var(--border);">
     </div>
   </div>
 </div>
@@ -647,7 +649,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       </div>
       <div class="silo-card">
         <!-- 差し替え: src="images/cold_storage.jpg" -->
-        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80" alt="中島定温倉庫">
+        <img src="nakashima.jpg" alt="中島定温倉庫">
         <div class="silo-card-body">
           <h3>中島定温倉庫</h3>
           <p><strong>延床面積</strong>　4,927.230㎡<br><strong>建築構造</strong>　1・2階 鉄筋コンクリート、3階 鉄骨構造<br><strong>冷却設備</strong>　定温（10〜15℃）/ 冷蔵（-2℃）<br><strong>くん蒸設備</strong>　特A級 短時間くん蒸（検疫くん蒸）<br><br><span style="font-size:13px;">付属設備：超音波式加湿設備 / オムニリフター</span></p>
@@ -672,96 +674,10 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div class="page-header-inner"><h2>採 用 情 報</h2><p>一般事務スタッフ（正社員）募集中　※2026年6月更新</p></div>
   </div>
   <div class="section">
-
-    <div class="info-box" style="margin-top:0;">
-      <h3>募集職種：一般事務スタッフ（正社員）</h3>
-      <p style="margin-top:10px;">食品原材料（コーングリッツ）の製造・販売を手がける当社にて、事務業務全般をお任せします。主なお取引先は大手ビール会社・菓子会社・大手総合商社です。</p>
-      <ul style="margin-top:12px;padding-left:20px;font-size:14px;color:var(--text-light);line-height:2.2;">
-        <li>受発注業務</li>
-        <li>書類作成</li>
-        <li>電話対応・その他サポート業務</li>
-      </ul>
+    <div class="info-box" style="margin-top:0;text-align:center;padding:48px 32px;">
+      <p style="font-size:22px;font-family:'Noto Serif JP',serif;font-weight:600;color:var(--navy);margin-bottom:16px;">現在、新規採用は行っておりません</p>
+      <p style="font-size:14px;color:var(--text-light);line-height:2;">募集が再開された際は、このページにてお知らせいたします。<br>ご関心をお持ちいただき、ありがとうございます。</p>
     </div>
-
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;">
-      <div class="recruit-card">
-        <div class="recruit-tag">給与・待遇</div>
-        <div class="recruit-detail" style="margin-top:4px;">
-          <p><strong>給与</strong>　月給 225,000円〜300,000円（基本給）<br>※事務職経験者は優遇</p>
-          <p><strong>昇給</strong>　年1回</p>
-          <p><strong>賞与</strong>　年2回</p>
-          <p><strong>通勤手当</strong>　実費支給（上限 月額24,000円）</p>
-          <p><strong>各種保険</strong>　雇用・労災・健康・厚生年金</p>
-          <p><strong>退職金</strong>　制度あり（勤続3年以上）</p>
-          <p><strong>医療保険等</strong>　入社一定期間経過後、医療保険・生命保険に団体加入（掛け金は全額会社負担・任意）</p>
-        </div>
-      </div>
-      <div class="recruit-card">
-        <div class="recruit-tag">勤務条件</div>
-        <div class="recruit-detail" style="margin-top:4px;">
-          <p><strong>勤務地</strong>　兵庫県姫路市飾磨区細江字浜万才1296（山陽製粉 工場）<br>飾磨駅（山陽電車）より車10分／駐車場あり</p>
-          <p><strong>勤務時間</strong>　8:00〜17:00（休憩60分）</p>
-          <p><strong>残業</strong>　なし</p>
-          <p><strong>休日</strong>　日曜・祝日、土曜日（月3回）、夏季・冬季・創立記念日ほか<br>年間休日118日</p>
-          <p><strong>雇用形態</strong>　正社員（試用期間3ヶ月・同条件）</p>
-          <p><strong>定年</strong>　62歳（再雇用制度あり・最長65歳まで）</p>
-        </div>
-      </div>
-      <div class="recruit-card">
-        <div class="recruit-tag">応募要件</div>
-        <div class="recruit-detail" style="margin-top:4px;">
-          <p><strong>学歴</strong>　高校卒業以上</p>
-          <p><strong>必須経験</strong>　事務経験者</p>
-          <p><strong>PCスキル</strong>　Excel・Word・ビジネスメールの基本操作</p>
-          <p><strong>免許・資格</strong>　普通自動車免許（AT限定可）※通勤のため</p>
-        </div>
-      </div>
-      <div class="recruit-card">
-        <div class="recruit-tag">当社の特長・福利厚生</div>
-        <div class="recruit-detail" style="margin-top:4px;">
-          <p><strong>残業ゼロ</strong>　定時退社で、家庭や趣味との両立が万全です。</p>
-          <p><strong>長期就労</strong>　平均勤続年数は約25年。腰を据えて長く働ける職場です。</p>
-          <p><strong>永年勤続表彰</strong>　5年ごとに報奨金を支給。</p>
-          <p><strong>安定した経営</strong>　創立95年。景気に左右されない「食」の安定需要に支えられた堅実な企業です。</p>
-          <p><strong>ライフへの配慮</strong>　育児・介護等の事情がある場合は、可能な範囲で就業時間の相談に応じます。</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="info-box" style="margin-top:32px;">
-      <h3>選考プロセス</h3>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:16px;text-align:center;">
-        <div style="padding:16px 8px;border-right:1px solid var(--border);">
-          <div style="font-size:11px;letter-spacing:.15em;color:var(--gold);margin-bottom:6px;">STEP 1</div>
-          <div style="font-size:14px;font-weight:500;color:var(--navy);">応募</div>
-          <div style="font-size:12px;color:var(--text-light);margin-top:6px;">履歴書（写真貼付）を郵送</div>
-        </div>
-        <div style="padding:16px 8px;border-right:1px solid var(--border);">
-          <div style="font-size:11px;letter-spacing:.15em;color:var(--gold);margin-bottom:6px;">STEP 2</div>
-          <div style="font-size:14px;font-weight:500;color:var(--navy);">書類選考</div>
-          <div style="font-size:12px;color:var(--text-light);margin-top:6px;">到着後5日以内に連絡</div>
-        </div>
-        <div style="padding:16px 8px;border-right:1px solid var(--border);">
-          <div style="font-size:11px;letter-spacing:.15em;color:var(--gold);margin-bottom:6px;">STEP 3</div>
-          <div style="font-size:14px;font-weight:500;color:var(--navy);">面接</div>
-          <div style="font-size:12px;color:var(--text-light);margin-top:6px;">1回（対面）</div>
-        </div>
-        <div style="padding:16px 8px;">
-          <div style="font-size:11px;letter-spacing:.15em;color:var(--gold);margin-bottom:6px;">STEP 4</div>
-          <div style="font-size:14px;font-weight:500;color:var(--navy);">結果通知</div>
-          <div style="font-size:12px;color:var(--text-light);margin-top:6px;">面接後7日以内に連絡</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="recruit-note" style="margin-top:32px;">
-      <strong style="display:block;margin-bottom:8px;color:var(--navy);">採用担当</strong>
-      浦崎・魚谷<br>
-      TEL：079-222-2003　FAX：079-223-0430<br>
-      〒670-0935　兵庫県姫路市北条口2丁目18番地 宮本ビル　山陽製粉株式会社 本社<br><br>
-      <span style="font-size:12px;">※本求人票は雇用契約書ではありません。採用時には別途書面での労働契約を締結します。</span>
-    </div>
-
   </div>
 </div>
 
