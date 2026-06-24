@@ -234,8 +234,8 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       <span class="logo-en">SANYO SEIFUN CO., LTD.</span>
     </a>
     <nav>
-      <a onclick="showPage('home')">ホーム</a>
-      <a onclick="showPage('business')">事業内容</a>
+      <a onclick="showPage('home')" data-i18n="nav-home-txt">ホーム</a>
+      <a onclick="showPage('business')" data-i18n="nav-business-txt">事業内容</a>
       <div class="nav-dropdown">
         <a onclick="showPage('company')">会社概要</a>
         <div class="dropdown-menu">
@@ -252,18 +252,14 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
           <a onclick="showPage('hominy')">ホミニーフィード</a>
         </div>
       </div>
-      <a onclick="showPage('sustainability')">サステナビリティ</a>
-      <a onclick="showPage('silo')">姫路港サイロ</a>
-      <a onclick="showPage('recruit')">採用情報</a>
-      <a onclick="showPage('contact')">お問い合わせ</a>
-      <div style="display:flex;gap:4px;margin-left:8px;">
-        <button onclick="setLang('ja')" id="btn-ja-pc" style="background:var(--gold);color:#fff;border:none;padding:4px 10px;font-size:11px;cursor:pointer;letter-spacing:.05em;">JA</button>
-        <button onclick="setLang('en')" id="btn-en-pc" style="background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.4);padding:4px 10px;font-size:11px;cursor:pointer;letter-spacing:.05em;">EN</button>
-      </div>
+      <a onclick="showPage('sustainability')" data-i18n="nav-sustainability-txt">サステナビリティ</a>
+      <a onclick="showPage('silo')" data-i18n="nav-silo-txt">姫路港サイロ</a>
+      <a onclick="showPage('recruit')" data-i18n="nav-recruit-txt">採用情報</a>
+      <a onclick="showPage('contact')" data-i18n="nav-contact-txt">お問い合わせ</a>
     </nav>
-    <div style="display:flex;align-items:center;gap:8px;">
-      <button onclick="setLang('ja')" id="btn-ja" style="background:var(--gold);color:#fff;border:none;padding:4px 10px;font-size:11px;cursor:pointer;letter-spacing:.05em;font-family:'Noto Sans JP',sans-serif;">JA</button>
-      <button onclick="setLang('en')" id="btn-en" style="background:transparent;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.4);padding:4px 10px;font-size:11px;cursor:pointer;letter-spacing:.05em;font-family:'Noto Sans JP',sans-serif;">EN</button>
+    <div style="display:flex;align-items:center;gap:6px;">
+      <button onclick="setLang('ja')" id="btn-ja" style="background:var(--gold);color:#fff;border:none;padding:5px 10px;font-size:12px;font-weight:500;cursor:pointer;border-radius:2px;">JA</button>
+      <button onclick="setLang('en')" id="btn-en" style="background:transparent;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.3);padding:5px 10px;font-size:12px;font-weight:500;cursor:pointer;border-radius:2px;">EN</button>
       <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
     </div>
   </div>
@@ -362,12 +358,12 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 <div id="page-business" class="page">
   <div class="page-header">
     <img class="page-header-img" src="top.JPG" alt="山陽製粉">
-    <div class="page-header-inner"><h2>事 業 内 容</h2><p>コーングリッツ製造・ホミニーフィード製造・倉庫業</p></div>
+    <div class="page-header-inner"><h2 data-i18n="business-h2">事 業 内 容</h2><p data-i18n="business-sub">コーングリッツ製造・ホミニーフィード製造・倉庫業</p></div>
   </div>
   <div class="section">
     <div class="content-block">
       <div class="content-text">
-        <h3>コーングリッツを作っています</h3>
+        <h3 data-i18n="business-grits-h3">コーングリッツを作っています</h3>
         <p>コーングリッツとは、コーンを乾燥させた後に細かく粉砕したものです（ドライミリング）。主に、ビールやスナック菓子・食品添加物など様々な食品原料としてご使用いただいております。<br><br>当社では、アメリカ産分別生産流通管理済み（旧表記：非遺伝子組み換え）コーンを原料に使用しております。</p>
       </div>
       <div class="content-img">
@@ -379,7 +375,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     </div>
     <div class="content-block rev">
       <div class="content-text">
-        <h3>畜産用飼料としてホミニーフィード</h3>
+        <h3 data-i18n="business-hominy-h3">畜産用飼料としてホミニーフィード</h3>
         <p>コーンは捨てるところの無い万能な穀物と言われています。グリッツ製造時に発生する胚芽・皮・デンプン質は飼料用として利用されております。<br><br>飼料価値も高く、多くの飼料会社様・畜産農家様にご愛用いただいております。また、きのこの培地としても広くご利用頂いております。</p>
       </div>
       <div class="content-img">
@@ -388,7 +384,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       </div>
     </div>
     <div class="info-box">
-      <h3>コーンはアレルギー反応が極めて少ない穀物</h3>
+      <h3 data-i18n="business-allergy-h3">コーンはアレルギー反応が極めて少ない穀物</h3>
       <div style="display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;margin-top:12px;">
         <p>食物アレルギーは、身体が食物に含まれるタンパク質を異物として認識し、過敏な反応を起こすことです。我が国における食物アレルギー体質をもつ方は全人口の１〜２％（乳児に限定すると約10％）と考えられています。そういった中で、とうもろこしに起因するアレルギーは例が極めて少なく、比較的安心して食べることのできる穀物といえます。</p>
         <img src="baby.avif" alt="赤ちゃん" style="width:160px;height:200px;object-fit:cover;display:block;flex-shrink:0;">
@@ -401,7 +397,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 <div id="page-company" class="page">
   <div class="page-header">
     <img class="page-header-img" src="top.JPG" alt="山陽製粉">
-    <div class="page-header-inner"><h2>会 社 概 要</h2><p>山陽製粉株式会社について</p></div>
+    <div class="page-header-inner"><h2 data-i18n="company-h2">会 社 概 要</h2><p data-i18n="company-sub">山陽製粉株式会社について</p></div>
   </div>
   <div class="section">
     <table class="co-table">
@@ -493,7 +489,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 <div id="page-history" class="page">
   <div class="page-header">
     <img class="page-header-img" src="top.JPG" alt="山陽製粉">
-    <div class="page-header-inner"><h2>沿 革</h2><p>昭和12年創業から現在まで</p></div>
+    <div class="page-header-inner"><h2 data-i18n="history-h2">沿 革</h2><p data-i18n="history-sub">昭和12年創業から現在まで</p></div>
   </div>
   <div class="section">
     <div style="display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;">
@@ -528,12 +524,12 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
   <div class="phil-hero">
     <img src="top.JPG" alt="山陽製粉">
     <div class="phil-hero-inner">
-      <div class="phil-tagline">「礎を研ぎ、<span>命を繋ぐ</span>」</div>
-      <div class="phil-sub">企業理念</div>
+      <div class="phil-tagline" data-i18n="phil-h2">「礎を研ぎ、<span>命を繋ぐ</span>」</div>
+      <div class="phil-sub" data-i18n="phil-sub">企業理念</div>
     </div>
   </div>
   <div class="section">
-    <p class="phil-body">トウモロコシは、古来より人類が繋いできた命の源です。私たちは、その黄金の一粒一粒に宿る可能性を、プロの技術と感性で研ぎ澄まし、あらゆる食品の「おいしさの土台」へと昇華させます。<br><br>私たちが作るのは、主役ではありません。しかし、私たちが生み出す一袋がなければ、あのビールの喉越しも、あの菓子の軽やかな食感も生まれません。目立つことはなくとも、食の根幹を支える誇りを胸に。私たちは、自然の恵みと健やかな未来を繋ぐ、確かな架け橋であり続けます。</p>
+    <p class="phil-body" data-i18n="phil-body">トウモロコシは、古来より人類が繋いできた命の源です。私たちは、その黄金の一粒一粒に宿る可能性を、プロの技術と感性で研ぎ澄まし、あらゆる食品の「おいしさの土台」へと昇華させます。<br><br>私たちが作るのは、主役ではありません。しかし、私たちが生み出す一袋がなければ、あのビールの喉越しも、あの菓子の軽やかな食感も生まれません。目立つことはなくとも、食の根幹を支える誇りを胸に。私たちは、自然の恵みと健やかな未来を繋ぐ、確かな架け橋であり続けます。</p>
     <span class="section-eyebrow">Principles</span>
     <h2 class="section-title">行 動 規 範</h2>
     <div class="principle-list" style="margin-top:28px;">
@@ -551,7 +547,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 <div id="page-grits" class="page">
   <div class="page-header">
     <img class="page-header-img" src="top.JPG" alt="山陽製粉">
-    <div class="page-header-inner"><h2>コーングリッツ</h2><p>用途別にメッシュサイズ（粒度）を分けて製造しております</p></div>
+    <div class="page-header-inner"><h2 data-i18n="grits-h2">コーングリッツ</h2><p data-i18n="grits-sub">用途別にメッシュサイズ（粒度）を分けて製造しております</p></div>
   </div>
   <div class="section">
     <p class="section-lead">お客様の用途に見合った、様々な種類のコーングリッツをご用意しております。オーダーメイドも可能です。原料はアメリカ産分別生産流通管理済み（NON-GMO）コーンを100%使用しております。</p>
@@ -618,7 +614,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 <div id="page-hominy" class="page">
   <div class="page-header">
     <img class="page-header-img" src="top.JPG" alt="山陽製粉">
-    <div class="page-header-inner"><h2>ホミニーフィード</h2><p>コーン由来の高エネルギー飼料・きのこ培地</p></div>
+    <div class="page-header-inner"><h2 data-i18n="hominy-h2">ホミニーフィード</h2><p data-i18n="hominy-sub">コーン由来の高エネルギー飼料・きのこ培地</p></div>
   </div>
   <div class="section">
     <p class="section-lead">コーングリッツを製造する際に分離される胚芽、皮、デンプン部の混合物です。エネルギー価が高く、各種畜産の飼料へ使用することができます。また、きのこの培地としても多くの農家様にご利用頂いております。</p>
@@ -656,14 +652,14 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
   <div class="page-header">
     <img class="page-header-img" src="top.JPG" alt="サステナビリティ">
     <div class="page-header-inner">
-      <h2>サステナビリティ</h2>
-      <p>山陽製粉株式会社の持続可能な事業活動への取り組み</p>
+      <h2 data-i18n="sus-h2">サステナビリティ</h2>
+      <p data-i18n="sus-sub">山陽製粉株式会社の持続可能な事業活動への取り組み</p>
     </div>
   </div>
 
   <div class="section">
     <span class="section-eyebrow">Sustainability</span>
-    <h2 class="section-title">私たちの取り組み</h2>
+    <h2 class="section-title" data-i18n="sus-title">私たちの取り組み</h2>
     <p class="section-lead">山陽製粉は創業以来、地域と共に歩んできた食品原材料メーカーです。食の安全・安心を守り、環境への負荷を低減しながら、次世代に豊かな社会を引き継ぐことが私たちの責務と考えています。</p>
 
     <!-- 5つのテーマ -->
@@ -797,7 +793,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 <div id="page-silo" class="page">
   <div class="page-header">
     <img class="page-header-img" src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&q=80" alt="姫路港サイロ">
-    <div class="page-header-inner"><h2>姫路港サイロ株式会社</h2><p>西播磨最大の穀物サイロ — 保管・輸送・通関をワンストップで</p></div>
+    <div class="page-header-inner"><h2 data-i18n="silo-h2">姫路港サイロ株式会社</h2><p data-i18n="silo-sub">西播磨最大の穀物サイロ — 保管・輸送・通関をワンストップで</p></div>
   </div>
   <div class="section">
     <p class="section-lead">西播磨最大の穀物サイロを保有し、コーンをはじめ小麦・大麦・大豆・大豆ミール・粗飼料などを保管しております。グループ・提携企業と連携し、穀物の陸上輸送・海上輸送・通関業務など多様なオーダーにお応えします。常温・定温倉庫も保有しており、貨物の形態を問わず最適な状態での保管が可能です。</p>
@@ -847,12 +843,12 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 <div id="page-recruit" class="page">
   <div class="page-header">
     <img class="page-header-img" src="top.JPG" alt="山陽製粉">
-    <div class="page-header-inner"><h2>採 用 情 報</h2><p>山陽製粉株式会社　採用情報</p></div>
+    <div class="page-header-inner"><h2 data-i18n="recruit-h2">採 用 情 報</h2><p data-i18n="recruit-sub">山陽製粉株式会社　採用情報</p></div>
   </div>
   <div class="section">
     <div class="info-box" style="margin-top:0;text-align:center;padding:48px 32px;">
-      <p style="font-size:22px;font-family:'Noto Serif JP',serif;font-weight:600;color:var(--navy);margin-bottom:16px;">現在、新規採用は行っておりません</p>
-      <p style="font-size:14px;color:var(--text-light);line-height:2;">募集が再開された際は、このページにてお知らせいたします。<br>ご関心をお持ちいただき、ありがとうございます。</p>
+      <p style="font-size:22px;font-family:'Noto Serif JP',serif;font-weight:600;color:var(--navy);margin-bottom:16px;" data-i18n="recruit-none">現在、新規採用は行っておりません</p>
+      <p style="font-size:14px;color:var(--text-light);line-height:2;" data-i18n="recruit-none-sub">募集が再開された際は、このページにてお知らせいたします。<br>ご関心をお持ちいただき、ありがとうございます。</p>
     </div>
   </div>
 </div>
@@ -861,7 +857,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 <div id="page-contact" class="page">
   <div class="page-header">
     <img class="page-header-img" src="top.JPG" alt="山陽製粉">
-    <div class="page-header-inner"><h2>お問い合わせ</h2><p>製品・採用・その他ご質問はこちらから</p></div>
+    <div class="page-header-inner"><h2 data-i18n="contact-h2">お問い合わせ</h2><p data-i18n="contact-sub">製品・採用・その他ご質問はこちらから</p></div>
   </div>
   <div class="section">
     <div class="contact-wrap">
@@ -883,7 +879,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
           </select>
         </div>
         <div class="form-group"><label class="form-label">お問い合わせ内容<span>必須</span></label><textarea class="form-textarea" id="fmessage" placeholder="お問い合わせ内容をご記入ください。"></textarea></div>
-        <button class="form-submit" onclick="submitForm()">送　信</button>
+        <button class="form-submit" onclick="submitForm()" data-i18n="contact-submit">送　信</button>
       </div>
 
       <div style="margin-top:32px;padding:24px 28px;background:#fff3f3;border:2px solid #c0392b;border-left:6px solid #c0392b;">
@@ -1110,17 +1106,17 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div class="footer-col">
       <h4>Navigation</h4>
       <ul>
-        <li><a onclick="showPage('home')">ホーム</a></li>
-        <li><a onclick="showPage('business')">事業内容</a></li>
+        <li><a onclick="showPage('home')" data-i18n="nav-home-txt">ホーム</a></li>
+        <li><a onclick="showPage('business')" data-i18n="nav-business-txt">事業内容</a></li>
         <li><a onclick="showPage('company')">会社概要</a></li>
         <li><a onclick="showPage('history')">沿革</a></li>
         <li><a onclick="showPage('philosophy')">企業理念</a></li>
         <li><a onclick="showPage('factory')">工場・倉庫案内</a></li>
         <li><a onclick="showPage('grits')">コーングリッツ</a></li>
         <li><a onclick="showPage('hominy')">ホミニーフィード</a></li>
-        <li><a onclick="showPage('sustainability')">サステナビリティ</a></li>
-        <li><a onclick="showPage('silo')">姫路港サイロ</a></li>
-        <li><a onclick="showPage('recruit')">採用情報</a></li>
+        <li><a onclick="showPage('sustainability')" data-i18n="nav-sustainability-txt">サステナビリティ</a></li>
+        <li><a onclick="showPage('silo')" data-i18n="nav-silo-txt">姫路港サイロ</a></li>
+        <li><a onclick="showPage('recruit')" data-i18n="nav-recruit-txt">採用情報</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1133,7 +1129,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     </div>
   </div>
   <div style="max-width:1100px;margin:0 auto;padding-bottom:16px;text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;"><a onclick="showPage('privacy')" style="font-size:12px;color:rgba(255,255,255,.6);cursor:pointer;text-decoration:underline;">プライバシーポリシー</a>　｜　<a onclick="showPage('disclaimer')" style="font-size:12px;color:rgba(255,255,255,.6);cursor:pointer;text-decoration:underline;">免責事項</a>　｜　<a onclick="showPage('sitemap')" style="font-size:12px;color:rgba(255,255,255,.6);cursor:pointer;text-decoration:underline;">サイトマップ</a></div><div class="footer-bottom">
-    <p>© 山陽製粉株式会社 All Rights Reserved.</p>
+    <p data-i18n="footer-copyright">© 山陽製粉株式会社 All Rights Reserved.</p>
     <p>〒672-8064　兵庫県姫路市飾磨区細江字浜万才1296</p>
   </div>
 </footer>
@@ -1177,6 +1173,122 @@ const translations = {
   'home-nongmo-title': {ja:'遺伝子組み換えではないコーンを使用', en:'Using Non-GMO Corn'},
   'home-nongmo-lead': {ja:'アメリカの契約農場にて生産された「分別生産流通管理済みコーン」のみを使用。様々な粒度でご用意し、オーダーメイドも承ります。', en:'We use only Identity Preserved (IP) corn grown at contracted farms in the United States. Available in various particle sizes, with custom orders accepted.'},
   'home-nongmo-btn': {ja:'お気軽にご相談ください', en:'Contact Us'},
+
+  // ナビ
+  'nav-home-txt': {ja:'ホーム', en:'Home'},
+  'nav-business-txt': {ja:'事業内容', en:'Business'},
+  'nav-company-txt': {ja:'会社概要', en:'Company'},
+  'nav-history-txt': {ja:'沿革', en:'History'},
+  'nav-philosophy-txt': {ja:'企業理念', en:'Philosophy'},
+  'nav-factory-txt': {ja:'工場・倉庫案内', en:'Factory & Warehouse'},
+  'nav-grits-txt': {ja:'コーングリッツ', en:'Corn Grits'},
+  'nav-hominy-txt': {ja:'ホミニーフィード', en:'Hominy Feed'},
+  'nav-sustainability-txt': {ja:'サステナビリティ', en:'Sustainability'},
+  'nav-silo-txt': {ja:'姫路港サイロ', en:'Himeji Port Silo'},
+  'nav-recruit-txt': {ja:'採用情報', en:'Careers'},
+  'nav-contact-txt': {ja:'お問い合わせ', en:'Contact'},
+
+  // 事業内容
+  'business-h2': {ja:'事 業 内 容', en:'Business'},
+  'business-sub': {ja:'コーングリッツ製造・ホミニーフィード製造・倉庫業', en:'Corn Grits / Hominy Feed / Warehousing'},
+  'business-grits-h3': {ja:'コーングリッツを作っています', en:'We Manufacture Corn Grits'},
+  'business-grits-p': {ja:'コーングリッツとは、コーンを乾燥させた後に細かく粉砕したものです（ドライミリング）。主に、ビールやスナック菓子・食品添加物など様々な食品原料としてご使用いただいております。<br><br>当社では、アメリカ産分別生産流通管理済み（旧表記：非遺伝子組み換え）コーンを原料に使用しております。', en:'Corn grits are produced by drying and grinding corn (dry milling). They are widely used as ingredients in beer, snacks, food additives, and more.<br><br>We use Identity Preserved (IP) corn from the United States — formerly labeled as non-GMO.'},
+  'business-hominy-h3': {ja:'畜産用飼料としてホミニーフィード', en:'Hominy Feed for Livestock'},
+  'business-hominy-p': {ja:'コーンは捨てるところの無い万能な穀物と言われています。グリッツ製造時に発生する胚芽・皮・デンプン質は飼料用として利用されております。<br><br>飼料価値も高く、多くの飼料会社様・畜産農家様にご愛用いただいております。また、きのこの培地としても広くご利用頂いております。', en:'Corn is often called a versatile grain with no waste. The germ, bran, and starch generated during grits production are used as feed.<br><br>Valued for its high nutritional content, it is widely used by feed manufacturers, livestock farmers, and mushroom growers.'},
+  'business-allergy-h3': {ja:'コーンはアレルギー反応が極めて少ない穀物', en:'Corn: An Extremely Low-Allergen Grain'},
+  'business-allergy-p': {ja:'食物アレルギーは、身体が食物に含まれるタンパク質を異物として認識し、過敏な反応を起こすことです。我が国における食物アレルギー体質をもつ方は全人口の１〜２％（乳児に限定すると約10％）と考えられています。そういった中で、とうもろこしに起因するアレルギーは例が極めて少なく、比較的安心して食べることのできる穀物といえます。', en:'Food allergies occur when the body recognizes proteins in food as foreign substances. In Japan, approximately 1-2% of the population (around 10% for infants) has food allergies. Among these, corn-related allergies are extremely rare, making it one of the safer grains to consume.'},
+
+  // 会社概要
+  'company-h2': {ja:'会 社 概 要', en:'Company Profile'},
+  'company-sub': {ja:'山陽製粉株式会社について', en:'About Sanyo Seifun Co., Ltd.'},
+  'company-name-label': {ja:'商号', en:'Company Name'},
+  'company-name-val': {ja:'山陽製粉株式会社', en:'Sanyo Seifun Co., Ltd.'},
+  'company-founded-label': {ja:'設立', en:'Founded'},
+  'company-capital-label': {ja:'資本金', en:'Capital'},
+  'company-president-label': {ja:'代表者', en:'President'},
+  'company-hq-label': {ja:'本社所在地', en:'Head Office'},
+  'company-factory-label': {ja:'工場所在地', en:'Factory'},
+  'company-business-label': {ja:'事業内容', en:'Business'},
+  'company-bank-label': {ja:'取引銀行', en:'Banks'},
+  'company-org-label': {ja:'所属団体', en:'Memberships'},
+  'company-related-label': {ja:'関連会社', en:'Affiliates'},
+
+  // 沿革
+  'history-h2': {ja:'沿 革', en:'History'},
+  'history-sub': {ja:'昭和12年創業から現在まで', en:'From Our Founding in 1937 to the Present'},
+
+  // 企業理念
+  'phil-h2': {ja:'「礎を研ぎ、命を繋ぐ」', en:'"Refine the Foundation, Connect Life"'},
+  'phil-sub': {ja:'企業理念', en:'Corporate Philosophy'},
+  'phil-body': {ja:'トウモロコシは、古来より人類が繋いできた命の源です。私たちは、その黄金の一粒一粒に宿る可能性を、プロの技術と感性で研ぎ澄まし、あらゆる食品の「おいしさの土台」へと昇華させます。<br><br>私たちが作るのは、主役ではありません。しかし、私たちが生み出す一袋がなければ、あのビールの喉越しも、あの菓子の軽やかな食感も生まれません。目立つことはなくとも、食の根幹を支える誇りを胸に。私たちは、自然の恵みと健やかな未来を繋ぐ、確かな架け橋であり続けます。', en:'Corn has been a source of life nurtured by humanity since ancient times. We refine the potential within each golden kernel through professional skill and sensibility, elevating it into the foundation of flavor for all kinds of food.<br><br>What we make is never the star of the show. Yet without the bags we produce, the crisp taste of that beer or the light texture of that snack would not exist. With quiet pride in supporting the heart of food, we remain a steadfast bridge connecting nature's gifts to a healthy future.'},
+  'phil-eyebrow': {ja:'Principles', en:'Principles'},
+  'phil-title': {ja:'行 動 規 範', en:'Code of Conduct'},
+  'phil-p01-num': {ja:'01', en:'01'},
+  'phil-p01-h3': {ja:'感性を磨き、期待を超える', en:'Sharpen Our Senses, Exceed Expectations'},
+  'phil-p01-p': {ja:'数値化できない「色・香り・手触り」を大切にします。機械に使われるのではなく、長年培った技術で機械を使いこなし、原料の個性を最大限に引き出します。', en:'We value what cannot be measured — color, aroma, and texture. Rather than being driven by machines, we master them with our accumulated expertise to draw out the best from every ingredient.'},
+  'phil-p02-h3': {ja:'誠実な循環を築く', en:'Build Honest Relationships'},
+  'phil-p02-p': {ja:'産地からお客様まで、食のバトンを繋ぐすべての方々を大切なパートナーと考えます。透明性の高い対話と誠実な商いを通じて、永く信頼される関係を築きます。', en:'We regard everyone who passes the baton of food — from producers to customers — as valued partners. Through transparent dialogue and honest business, we build lasting trust.'},
+  'phil-p03-h3': {ja:'互いの個性を尊重する', en:'Respect Each Individual'},
+  'phil-p03-p': {ja:'障がいの有無や背景に関わらず、一人ひとりが持つ固有の才能を尊重します。適材適所を追求し、「誰もが主役になれる職場」を共創します。', en:'We respect the unique talents of each individual, regardless of disability or background. By placing the right people in the right roles, we co-create a workplace where everyone can shine.'},
+  'phil-p04-h3': {ja:'資源への畏敬と環境への配慮', en:'Respect for Resources and the Environment'},
+  'phil-p04-p': {ja:'皮一つ、粉塵一つに至るまで価値を見出し、無駄なく使い切る「全利用」を追求します。次世代に豊かな大地を引き継ぐため、環境負荷の低減に努めます。', en:'We find value in every husk and every grain of dust, pursuing total utilization with zero waste. We strive to reduce our environmental impact and pass on a rich earth to future generations.'},
+  'phil-p05-h3': {ja:'変化を恐れず、本質を守る', en:'Embrace Change, Protect Our Core'},
+  'phil-p05-p': {ja:'時代のニーズや技術の進化には柔軟に応えます。しかし、「誠実に作る」という根底の魂は、創業以来、そしてこれからも決して変えることはありません。', en:'We respond flexibly to evolving needs and technologies. Yet the spirit of making things with integrity — the soul of our founding — will never change.'},
+  'phil-p06-h3': {ja:'働く仲間を、最大の財産として大切にする', en:'Cherish Our People as Our Greatest Asset'},
+  'phil-p06-p': {ja:'会社の根幹を支えるのは、一人ひとりの従業員です。安心して長く働き続けられる環境を整えることが、経営者としての責務です。社員の成長が会社の成長であり、社員の喜びが会社の喜びであると信じています。', en:'Our employees are the foundation of our company. It is our duty as management to create an environment where people can work with confidence for the long term. We believe that the growth and happiness of our employees is the growth and happiness of our company.'},
+
+  // コーングリッツ
+  'grits-h2': {ja:'コーングリッツ', en:'Corn Grits'},
+  'grits-sub': {ja:'用途別にメッシュサイズ（粒度）を分けて製造しております', en:'Manufactured in various mesh sizes for different applications'},
+  'grits-lead': {ja:'お客様の用途に見合った、様々な種類のコーングリッツをご用意しております。オーダーメイドも可能です。原料はアメリカ産分別生産流通管理済み（NON-GMO）コーンを100%使用しております。', en:'We offer a wide range of corn grits tailored to your needs. Custom orders are also available. All products use 100% American Identity Preserved (NON-GMO) corn.'},
+  'grits-btn': {ja:'お問い合わせ', en:'Contact Us'},
+
+  // ホミニーフィード
+  'hominy-h2': {ja:'ホミニーフィード', en:'Hominy Feed'},
+  'hominy-sub': {ja:'コーン由来の高エネルギー飼料・きのこ培地', en:'High-energy corn-based feed and mushroom substrate'},
+  'hominy-lead': {ja:'コーングリッツを製造する際に分離される胚芽、皮、デンプン部の混合物です。エネルギー価が高く、各種畜産の飼料へ使用することができます。また、きのこの培地としても多くの農家様にご利用頂いております。', en:'Hominy feed is a mixture of germ, bran, and starch separated during corn grits production. With high energy value, it is used as livestock feed across various farming operations, and is also widely used as a mushroom cultivation substrate.'},
+  'hominy-spec-h3': {ja:'栄養成分', en:'Nutritional Content'},
+  'hominy-shipping-h3': {ja:'出荷形態', en:'Shipping Options'},
+  'hominy-shipping-p': {ja:'バラ・20kg紙袋・500kgフレコンでの出荷が可能です。ご要望に応じてご対応いたします。', en:'Available in bulk, 20kg paper bags, or 500kg flexible containers. We accommodate your specific requirements.'},
+  'hominy-btn': {ja:'お問い合わせ・ご相談', en:'Contact Us'},
+
+  // 採用
+  'recruit-h2': {ja:'採 用 情 報', en:'Careers'},
+  'recruit-sub': {ja:'山陽製粉株式会社　採用情報', en:'Sanyo Seifun Co., Ltd. — Careers'},
+  'recruit-none': {ja:'現在、新規採用は行っておりません', en:'We are not currently hiring.'},
+  'recruit-none-sub': {ja:'募集が再開された際は、このページにてお知らせいたします。<br>ご関心をお持ちいただき、ありがとうございます。', en:'We will announce new openings on this page when recruitment resumes.<br>Thank you for your interest.'},
+
+  // お問い合わせ
+  'contact-h2': {ja:'お問い合わせ', en:'Contact'},
+  'contact-sub': {ja:'製品・採用・その他ご質問はこちらから', en:'For product inquiries, careers, and other questions'},
+  'contact-note': {ja:'お電話でのお問い合わせは業務部（TEL：079-233-0022）まで。フォームからのお問い合わせは3営業日以内にご返信いたします。', en:'For phone inquiries, please contact our Operations Dept. (TEL: 079-233-0022). Form inquiries will be answered within 3 business days.'},
+  'contact-name': {ja:'お名前', en:'Name'},
+  'contact-company': {ja:'会社名', en:'Company'},
+  'contact-email': {ja:'メールアドレス', en:'Email'},
+  'contact-tel': {ja:'電話番号', en:'Phone'},
+  'contact-type': {ja:'お問い合わせ種別', en:'Inquiry Type'},
+  'contact-msg': {ja:'お問い合わせ内容', en:'Message'},
+  'contact-submit': {ja:'送　信', en:'Send'},
+  'contact-type-select': {ja:'選択してください', en:'Please select'},
+  'contact-type-product': {ja:'製品について', en:'About Products'},
+  'contact-type-silo': {ja:'姫路港サイロについて', en:'About Himeji Port Silo'},
+  'contact-type-recruit': {ja:'求人について', en:'About Careers'},
+  'contact-type-other': {ja:'その他', en:'Other'},
+
+  // サイロ
+  'silo-h2': {ja:'姫路港サイロ株式会社', en:'Himeji Port Silo Co., Ltd.'},
+  'silo-sub': {ja:'西播磨最大の穀物サイロ — 保管・輸送・通関をワンストップで', en:"Nishi-Harima's largest grain silo — one-stop storage, transport, and customs"},
+  'silo-lead': {ja:'西播磨最大の穀物サイロを保有し、コーンをはじめ小麦・大麦・大豆・大豆ミール・粗飼料などを保管しております。グループ・提携企業と連携し、穀物の陸上輸送・海上輸送・通関業務など多様なオーダーにお応えします。常温・定温倉庫も保有しており、貨物の形態を問わず最適な状態での保管が可能です。', en:'We operate the largest grain silo in the Nishi-Harima region, storing corn, wheat, barley, soybeans, soybean meal, and roughage. In cooperation with group and partner companies, we handle land/sea transport and customs clearance. Our ambient and temperature-controlled warehouses accommodate cargo of any type.'},
+
+  // サステナビリティ
+  'sus-h2': {ja:'サステナビリティ', en:'Sustainability'},
+  'sus-sub': {ja:'山陽製粉株式会社の持続可能な事業活動への取り組み', en:'Our commitment to sustainable business practices'},
+  'sus-eyebrow': {ja:'Sustainability', en:'Sustainability'},
+  'sus-title': {ja:'私たちの取り組み', en:'Our Initiatives'},
+  'sus-lead': {ja:'山陽製粉は創業以来、地域と共に歩んできた食品原材料メーカーです。食の安全・安心を守り、環境への負荷を低減しながら、次世代に豊かな社会を引き継ぐことが私たちの責務と考えています。', en:'Sanyo Seifun has walked alongside our community since our founding. We believe it is our responsibility to protect food safety, reduce environmental impact, and pass on a prosperous society to future generations.'},
+
+  // フッター
+  'footer-copyright': {ja:'© 山陽製粉株式会社 All Rights Reserved.', en:'© Sanyo Seifun Co., Ltd. All Rights Reserved.'},
 };
 
 let currentLang = 'ja';
@@ -1184,7 +1296,7 @@ let currentLang = 'ja';
 function setLang(lang) {
   currentLang = lang;
   // ボタンのスタイル切替
-  ['btn-ja','btn-en','btn-ja-pc','btn-en-pc'].forEach(id => {
+  ['btn-ja','btn-en'].forEach(id => {
     const el = document.getElementById(id);
     if (!el) return;
     if (id.includes(lang)) {
@@ -1193,8 +1305,8 @@ function setLang(lang) {
       el.style.border = 'none';
     } else {
       el.style.background = 'transparent';
-      el.style.color = 'rgba(255,255,255,.7)';
-      el.style.border = '1px solid rgba(255,255,255,.4)';
+      el.style.color = 'rgba(255,255,255,.6)';
+      el.style.border = '1px solid rgba(255,255,255,.3)';
     }
   });
   // テキスト切替
