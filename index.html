@@ -13,16 +13,24 @@
   写真差し替え方法：各 <img> の src="https://..." を自前のファイルパスに変えるだけ
   例: src="https://images.unsplash.com/..." → src="images/factory.jpg"
 */
-:root{--navy:#1a2744;--navy-light:#243560;--gold:#C8920A;--gold-light:#E8B020;--gold-pale:#F5E6B8;--cream:#F8F5EE;--white:#fff;--text:#1a1a1a;--text-light:#3d3d3d;--border:#ddd5c0;}
+:root{
+  --navy:#1a2744;--navy-light:#243560;
+  --gold:#C8920A;--gold-light:#E8B020;--gold-pale:#F5E6B8;
+  --cream:#F7F4EE;--white:#fff;
+  --text:#1e1e1e;--text-light:#4a4a4a;--border:#ddd5c0;
+  --radius:2px;
+  --shadow:0 2px 12px rgba(0,0,0,0.08);
+  --shadow-lg:0 4px 24px rgba(0,0,0,0.12);
+}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--text);line-height:1.7;font-weight:400;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--cream);color:var(--text);line-height:1.8;font-weight:400;-webkit-font-smoothing:antialiased;}
 
 /* HEADER */
-header{background:var(--navy);position:fixed;top:0;left:0;right:0;z-index:1000;border-bottom:2px solid var(--gold);}
+header{background:var(--navy);position:fixed;top:0;left:0;right:0;z-index:1000;border-bottom:2px solid var(--gold);box-shadow:0 2px 20px rgba(0,0,0,0.25);}
 .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;}
 .logo{display:flex;flex-direction:column;line-height:1.2;cursor:pointer;text-decoration:none;}
-.logo-ja{font-family:'Noto Serif JP',serif;font-size:32px;font-weight:700;color:var(--white);letter-spacing:.05em;}
+.logo-ja{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:700;color:var(--white);letter-spacing:.06em;}
 .logo-en{font-size:11px;color:var(--gold-light);letter-spacing:.2em;}
 nav{display:flex;align-items:center;gap:2px;}
 nav a{color:rgba(255,255,255,.95);text-decoration:none;font-size:12.5px;padding:6px 10px;border-radius:3px;transition:color .2s;cursor:pointer;white-space:nowrap;}
@@ -42,56 +50,56 @@ nav a:hover{color:var(--gold-light);}
 main{padding-top:80px;min-height:100vh;}
 
 /* HERO */
-.hero{position:relative;height:520px;overflow:hidden;}
+.hero{position:relative;height:580px;overflow:hidden;}
 .hero-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.65);}
 .hero-grad{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,39,68,.1),rgba(26,39,68,.5));}
 .hero-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;}
-.hero-eyebrow{display:inline-block;font-size:11px;letter-spacing:.3em;color:var(--gold-light);border:1px solid rgba(200,146,10,.4);padding:4px 16px;margin-bottom:20px;}
-.hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(26px,5vw,46px);font-weight:700;color:var(--white);line-height:1.4;margin-bottom:22px;letter-spacing:.08em;}
+.hero-eyebrow{display:inline-block;font-size:11px;letter-spacing:.35em;color:var(--gold-light);border:1px solid rgba(200,146,10,.5);padding:5px 20px;margin-bottom:24px;text-transform:uppercase;}
+.hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(28px,5vw,52px);font-weight:700;color:var(--white);line-height:1.35;margin-bottom:28px;letter-spacing:.1em;text-shadow:0 2px 8px rgba(0,0,0,0.3);}
 .hero-tagline{font-size:clamp(13px,2vw,15px);color:rgba(255,255,255,.95);margin-bottom:36px;line-height:2;}
 .hero-cta{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center;}
 
 /* PAGE HEADER (各ページ上部) */
-.page-header{position:relative;height:240px;overflow:hidden;}
+.page-header{position:relative;height:260px;overflow:hidden;}
 .page-header-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.55);}
 .page-header-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
-.page-header-inner h2{font-family:'Noto Serif JP',serif;font-size:clamp(22px,4vw,34px);font-weight:700;color:var(--white);letter-spacing:.15em;margin-bottom:8px;}
+.page-header-inner h2{font-family:'Noto Serif JP',serif;font-size:clamp(24px,4vw,36px);font-weight:700;color:var(--white);letter-spacing:.2em;margin-bottom:10px;text-shadow:0 2px 8px rgba(0,0,0,0.3);}
 .page-header-inner p{font-size:13px;color:rgba(255,255,255,.9);letter-spacing:.1em;}
 
 /* BUTTONS */
-.btn-primary{background:var(--gold);color:var(--white);border:none;padding:13px 32px;font-size:14px;font-family:'Noto Sans JP',sans-serif;font-weight:500;cursor:pointer;letter-spacing:.1em;transition:background .2s;}
-.btn-primary:hover{background:var(--gold-light);}
+.btn-primary{background:var(--gold);color:var(--white);border:none;padding:14px 36px;font-size:14px;font-family:'Noto Sans JP',sans-serif;font-weight:500;cursor:pointer;letter-spacing:.12em;transition:all .2s;box-shadow:0 2px 8px rgba(200,146,10,0.3);}
+.btn-primary:hover{background:var(--gold-light);box-shadow:0 4px 12px rgba(200,146,10,0.4);transform:translateY(-1px);}
 .btn-outline{background:transparent;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.4);padding:13px 32px;font-size:14px;font-family:'Noto Sans JP',sans-serif;cursor:pointer;letter-spacing:.1em;transition:all .2s;}
 .btn-outline:hover{border-color:var(--gold-light);color:var(--gold-light);}
 
 /* USAGE STRIP */
-.usage-strip{background:var(--gold);padding:14px 24px;text-align:center;}
-.usage-strip p{font-size:13px;color:var(--white);letter-spacing:.12em;font-weight:500;}
+.usage-strip{background:linear-gradient(135deg,#B07808,var(--gold),#D4A020);padding:16px 24px;text-align:center;}
+.usage-strip p{font-size:13px;color:var(--white);letter-spacing:.14em;font-weight:500;}
 
 /* SECTION */
 .section{max-width:1000px;margin:0 auto;padding:72px 24px;}
 .section-eyebrow{font-size:11px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:10px;display:block;}
-.section-title{font-family:'Noto Serif JP',serif;font-size:clamp(22px,3.5vw,30px);font-weight:700;color:var(--navy);margin-bottom:16px;line-height:1.5;letter-spacing:.05em;}
-.section-title::after{content:'';display:block;width:48px;height:2px;background:var(--gold);margin-top:14px;}
-.section-lead{font-size:15px;color:var(--text);max-width:700px;margin-bottom:44px;line-height:2.1;}
-.divider-gold{height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);margin:0 24px;}
+.section-title{font-family:'Noto Serif JP',serif;font-size:clamp(22px,3.5vw,30px);font-weight:700;color:var(--navy);margin-bottom:20px;line-height:1.5;letter-spacing:.06em;}
+.section-title::after{content:'';display:block;width:48px;height:3px;background:var(--gold);margin-top:16px;border-radius:2px;}
+.section-lead{font-size:15.5px;color:var(--text-light);max-width:680px;margin-bottom:48px;line-height:2.2;}
+.divider-gold{height:1px;background:linear-gradient(to right,transparent,var(--gold),var(--gold),transparent);margin:0;opacity:.4;}
 
 /* FEATURE CARDS */
 .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-top:40px;}
-.feature-card{background:var(--white);cursor:pointer;transition:all .2s;position:relative;overflow:hidden;}
+.feature-card{background:var(--white);cursor:pointer;transition:all .25s;position:relative;overflow:hidden;box-shadow:var(--shadow);}
 .feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transition:transform .2s;transform-origin:left;z-index:1;}
 .feature-card:hover::before{transform:scaleX(1);}
 .feature-card-img{width:100%;height:180px;object-fit:cover;display:block;}
-.feature-card-body{padding:24px 28px 26px;}
-.feature-card h3{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:10px;}
-.feature-card p{font-size:14px;color:var(--text);line-height:1.9;}
+.feature-card-body{padding:28px 28px 28px;}
+.feature-card h3{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:12px;}
+.feature-card p{font-size:14px;color:var(--text-light);line-height:2;}
 .feature-link{display:inline-block;margin-top:14px;font-size:12px;color:var(--gold);letter-spacing:.1em;}
 
 /* CONTENT BLOCK */
 .content-block{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:72px;}
 .content-block.rev{direction:rtl;}
 .content-block.rev>*{direction:ltr;}
-.content-text h3{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:16px;border-left:3px solid var(--gold);padding-left:14px;}
+.content-text h3{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:18px;border-left:4px solid var(--gold);padding-left:16px;}
 .content-text p{font-size:15px;color:var(--text);line-height:2.1;}
 .content-img img{width:100%;height:280px;object-fit:cover;display:block;}
 
@@ -99,20 +107,20 @@ main{padding-top:80px;min-height:100vh;}
 .co-table{width:100%;border-collapse:collapse;font-size:14.5px;}
 .co-table tr{border-bottom:1px solid var(--border);}
 .co-table tr:first-child{border-top:1px solid var(--border);}
-.co-table th{width:160px;padding:16px 20px;text-align:left;color:var(--navy);font-weight:500;background:rgba(200,146,10,.06);vertical-align:top;font-size:13.5px;letter-spacing:.05em;}
-.co-table td{padding:16px 20px;color:var(--text);line-height:1.9;font-size:14.5px;}
+.co-table th{width:170px;padding:18px 22px;text-align:left;color:var(--navy);font-weight:600;background:rgba(26,39,68,.04);vertical-align:top;font-size:13.5px;letter-spacing:.05em;}
+.co-table td{padding:18px 22px;color:var(--text);line-height:2;font-size:14.5px;}
 
 /* TIMELINE */
 .timeline{position:relative;padding-left:32px;}
 .timeline::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--border);}
 .tl-item{position:relative;margin-bottom:22px;display:flex;gap:20px;align-items:baseline;}
 .tl-item::before{content:'';position:absolute;left:-28px;top:8px;width:8px;height:8px;background:var(--gold);border-radius:50%;}
-.tl-year{font-family:'Noto Serif JP',serif;font-size:13px;font-weight:600;color:var(--navy);min-width:80px;flex-shrink:0;}
-.tl-event{font-size:14.5px;color:var(--text);line-height:1.8;}
+.tl-year{font-family:'Noto Serif JP',serif;font-size:13.5px;font-weight:600;color:var(--navy);min-width:88px;flex-shrink:0;}
+.tl-event{font-size:14.5px;color:var(--text);line-height:1.9;}
 
 /* PRODUCTS */
 .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:40px;}
-.product-card{background:var(--white);border:1px solid var(--border);overflow:hidden;}
+.product-card{background:var(--white);border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .2s;}
 .product-card img{width:100%;height:150px;object-fit:cover;display:block;}
 .product-card-body{padding:18px 20px 20px;}
 .product-mesh{display:inline-block;font-size:11px;letter-spacing:.15em;color:var(--gold);border:1px solid var(--gold);padding:2px 10px;margin-bottom:10px;}
@@ -121,29 +129,29 @@ main{padding-top:80px;min-height:100vh;}
 .product-size{margin-top:10px;font-size:12px;color:var(--gold);}
 
 /* SPEC */
-.spec-table{background:var(--white);border:1px solid var(--border);padding:28px;display:inline-block;margin-top:16px;}
+.spec-table{background:var(--white);border:1px solid var(--border);padding:28px 36px;display:inline-block;margin-top:16px;box-shadow:var(--shadow);}
 .spec-row{display:flex;gap:32px;padding:9px 0;border-bottom:1px solid var(--border);font-size:14px;}
 .spec-row:last-child{border-bottom:none;}
 .spec-label{color:var(--text-light);min-width:130px;}
 .spec-value{font-weight:500;color:var(--navy);}
 
 /* PHILOSOPHY */
-.phil-hero{position:relative;height:280px;overflow:hidden;}
+.phil-hero{position:relative;height:300px;overflow:hidden;}
 .phil-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(.5);}
 .phil-hero-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
 .phil-tagline{font-family:'Noto Serif JP',serif;font-size:clamp(22px,4vw,36px);font-weight:700;color:var(--white);letter-spacing:.15em;margin-bottom:10px;}
 .phil-tagline span{color:var(--gold-light);}
 .phil-sub{font-size:13px;color:rgba(255,255,255,.6);letter-spacing:.1em;}
-.phil-body{max-width:720px;margin:0 auto 52px;font-size:15.5px;color:var(--text);line-height:2.2;}
+.phil-body{max-width:720px;margin:0 auto 56px;font-size:15.5px;color:var(--text-light);line-height:2.3;}
 .principle-list{display:grid;gap:18px;}
-.principle-item{background:var(--white);border-left:4px solid var(--gold);padding:22px 26px;}
+.principle-item{background:var(--white);border-left:5px solid var(--gold);padding:24px 28px;box-shadow:var(--shadow);}
 .principle-num{font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:6px;}
-.principle-item h3{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:8px;}
-.principle-item p{font-size:14.5px;color:var(--text);line-height:2;}
+.principle-item h3{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:10px;}
+.principle-item p{font-size:14.5px;color:var(--text-light);line-height:2.1;}
 
 /* ACCESS */
 .access-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px;}
-.access-card{background:var(--white);border:1px solid var(--border);padding:28px;}
+.access-card{background:var(--white);border:1px solid var(--border);padding:28px;box-shadow:var(--shadow);}
 .access-card h3{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--gold-pale);}
 .access-info{font-size:14px;color:var(--text);line-height:2.2;}
 .access-info strong{color:var(--navy);font-weight:500;}
@@ -160,13 +168,13 @@ main{padding-top:80px;min-height:100vh;}
 .silo-card strong{color:var(--navy);font-weight:500;}
 
 /* ALLERGY BOX */
-.info-box{background:var(--white);border:1px solid var(--border);border-left:4px solid var(--gold);padding:26px 30px;margin-top:30px;}
-.info-box h3{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:10px;}
+.info-box{background:var(--white);border:1px solid var(--border);border-left:5px solid var(--gold);padding:28px 32px;margin-top:32px;box-shadow:var(--shadow);}
+.info-box h3{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:600;color:var(--navy);margin-bottom:12px;}
 .info-box p{font-size:14.5px;color:var(--text);line-height:2;}
 
 /* RECRUIT */
 .recruit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:36px;}
-.recruit-card{background:var(--white);border:1px solid var(--border);padding:28px;}
+.recruit-card{background:var(--white);border:1px solid var(--border);padding:28px;box-shadow:var(--shadow);}
 .recruit-tag{display:inline-block;font-size:11px;letter-spacing:.15em;color:var(--white);background:var(--navy);padding:3px 12px;margin-bottom:12px;}
 .recruit-card h3{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:14px;}
 .recruit-detail{font-size:14px;color:var(--text);line-height:2;}
@@ -179,8 +187,8 @@ main{padding-top:80px;min-height:100vh;}
 .form-group{display:grid;gap:8px;}
 .form-label{font-size:13px;color:var(--navy);font-weight:500;letter-spacing:.05em;}
 .form-label span{color:var(--gold);margin-left:4px;font-size:11px;}
-.form-input,.form-textarea,.form-select{width:100%;padding:12px 16px;border:1px solid var(--border);background:var(--white);font-family:'Noto Sans JP',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color .2s;border-radius:0;-webkit-appearance:none;}
-.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--gold);}
+.form-input,.form-textarea,.form-select{width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--white);font-family:'Noto Sans JP',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color .2s,box-shadow .2s;border-radius:0;-webkit-appearance:none;}
+.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,146,10,0.1);}
 .form-textarea{resize:vertical;min-height:160px;}
 .form-submit{background:var(--navy);color:var(--white);border:none;padding:16px 48px;font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:500;letter-spacing:.15em;cursor:pointer;transition:background .2s;}
 .form-submit:hover{background:var(--navy-light);}
@@ -188,9 +196,9 @@ main{padding-top:80px;min-height:100vh;}
 .success-msg{display:none;background:#e8f5e9;border:1px solid #66bb6a;border-left:4px solid #2e7d32;padding:20px 24px;margin-bottom:24px;font-size:14px;color:#1b5e20;}
 
 /* FOOTER */
-footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--gold);}
+footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--gold);}
 .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:44px;margin-bottom:36px;}
-.footer-logo-ja{color:#fff;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;letter-spacing:.05em;}
+.footer-logo-ja{color:#fff;font-family:'Noto Serif JP',serif;font-size:18px;font-weight:700;letter-spacing:.06em;}
 .footer-logo-en{font-size:10px;color:var(--gold-light);letter-spacing:.2em;margin-top:4px;display:block;}
 .footer-tagline{font-size:12px;color:rgba(255,255,255,.7);margin-top:10px;line-height:1.9;}
 .footer-col h4{font-size:11px;letter-spacing:.2em;color:var(--gold-light);margin-bottom:14px;text-transform:uppercase;}
@@ -217,8 +225,10 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
   .content-block,.access-grid,.footer-inner,.silo-grid{grid-template-columns:1fr;}
   .content-block.rev{direction:ltr;}
   .footer-inner{gap:28px;}
-  .hero{height:400px;}
-  .page-header{height:170px;}
+  .hero{height:460px;}
+  .page-header{height:200px;}
+  .section{padding:48px 20px;}
+  .feature-card-body{padding:20px;}
 }
 @media(max-width:480px){
   .products-grid,.recruit-grid{grid-template-columns:1fr;}
@@ -260,6 +270,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div style="display:flex;align-items:center;gap:6px;">
       <button onclick="setLang('ja')" id="btn-ja" style="background:var(--gold);color:#fff;border:none;padding:5px 10px;font-size:12px;font-weight:500;cursor:pointer;border-radius:2px;">JA</button>
       <button onclick="setLang('en')" id="btn-en" style="background:transparent;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.3);padding:5px 10px;font-size:12px;font-weight:500;cursor:pointer;border-radius:2px;">EN</button>
+      <button onclick="setLang('tw')" id="btn-tw" style="background:transparent;color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.3);padding:5px 10px;font-size:12px;font-weight:500;cursor:pointer;border-radius:2px;">TW</button>
       <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
     </div>
   </div>
@@ -343,7 +354,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <span class="section-eyebrow">NON-GMO</span>
     <h2 class="section-title" style="display:inline-block;" data-i18n="home-nongmo-title">遺伝子組み換えではないコーンを使用</h2>
     <p class="section-lead" style="margin:24px auto 32px;" data-i18n="home-nongmo-lead">アメリカの契約農場にて生産された「分別生産流通管理済みコーン」のみを使用。様々な粒度でご用意し、オーダーメイドも承ります。</p>
-    <button class="btn-primary" onclick="showPage('contact')">お気軽にご相談ください</button>
+    <button class="btn-primary" onclick="showPage('contact')" data-i18n="home-consult-btn">お気軽にご相談ください</button>
 
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:40px;">
       <img src="corn yeald.jpg" alt="コーン収穫" style="width:100%;height:220px;object-fit:cover;display:block;">
@@ -364,7 +375,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div class="content-block">
       <div class="content-text">
         <h3 data-i18n="business-grits-h3">コーングリッツを作っています</h3>
-        <p>コーングリッツとは、コーンを乾燥させた後に細かく粉砕したものです（ドライミリング）。主に、ビールやスナック菓子・食品添加物など様々な食品原料としてご使用いただいております。<br><br>当社では、アメリカ産分別生産流通管理済み（旧表記：非遺伝子組み換え）コーンを原料に使用しております。</p>
+        <p data-i18n="business-grits-body">コーングリッツとは、コーンを乾燥させた後に細かく粉砕したものです（ドライミリング）。主に、ビールやスナック菓子・食品添加物など様々な食品原料としてご使用いただいております。<br><br>当社では、アメリカ産分別生産流通管理済み（旧表記：非遺伝子組み換え）コーンを原料に使用しております。</p>
       </div>
       <div class="content-img">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
@@ -376,7 +387,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div class="content-block rev">
       <div class="content-text">
         <h3 data-i18n="business-hominy-h3">畜産用飼料としてホミニーフィード</h3>
-        <p>コーンは捨てるところの無い万能な穀物と言われています。グリッツ製造時に発生する胚芽・皮・デンプン質は飼料用として利用されております。<br><br>飼料価値も高く、多くの飼料会社様・畜産農家様にご愛用いただいております。また、きのこの培地としても広くご利用頂いております。</p>
+        <p data-i18n="business-hominy-body">コーンは捨てるところの無い万能な穀物と言われています。グリッツ製造時に発生する胚芽・皮・デンプン質は飼料用として利用されております。<br><br>飼料価値も高く、多くの飼料会社様・畜産農家様にご愛用いただいております。また、きのこの培地としても広くご利用頂いております。</p>
       </div>
       <div class="content-img">
         <!-- 差し替え: src="images/cattle.jpg" -->
@@ -386,7 +397,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div class="info-box">
       <h3 data-i18n="business-allergy-h3">コーンはアレルギー反応が極めて少ない穀物</h3>
       <div style="display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;margin-top:12px;">
-        <p>食物アレルギーは、身体が食物に含まれるタンパク質を異物として認識し、過敏な反応を起こすことです。我が国における食物アレルギー体質をもつ方は全人口の１〜２％（乳児に限定すると約10％）と考えられています。そういった中で、とうもろこしに起因するアレルギーは例が極めて少なく、比較的安心して食べることのできる穀物といえます。</p>
+        <p data-i18n="business-allergy-body">食物アレルギーは、身体が食物に含まれるタンパク質を異物として認識し、過敏な反応を起こすことです。我が国における食物アレルギー体質をもつ方は全人口の１〜２％（乳児に限定すると約10％）と考えられています。そういった中で、とうもろこしに起因するアレルギーは例が極めて少なく、比較的安心して食べることのできる穀物といえます。</p>
         <img src="baby.avif" alt="赤ちゃん" style="width:160px;height:200px;object-fit:cover;display:block;flex-shrink:0;">
       </div>
     </div>
@@ -401,25 +412,25 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
   </div>
   <div class="section">
     <table class="co-table">
-      <tr><th>商号</th><td>山陽製粉株式会社</td></tr>
-      <tr><th>設立</th><td>昭和12年10月5日</td></tr>
-      <tr><th>資本金</th><td>2,000万円</td></tr>
-      <tr><th>代表者</th><td>代表取締役　宮本義太郎</td></tr>
-      <tr><th>本社所在地</th><td>
+      <tr><th data-i18n="co-name-th">商号</th><td data-i18n="co-name-td">山陽製粉株式会社</td></tr>
+      <tr><th data-i18n="co-founded-th">設立</th><td data-i18n="co-founded-td">昭和12年10月5日</td></tr>
+      <tr><th data-i18n="co-capital-th">資本金</th><td data-i18n="co-capital-td">2,000万円</td></tr>
+      <tr><th data-i18n="co-president-th">代表者</th><td data-i18n="co-president-td">代表取締役　宮本義太郎</td></tr>
+      <tr><th data-i18n="co-hq-th">本社所在地</th><td>
         <div style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;">
           <div>〒670-0935　兵庫県姫路市北条口2丁目18番地 宮本ビル<br>
-          <span style="font-size:13px;color:var(--text-light);line-height:2;display:block;margin-top:6px;">JR姫路駅より徒歩5分<br>お車でお越しの方は、隣接する立体駐車場をご利用ください。</span>
-          <a href="https://maps.app.goo.gl/sRq1u9985K5PDWQW6" target="_blank" style="display:inline-block;margin-top:8px;background:var(--gold);color:#fff;font-size:12px;padding:5px 14px;text-decoration:none;letter-spacing:.05em;">📍 Googleマップで開く</a></div>
+          <span style="font-size:13px;color:var(--text-light);line-height:2;display:block;margin-top:6px;"><span data-i18n="co-hq-access">JR姫路駅より徒歩5分<br>お車でお越しの方は、隣接する立体駐車場をご利用ください。</span></span>
+          <a href="https://maps.app.goo.gl/sRq1u9985K5PDWQW6" target="_blank" style="display:inline-block;margin-top:8px;background:var(--gold);color:#fff;font-size:12px;padding:5px 14px;text-decoration:none;letter-spacing:.05em;" data-i18n="co-hq-map">📍 Googleマップで開く</a></div>
           <img src="%E5%86%99%E7%9C%9F3.JPG" alt="山陽製粉本社" style="width:200px;height:auto;display:block;flex-shrink:0;border:1px solid var(--border);">
         </div>
       </td></tr>
-      <tr><th>工場所在地</th><td>〒672-8064　兵庫県姫路市飾磨区細江字浜万才1296番地<br>
-      <span style="font-size:13px;color:var(--text-light);line-height:2;display:block;margin-top:6px;">JR姫路駅より車で15分　山陽電車飾磨駅より車で10分</span>
-      <a href="https://maps.app.goo.gl/REeQN5i9b5EJSngv5" target="_blank" style="display:inline-block;margin-top:8px;background:var(--gold);color:#fff;font-size:12px;padding:5px 14px;text-decoration:none;letter-spacing:.05em;">📍 Googleマップで開く</a></td></tr>
-      <tr><th>事業内容</th><td>コーングリッツ及びその加工品の製造販売業<br>倉庫業（保税蔵置場指定）</td></tr>
-      <tr><th>取引銀行</th><td>播州信用金庫　駅前支店<br>三井住友銀行　姫路支店</td></tr>
-      <tr><th>所属団体</th><td>一般社団法人 日本コーングリッツ協会<br>一般社団法人 日本倉庫協会（兵庫県倉庫協会）<br>一般社団法人 姫路植物検疫協会<br>姫路商工会議所<br>飾磨港振興会</td></tr>
-      <tr><th>関連会社</th><td>宮本産業株式会社<br><a onclick="showPage('silo')" style="color:var(--gold);cursor:pointer;text-decoration:underline;">姫路港サイロ株式会社 →</a></td></tr>
+      <tr><th data-i18n="co-factory-th">工場所在地</th><td>〒672-8064　兵庫県姫路市飾磨区細江字浜万才1296番地<br>
+      <span style="font-size:13px;color:var(--text-light);line-height:2;display:block;margin-top:6px;"><span data-i18n="co-factory-access">JR姫路駅より車で15分　山陽電車飾磨駅より車で10分</span></span>
+      <a href="https://maps.app.goo.gl/REeQN5i9b5EJSngv5" target="_blank" style="display:inline-block;margin-top:8px;background:var(--gold);color:#fff;font-size:12px;padding:5px 14px;text-decoration:none;letter-spacing:.05em;" data-i18n="co-factory-map">📍 Googleマップで開く</a></td></tr>
+      <tr><th data-i18n="co-business-th">事業内容</th><td data-i18n="co-business-td">コーングリッツ及びその加工品の製造販売業<br>倉庫業（保税蔵置場指定）</td></tr>
+      <tr><th data-i18n="co-bank-th">取引銀行</th><td data-i18n="co-bank-td">播州信用金庫　駅前支店<br>三井住友銀行　姫路支店</td></tr>
+      <tr><th data-i18n="co-org-th">所属団体</th><td data-i18n="co-org-td">一般社団法人 日本コーングリッツ協会<br>一般社団法人 日本倉庫協会（兵庫県倉庫協会）<br>一般社団法人 姫路植物検疫協会<br>姫路商工会議所<br>飾磨港振興会</td></tr>
+      <tr><th data-i18n="co-related-th">関連会社</th><td><span data-i18n="co-related-td">宮本産業株式会社</span><br><a onclick="showPage('silo')" style="color:var(--gold);cursor:pointer;text-decoration:underline;" data-i18n="co-silo-link">姫路港サイロ株式会社 →</a></td></tr>
     </table>
   </div>
 </div>
@@ -428,14 +439,14 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 <div id="page-factory" class="page">
   <div class="page-header">
     <img class="page-header-img" src="sanyo factory.avif" alt="工場・倉庫案内">
-    <div class="page-header-inner"><h2>工場・倉庫案内</h2><p>姫路港に隣接した製粉工場・営業倉庫</p></div>
+    <div class="page-header-inner"><h2 data-i18n="factory-h2">工場・倉庫案内</h2><p data-i18n="factory-sub">姫路港に隣接した製粉工場・営業倉庫</p></div>
   </div>
   <div class="section">
-    <p class="section-lead">当工場は、古来より瀬戸内海の交通の要所として栄え、現在は国際拠点港湾に指定されている「姫路港」に隣接しています。陸上物流では山陽自動車道へのアクセスが容易です。海上物流では神戸港・大阪港を経由し、北海道から沖縄まで全国へのお届けが可能です。</p>
+    <p class="section-lead" data-i18n="factory-lead">当工場は、古来より瀬戸内海の交通の要所として栄え、現在は国際拠点港湾に指定されている「姫路港」に隣接しています。陸上物流では山陽自動車道へのアクセスが容易です。海上物流では神戸港・大阪港を経由し、北海道から沖縄まで全国へのお届けが可能です。</p>
 
     <div class="content-block">
       <div class="content-text">
-        <h3>製粉工場</h3>
+        <h3 data-i18n="factory-mill-h3">製粉工場</h3>
         <p>
           <strong>敷地面積</strong>　5,491㎡<br><br>
           【構造】<br>
@@ -455,7 +466,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 
     <div class="content-block rev">
       <div class="content-text">
-        <h3>営業倉庫</h3>
+        <h3 data-i18n="factory-ware-h3">営業倉庫</h3>
         <p>
           <strong>延床面積</strong>　3,309㎡<br><br>
           【構造】<br>
@@ -474,8 +485,8 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     </div>
 
     <div style="margin-bottom:72px;">
-      <h3 style="font-family:'Noto Serif JP',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:16px;border-left:3px solid var(--gold);padding-left:14px;">グリッツ専用タンクローリー</h3>
-      <p style="font-size:14.5px;color:var(--text-light);line-height:2.1;margin-bottom:24px;">自社所有のグリッツ専用タンクローリーを2台保有しております。お客様のご要望に応じた安定した輸送体制を整えています。</p>
+      <h3 style="font-family:'Noto Serif JP',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:16px;border-left:3px solid var(--gold);padding-left:14px;" data-i18n="factory-truck-h3">グリッツ専用タンクローリー</h3>
+      <p style="font-size:14.5px;color:var(--text-light);line-height:2.1;margin-bottom:24px;" data-i18n="factory-truck-body">自社所有のグリッツ専用タンクローリーを2台保有しております。お客様のご要望に応じた安定した輸送体制を整えています。</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
         <img src="bulk1.JPG" alt="タンクローリー1" style="width:100%;height:240px;object-fit:cover;display:block;">
         <img src="tank2.JPG" alt="タンクローリー2" style="width:100%;height:240px;object-fit:cover;display:block;">
@@ -494,25 +505,25 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
   <div class="section">
     <div style="display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start;">
       <div class="timeline">
-      <div class="tl-item"><span class="tl-year">昭和12年</span><span class="tl-event">山陽興業株式会社を設立（素麺穀物小麦粉販売）</span></div>
-      <div class="tl-item"><span class="tl-year">昭和21年</span><span class="tl-event">小麦製粉の製造へ進出</span></div>
-      <div class="tl-item"><span class="tl-year">昭和29年</span><span class="tl-event">商号を山陽製粉株式会社へ変更。代表取締役に宮本義郎が就任</span></div>
-      <div class="tl-item"><span class="tl-year">昭和33年</span><span class="tl-event">農林省より飼料小麦加工専門工場に指定</span></div>
-      <div class="tl-item"><span class="tl-year">昭和35年</span><span class="tl-event">本社ビル竣工</span></div>
-      <div class="tl-item"><span class="tl-year">昭和42年</span><span class="tl-event">資本金を2,000万円とする</span></div>
-      <div class="tl-item"><span class="tl-year">昭和44年</span><span class="tl-event">姫路製粉サイロ株式会社の設立に参画（現在の姫路港サイロ株式会社）</span></div>
-      <div class="tl-item"><span class="tl-year">昭和56年</span><span class="tl-event">神戸海運局より営業倉庫（保税蔵置場）の運営許可</span></div>
-      <div class="tl-item"><span class="tl-year">昭和57年</span><span class="tl-event">製粉工場及び営業倉庫を移転、竣工</span></div>
-      <div class="tl-item"><span class="tl-year">昭和59年</span><span class="tl-event">代表取締役に宮本義人が就任</span></div>
-      <div class="tl-item"><span class="tl-year">平成17年</span><span class="tl-event">小麦粉製造業から現在のコーングリッツ製造業へ転換</span></div>
-      <div class="tl-item"><span class="tl-year">平成19年</span><span class="tl-event">色彩選別機を導入</span></div>
-      <div class="tl-item"><span class="tl-year">平成20年</span><span class="tl-event">乾燥設備を導入</span></div>
-      <div class="tl-item"><span class="tl-year">平成22年</span><span class="tl-event">自社所有タンクローリーを2台体制に</span></div>
-      <div class="tl-item"><span class="tl-year">平成26年</span><span class="tl-event">色彩選別機を更新し製造品質を強化</span></div>
-      <div class="tl-item"><span class="tl-year">令和元年</span><span class="tl-event">全フォークリフトをエンジン車からバッテリー車へ更新</span></div>
-      <div class="tl-item"><span class="tl-year">令和4年</span><span class="tl-event">代表取締役に宮本義太郎が就任</span></div>
-      <div class="tl-item"><span class="tl-year">令和6年</span><span class="tl-event">製品倉庫リニューアル</span></div>
-      <div class="tl-item"><span class="tl-year">令和8年</span><span class="tl-event">グリッツ包装設備リニューアル</span></div>
+      <div class="tl-item"><span class="tl-year">昭和12年</span><span class="tl-event" data-i18n="history-1937">山陽興業株式会社を設立（素麺穀物小麦粉販売）</span></div>
+      <div class="tl-item"><span class="tl-year">昭和21年</span><span class="tl-event" data-i18n="history-1946">小麦製粉の製造へ進出</span></div>
+      <div class="tl-item"><span class="tl-year">昭和29年</span><span class="tl-event" data-i18n="history-1954">商号を山陽製粉株式会社へ変更。代表取締役に宮本義郎が就任</span></div>
+      <div class="tl-item"><span class="tl-year">昭和33年</span><span class="tl-event" data-i18n="history-1958">農林省より飼料小麦加工専門工場に指定</span></div>
+      <div class="tl-item"><span class="tl-year">昭和35年</span><span class="tl-event" data-i18n="history-1960">本社ビル竣工</span></div>
+      <div class="tl-item"><span class="tl-year">昭和42年</span><span class="tl-event" data-i18n="history-1967">資本金を2,000万円とする</span></div>
+      <div class="tl-item"><span class="tl-year">昭和44年</span><span class="tl-event" data-i18n="history-1969">姫路製粉サイロ株式会社の設立に参画（現在の姫路港サイロ株式会社）</span></div>
+      <div class="tl-item"><span class="tl-year">昭和56年</span><span class="tl-event" data-i18n="history-1981">神戸海運局より営業倉庫（保税蔵置場）の運営許可</span></div>
+      <div class="tl-item"><span class="tl-year">昭和57年</span><span class="tl-event" data-i18n="history-1982">製粉工場及び営業倉庫を移転、竣工</span></div>
+      <div class="tl-item"><span class="tl-year">昭和59年</span><span class="tl-event" data-i18n="history-1984">代表取締役に宮本義人が就任</span></div>
+      <div class="tl-item"><span class="tl-year">平成17年</span><span class="tl-event" data-i18n="history-2005">小麦粉製造業から現在のコーングリッツ製造業へ転換</span></div>
+      <div class="tl-item"><span class="tl-year">平成19年</span><span class="tl-event" data-i18n="history-2007">色彩選別機を導入</span></div>
+      <div class="tl-item"><span class="tl-year">平成20年</span><span class="tl-event" data-i18n="history-2008">乾燥設備を導入</span></div>
+      <div class="tl-item"><span class="tl-year">平成22年</span><span class="tl-event" data-i18n="history-2010">自社所有タンクローリーを2台体制に</span></div>
+      <div class="tl-item"><span class="tl-year">平成26年</span><span class="tl-event" data-i18n="history-2014">色彩選別機を更新し製造品質を強化</span></div>
+      <div class="tl-item"><span class="tl-year">令和元年</span><span class="tl-event" data-i18n="history-2019">全フォークリフトをエンジン車からバッテリー車へ更新</span></div>
+      <div class="tl-item"><span class="tl-year">令和4年</span><span class="tl-event" data-i18n="history-2022">代表取締役に宮本義太郎が就任</span></div>
+      <div class="tl-item"><span class="tl-year">令和6年</span><span class="tl-event" data-i18n="history-2024">製品倉庫リニューアル</span></div>
+      <div class="tl-item"><span class="tl-year">令和8年</span><span class="tl-event" data-i18n="history-2026">グリッツ包装設備リニューアル</span></div>
     </div>
       <img src="enkaku.JPG" alt="沿革" style="width:280px;object-fit:cover;display:block;border:1px solid var(--border);">
     </div>
@@ -550,7 +561,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div class="page-header-inner"><h2 data-i18n="grits-h2">コーングリッツ</h2><p data-i18n="grits-sub">用途別にメッシュサイズ（粒度）を分けて製造しております</p></div>
   </div>
   <div class="section">
-    <p class="section-lead">お客様の用途に見合った、様々な種類のコーングリッツをご用意しております。オーダーメイドも可能です。原料はアメリカ産分別生産流通管理済み（NON-GMO）コーンを100%使用しております。</p>
+    <p class="section-lead" data-i18n="grits-lead">お客様の用途に見合った、様々な種類のコーングリッツをご用意しております。オーダーメイドも可能です。原料はアメリカ産分別生産流通管理済み（NON-GMO）コーンを100%使用しております。</p>
     <div class="products-grid">
       <div class="product-card">
         <!-- 差し替え: src="images/nozomi_h.jpg" -->
@@ -604,7 +615,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       </div>
     </div>
     <div style="margin-top:48px;text-align:center;">
-      <p style="font-size:14px;color:var(--text-light);margin-bottom:20px;">ご不明な点・オーダーメイドのご相談はお気軽にどうぞ</p>
+      <p style="font-size:14px;color:var(--text-light);margin-bottom:20px;" data-i18n="grits-contact-txt">ご不明な点・オーダーメイドのご相談はお気軽にどうぞ</p>
       <button class="btn-primary" onclick="showPage('contact')">お問い合わせ</button>
     </div>
   </div>
@@ -617,18 +628,18 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div class="page-header-inner"><h2 data-i18n="hominy-h2">ホミニーフィード</h2><p data-i18n="hominy-sub">コーン由来の高エネルギー飼料・きのこ培地</p></div>
   </div>
   <div class="section">
-    <p class="section-lead">コーングリッツを製造する際に分離される胚芽、皮、デンプン部の混合物です。エネルギー価が高く、各種畜産の飼料へ使用することができます。また、きのこの培地としても多くの農家様にご利用頂いております。</p>
+    <p class="section-lead" data-i18n="hominy-lead">コーングリッツを製造する際に分離される胚芽、皮、デンプン部の混合物です。エネルギー価が高く、各種畜産の飼料へ使用することができます。また、きのこの培地としても多くの農家様にご利用頂いております。</p>
     <div class="content-block">
       <div class="content-text">
-        <h3>栄養成分</h3>
+        <h3 data-i18n="hominy-spec-h3">栄養成分</h3>
         <div class="spec-table">
-          <div class="spec-row"><span class="spec-label">水　分</span><span class="spec-value">12.8%</span></div>
-          <div class="spec-row"><span class="spec-label">粗タンパク質</span><span class="spec-value">9.6%</span></div>
-          <div class="spec-row"><span class="spec-label">粗脂肪</span><span class="spec-value">7.5%</span></div>
-          <div class="spec-row"><span class="spec-label">粗繊維</span><span class="spec-value">4.6%</span></div>
-          <div class="spec-row"><span class="spec-label">TDN（牛）</span><span class="spec-value">82.6%</span></div>
+          <div class="spec-row"><span class="spec-label" data-i18n="hominy-moisture">水　分</span><span class="spec-value">12.8%</span></div>
+          <div class="spec-row"><span class="spec-label" data-i18n="hominy-protein">粗タンパク質</span><span class="spec-value">9.6%</span></div>
+          <div class="spec-row"><span class="spec-label" data-i18n="hominy-fat">粗脂肪</span><span class="spec-value">7.5%</span></div>
+          <div class="spec-row"><span class="spec-label" data-i18n="hominy-fiber">粗繊維</span><span class="spec-value">4.6%</span></div>
+          <div class="spec-row"><span class="spec-label" data-i18n="hominy-tdn">TDN（牛）</span><span class="spec-value">82.6%</span></div>
         </div>
-        <p style="font-size:12px;color:var(--text-light);margin-top:8px;">【日本標準飼料成分表2001より】</p>
+        <p style="font-size:12px;color:var(--text-light);margin-top:8px;" data-i18n="hominy-source">【日本標準飼料成分表2001より】</p>
       </div>
       <div class="content-img">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
@@ -667,8 +678,8 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 
       <!-- 01 食の安全・安心 -->
       <div class="principle-item">
-        <div class="principle-num">01　食の安全・安心</div>
-        <h3>安全で高品質な製品の安定供給</h3>
+        <div class="principle-num" data-i18n="sus-01-num">01　食の安全・安心</div>
+        <h3 data-i18n="sus-01-h3">安全で高品質な製品の安定供給</h3>
         <p>
           お客様に安心してお使いいただける製品をお届けすることが、私たちの最も重要な使命です。アメリカ産の分別生産流通管理済み（NON-GMO）コーンのみを原料として使用し、製造工程における品質管理を徹底しています。<br><br>
           アレルギー反応が極めて少ないとうもろこしを原料とした製品は、食品メーカー・醸造メーカー・飼料メーカーなど幅広いお取引先に安定してお届けできるよう、生産体制の維持・強化に継続して取り組んでいます。
@@ -680,8 +691,8 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 
       <!-- 02 持続可能な原料調達 -->
       <div class="principle-item">
-        <div class="principle-num">02　持続可能な原料調達</div>
-        <h3>責任ある原材料の調達</h3>
+        <div class="principle-num" data-i18n="sus-02-num">02　持続可能な原料調達</div>
+        <h3 data-i18n="sus-02-h3">責任ある原材料の調達</h3>
         <p>
           原料となるとうもろこしはアメリカの契約農場にて生産された分別生産流通管理済みコーンを使用しています。調達先との長期的な信頼関係を築きながら、安定的かつ持続可能な原料確保に努めています。<br><br>
           気候変動や地政学リスクが原料調達に影響を与える可能性を認識しており、複数の調達ルートの確保と在庫管理の最適化により、お客様への安定供給体制を維持しています。
@@ -693,8 +704,8 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 
       <!-- 03 環境への配慮 -->
       <div class="principle-item">
-        <div class="principle-num">03　環境への配慮</div>
-        <h3>廃棄物ゼロへの挑戦と省エネ推進</h3>
+        <div class="principle-num" data-i18n="sus-03-num">03　環境への配慮</div>
+        <h3 data-i18n="sus-03-h3">廃棄物ゼロへの挑戦と省エネ推進</h3>
         <p>
           とうもろこしはすべての部位を活用できる穀物です。コーングリッツの製造で生じる胚芽・皮・デンプン質はホミニーフィードとして飼料に活用しており、廃棄物をほぼ出さない製造体制を実現しています。<br><br>
           また、全フォークリフトのバッテリー車への転換（令和元年完了）を皮切りに、省エネ設備の導入・更新を継続的に推進しています。製品倉庫・包装設備のリニューアルを通じてエネルギー効率の改善にも取り組んでいます。
@@ -706,8 +717,8 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 
       <!-- 04 地域社会との共生 -->
       <div class="principle-item">
-        <div class="principle-num">04　地域社会との共生</div>
-        <h3>姫路・播磨地域の産業と食を支える</h3>
+        <div class="principle-num" data-i18n="sus-04-num">04　地域社会との共生</div>
+        <h3 data-i18n="sus-04-h3">姫路・播磨地域の産業と食を支える</h3>
         <p>
           昭和12年の創業以来、兵庫県姫路市に根ざした企業として、地域経済・雇用・産業の維持発展に貢献してまいりました。姫路港に隣接する立地を活かした物流体制と、姫路港サイロ株式会社を通じた穀物保管・通関機能は、西播磨地域の食品産業を支えるインフラの一翼を担っています。<br><br>
           姫路商工会議所・兵庫県倉庫協会・日本コーングリッツ協会などの業界団体への参加を通じて、地域・業界全体の発展にも積極的に関与しています。
@@ -719,8 +730,8 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 
       <!-- 05 従業員への責任 -->
       <div class="principle-item">
-        <div class="principle-num">05　従業員への責任</div>
-        <h3>働きがいのある職場づくり</h3>
+        <div class="principle-num" data-i18n="sus-05-num">05　従業員への責任</div>
+        <h3 data-i18n="sus-05-h3">働きがいのある職場づくり</h3>
         <p>
           平均勤続年数約25年という実績が示すように、山陽製粉は従業員が長く安心して働き続けられる職場環境の整備に取り組んでいます。残業ゼロ・充実した福利厚生・永年勤続表彰制度など、従業員の生活と健康を大切にする制度を整備しています。<br><br>
           障がいの有無や背景に関わらず、一人ひとりの個性と能力を尊重する「誰もが主役になれる職場」の実現を目指し、適材適所の人材配置と相互補完のできる組織づくりを推進しています。
@@ -741,25 +752,22 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
     <div style="background:var(--navy);border:3px solid var(--gold);padding:40px;margin-top:8px;text-align:center;position:relative;overflow:hidden;">
       <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(200,146,10,.08) 1px,transparent 1px);background-size:24px 24px;"></div>
       <div style="position:relative;z-index:1;">
-        <p style="font-size:12px;letter-spacing:.25em;color:var(--gold-light);margin-bottom:12px;">HIMEJI CITY SDGs DECLARATION</p>
-        <p style="font-family:'Noto Serif JP',serif;font-size:clamp(20px,3vw,28px);font-weight:700;color:#fff;letter-spacing:.15em;margin-bottom:8px;">姫路市ＳＤＧｓ宣言書</p>
+        <p style="font-size:12px;letter-spacing:.25em;color:var(--gold-light);margin-bottom:12px;" data-i18n="sus-sdgs-eyebrow">SDGs Declaration</p>
+        <p style="font-family:'Noto Serif JP',serif;font-size:clamp(20px,3vw,28px);font-weight:700;color:#fff;letter-spacing:.15em;margin-bottom:8px;" data-i18n="sus-sdgs-declaration-title">姫路市SDGs宣言</p>
         <p style="font-family:'Noto Serif JP',serif;font-size:clamp(16px,2.5vw,22px);font-weight:600;color:var(--gold-light);letter-spacing:.1em;margin-bottom:32px;">山陽製粉株式会社　はＳＤＧｓ宣言します</p>
 
         <!-- SDGs13バッジ -->
         <div style="display:inline-block;background:#3F7E44;padding:20px 32px;margin-bottom:32px;">
           <div style="font-size:36px;font-weight:700;color:#fff;line-height:1;">13</div>
-          <div style="font-size:12px;color:#fff;letter-spacing:.05em;margin-top:4px;">気候変動に<br>具体的な対策を</div>
+          <div style="font-size:12px;color:#fff;letter-spacing:.05em;margin-top:4px;" data-i18n="sus-declaration-badge">気候変動に<br>具体的な対策を</div>
         </div>
 
         <!-- 宣言文 -->
         <div style="background:rgba(255,255,255,.08);border:1px solid rgba(200,146,10,.3);padding:28px 32px;max-width:560px;margin:0 auto 28px;text-align:left;">
-          <p style="font-size:15px;color:#fff;line-height:2.2;">
-            コーングリッツ製造工程の省エネ化により、CO₂排出削減に取り組みます。<br>
-            製造現場から気候変動対策を推進し、持続可能な産業の実現を目指します。
-          </p>
+          <p style="font-size:15px;color:#fff;line-height:2.2;" data-i18n="sus-declaration-text">コーングリッツ製造工程の省エネ化により、CO₂排出削減に取り組みます。<br>製造現場から気候変動対策を推進し、持続可能な産業の実現を目指します。</p>
         </div>
 
-        <p style="font-size:13px;color:rgba(255,255,255,.7);letter-spacing:.1em;">２０２６年６月１７日　　山陽製粉株式会社　代表取締役　宮本義太郎</p>
+        <p style="font-size:13px;color:rgba(255,255,255,.7);letter-spacing:.1em;" data-i18n="sus-declaration-date">２０２６年６月１７日　　山陽製粉株式会社　代表取締役　宮本義太郎</p>
       </div>
     </div>
 
@@ -798,24 +806,24 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
   <div class="section">
     <p class="section-lead">西播磨最大の穀物サイロを保有し、コーンをはじめ小麦・大麦・大豆・大豆ミール・粗飼料などを保管しております。グループ・提携企業と連携し、穀物の陸上輸送・海上輸送・通関業務など多様なオーダーにお応えします。常温・定温倉庫も保有しており、貨物の形態を問わず最適な状態での保管が可能です。</p>
     <table class="co-table">
-      <tr><th>創立</th><td>昭和44年3月27日</td></tr>
-      <tr><th>資本金</th><td>6,000万円</td></tr>
-      <tr><th>代表者</th><td>代表取締役　宮本義太郎</td></tr>
+      <tr><th data-i18n="silo-founded-th">創立</th><td data-i18n="silo-founded-td">昭和44年3月27日</td></tr>
+      <tr><th data-i18n="silo-capital-th">資本金</th><td data-i18n="silo-capital-td">6,000万円</td></tr>
+      <tr><th data-i18n="co-president-th">代表者</th><td data-i18n="co-president-td">代表取締役　宮本義太郎</td></tr>
       <tr><th>本社</th><td>〒670-0935　姫路市北条口2丁目18番地 宮本ビル　TEL：079-222-2003</td></tr>
       <tr><th>サイロ</th><td>〒672-8064　姫路市飾磨区細江5号岸壁　TEL：079-235-7021</td></tr>
       <tr><th>定温倉庫</th><td>〒672-8043　姫路市飾磨区中島字宝来3067-14</td></tr>
-      <tr><th>取扱品目</th><td>食品穀物・飼料穀物・食品原材料・肥料等</td></tr>
-      <tr><th>株主</th><td>山陽製粉株式会社</td></tr>
-      <tr><th>取引銀行</th><td>播州信用金庫　駅前支店<br>三井住友銀行　姫路支店</td></tr>
-      <tr><th>所属団体</th><td>一般社団法人 日本倉庫協会（兵庫県倉庫協会）<br>一般社団法人 姫路植物検疫協会<br>姫路商工会議所<br>飾磨港振興会</td></tr>
-      <tr><th>保管能力</th><td>サイロ：52,784トン　／　常温倉庫：1,800トン　／　定温倉庫：9,200トン</td></tr>
+      <tr><th data-i18n="silo-items-th">取扱品目</th><td data-i18n="silo-items-td">食品穀物・飼料穀物・食品原材料・肥料等</td></tr>
+      <tr><th data-i18n="silo-shareholder-th">株主</th><td data-i18n="silo-shareholder-td">山陽製粉株式会社</td></tr>
+      <tr><th data-i18n="co-bank-th">取引銀行</th><td data-i18n="co-bank-td">播州信用金庫　駅前支店<br>三井住友銀行　姫路支店</td></tr>
+      <tr><th data-i18n="co-org-th">所属団体</th><td>一般社団法人 日本倉庫協会（兵庫県倉庫協会）<br>一般社団法人 姫路植物検疫協会<br>姫路商工会議所<br>飾磨港振興会</td></tr>
+      <tr><th data-i18n="silo-capacity-th">保管能力</th><td data-i18n="silo-capacity-td">サイロ：52,784トン　／　常温倉庫：1,800トン　／　定温倉庫：9,200トン</td></tr>
     </table>
     <div class="silo-grid">
       <div class="silo-card">
         <!-- 差し替え: src="images/silo_facility.jpg" -->
         <img src="%E5%86%99%E7%9C%9F%202.JPG" alt="サイロ事業所">
         <div class="silo-card-body">
-          <h3>サイロ事業所</h3>
+          <h3 data-i18n="silo-facility1-h3">サイロ事業所</h3>
           <p><strong>コンクリートサイロ</strong>　46基（24,012t）<br><strong>鋼板サイロ</strong>　50基（28,772t）<br><strong>常温倉庫</strong>　延床 983㎡（1,800t）<br><br><span style="font-size:13px;">付属設備：サイロ冷却装置 / ニューマ式アンローダー / 粗飼料粉砕機 / 選別精選機械 / くん蒸設備（検疫くん蒸）/ 集塵設備 / 強制換気設備</span></p>
         </div>
       </div>
@@ -823,7 +831,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
         <!-- 差し替え: src="images/cold_storage.jpg" -->
         <img src="nakashima.jpg" alt="中島定温倉庫">
         <div class="silo-card-body">
-          <h3>中島定温倉庫</h3>
+          <h3 data-i18n="silo-facility2-h3">中島定温倉庫</h3>
           <p><strong>延床面積</strong>　4,927.230㎡<br><strong>建築構造</strong>　1・2階 鉄筋コンクリート、3階 鉄骨構造<br><strong>冷却設備</strong>　定温（10〜15℃）/ 冷蔵（-2℃）<br><strong>くん蒸設備</strong>　特A級 短時間くん蒸（検疫くん蒸）<br><br><span style="font-size:13px;">付属設備：超音波式加湿設備 / オムニリフター</span></p>
         </div>
       </div>
@@ -862,7 +870,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
   <div class="section">
     <div class="contact-wrap">
       <div class="contact-note">お電話でのお問い合わせは業務部（TEL：079-233-0022）まで。フォームからのお問い合わせは3営業日以内にご返信いたします。</div>
-      <div id="successMsg" class="success-msg">お問い合わせありがとうございます。内容を確認の上、ご連絡いたします。</div>
+      <div id="successMsg" class="success-msg" data-i18n="contact-success">お問い合わせありがとうございます。内容を確認の上、ご連絡いたします。</div>
       <div class="contact-form" id="contactForm">
         <div class="form-group"><label class="form-label">お名前<span>必須</span></label><input type="text" class="form-input" id="fname" placeholder="山陽　太郎"></div>
         <div class="form-group"><label class="form-label">会社名</label><input type="text" class="form-input" id="fcompany" placeholder="株式会社○○"></div>
@@ -883,12 +891,9 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       </div>
 
       <div style="margin-top:32px;padding:24px 28px;background:#fff3f3;border:2px solid #c0392b;border-left:6px solid #c0392b;">
-        <p style="font-size:14px;font-weight:700;color:#c0392b;margin-bottom:12px;">【重要：営業・勧誘メールについて】</p>
-        <p style="font-size:13.5px;color:#c0392b;font-weight:500;line-height:1.9;margin-bottom:16px;">
-          当フォームへの営業・勧誘・サービス紹介を目的としたお問い合わせは、固くお断りいたします。<br>
-          該当するお問い合わせへの返信は一切行いません。また、送信者情報を記録・保管する場合があります。
-        </p>
-        <p style="font-size:13px;font-weight:500;color:var(--navy);margin-bottom:10px;">【その他注意事項】</p>
+        <p style="font-size:14px;font-weight:700;color:#c0392b;margin-bottom:12px;" data-i18n="contact-warn-title">【重要：営業・勧誘メールについて】</p>
+        <p style="font-size:13.5px;color:#c0392b;font-weight:500;line-height:1.9;margin-bottom:16px;" data-i18n="contact-warn-body">当フォームへの営業・勧誘・サービス紹介を目的としたお問い合わせは、固くお断りいたします。<br>該当するお問い合わせへの返信は一切行いません。また、送信者情報を記録・保管する場合があります。</p>
+        <p style="font-size:13px;font-weight:500;color:var(--navy);margin-bottom:10px;" data-i18n="contact-warn-other">【その他注意事項】</p>
         <ol style="font-size:13px;color:var(--text);line-height:2.2;padding-left:18px;">
           <li>内容確認のためにお電話させていただく場合もありますので、お電話番号のご記入をお願いします。</li>
           <li>内容によりましては、ご返事までにお時間がかかる場合、またはご返事を差し上げられない場合がございますのでご了承下さい。</li>
@@ -1104,7 +1109,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       
     </div>
     <div class="footer-col">
-      <h4>Navigation</h4>
+      <h4 data-i18n="footer-nav-title">Navigation</h4>
       <ul>
         <li><a onclick="showPage('home')" data-i18n="nav-home-txt">ホーム</a></li>
         <li><a onclick="showPage('business')" data-i18n="nav-business-txt">事業内容</a></li>
@@ -1120,15 +1125,15 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h4 data-i18n="footer-contact-title">Contact</h4>
       <div class="footer-contact">
-        <p>【工場・業務部】</p><strong>079-233-0022</strong><p>FAX: 079-235-1145</p><br>
-        <p>【本社】</p><strong>079-222-2003</strong><p>FAX: 079-223-0430</p><br>
-        <p>【姫路港サイロ】</p><strong>079-235-7021</strong><p>FAX: 079-233-3695</p>
+        <p data-i18n="footer-factory-dept">【工場・業務部】</p><strong>079-233-0022</strong><p>FAX: 079-235-1145</p><br>
+        <p data-i18n="footer-hq">【本社】</p><strong>079-222-2003</strong><p>FAX: 079-223-0430</p><br>
+        <p data-i18n="footer-silo">【姫路港サイロ】</p><strong>079-235-7021</strong><p>FAX: 079-233-3695</p>
       </div>
     </div>
   </div>
-  <div style="max-width:1100px;margin:0 auto;padding-bottom:16px;text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;"><a onclick="showPage('privacy')" style="font-size:12px;color:rgba(255,255,255,.6);cursor:pointer;text-decoration:underline;">プライバシーポリシー</a>　｜　<a onclick="showPage('disclaimer')" style="font-size:12px;color:rgba(255,255,255,.6);cursor:pointer;text-decoration:underline;">免責事項</a>　｜　<a onclick="showPage('sitemap')" style="font-size:12px;color:rgba(255,255,255,.6);cursor:pointer;text-decoration:underline;">サイトマップ</a></div><div class="footer-bottom">
+  <div style="max-width:1100px;margin:0 auto;padding-bottom:16px;text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;"><a onclick="showPage('privacy')" style="font-size:12px;color:rgba(255,255,255,.6);cursor:pointer;text-decoration:underline;" data-i18n="footer-privacy">プライバシーポリシー</a>　｜　<a onclick="showPage('disclaimer')" style="font-size:12px;color:rgba(255,255,255,.6);cursor:pointer;text-decoration:underline;" data-i18n="footer-disclaimer">免責事項</a>　｜　<a onclick="showPage('sitemap')" style="font-size:12px;color:rgba(255,255,255,.6);cursor:pointer;text-decoration:underline;" data-i18n="footer-sitemap">サイトマップ</a></div><div class="footer-bottom">
     <p data-i18n="footer-copyright">© 山陽製粉株式会社 All Rights Reserved.</p>
     <p>〒672-8064　兵庫県姫路市飾磨区細江字浜万才1296</p>
   </div>
@@ -1137,158 +1142,269 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
 <script>
 // 翻訳データ
 const translations = {
-  // ナビ
-  'nav-home': {ja:'ホーム', en:'Home'},
-  'nav-business': {ja:'事業内容', en:'Business'},
-  'nav-company': {ja:'会社概要', en:'Company'},
-  'nav-history': {ja:'沿革', en:'History'},
-  'nav-philosophy': {ja:'企業理念', en:'Philosophy'},
-  'nav-factory': {ja:'工場・倉庫案内', en:'Factory & Warehouse'},
-  'nav-grits': {ja:'コーングリッツ', en:'Corn Grits'},
-  'nav-hominy': {ja:'ホミニーフィード', en:'Hominy Feed'},
-  'nav-sustainability': {ja:'サステナビリティ', en:'Sustainability'},
-  'nav-silo': {ja:'姫路港サイロ', en:'Himeji Port Silo'},
-  'nav-recruit': {ja:'採用情報', en:'Careers'},
-  'nav-contact': {ja:'お問い合わせ', en:'Contact'},
-  // ホーム
-  'home-eyebrow': {ja:'Since 1937 — Himeji, Japan', en:'Since 1937 — Himeji, Japan'},
-  'home-h1': {ja:'GOOD CORN<br>FOR GOOD FOOD', en:'GOOD CORN<br>FOR GOOD FOOD'},
-  'home-tagline': {ja:'アメリカ産NON-GMOとうもろこしを原料に、<br>コーングリッツ・ホミニーフィードを製造。<br>食のおいしさの土台を、姫路から全国へ。', en:'Using 100% American NON-GMO corn,<br>we manufacture corn grits and hominy feed.<br>From Himeji, supporting the foundation of good food across Japan.'},
-  'home-btn1': {ja:'製品紹介を見る', en:'Our Products'},
-  'home-btn2': {ja:'お問い合わせ', en:'Contact Us'},
-  'home-usage': {ja:'スナック菓子 ／ ビール原料 ／ 焼酎・ウイスキー原料 ／ ピザ打ち粉 ／ 雑穀原料 ／ パン原料 ／ 唐揚げ粉・天ぷら粉 ／ コーンフラワー ／ ホミニーフィード', en:'Snacks / Beer / Shochu & Whisky / Pizza flour / Multigrain / Bread / Fried food coating / Corn flour / Hominy feed'},
-  'home-eyebrow2': {ja:'About Us', en:'About Us'},
-  'home-about-title': {ja:'穀物加工約90年の技術と誠実さ', en:'90 Years of Grain Processing Expertise'},
-  'home-about-lead': {ja:'当社は創業以来、小麦製粉を事業の柱としてまいりました。時代の変化とともにコーングリッツ製造へと事業を転換し、約90年にわたり穀物加工に携わっております。信頼できる生産者から穀物を輸入し、当社の技術でひと手間加えることで、おいしさの可能性を広げています。', en:'Since our founding, we have been committed to grain processing. After transitioning from wheat flour milling to corn grits manufacturing, we have spent nearly 90 years refining our craft. By importing grain from trusted producers and adding our expertise, we continue to expand the possibilities of great taste.'},
-  'home-card1-title': {ja:'コーングリッツ製造', en:'Corn Grits Manufacturing'},
-  'home-card1-text': {ja:'NON-GMOコーンをドライミリング製法で粉砕。用途別に様々な粒度の製品を製造しております。', en:'We grind NON-GMO corn using the dry milling process, producing products in various particle sizes for different applications.'},
-  'home-card1-link': {ja:'詳しく見る →', en:'Learn more →'},
-  'home-card2-title': {ja:'ホミニーフィード', en:'Hominy Feed'},
-  'home-card2-text': {ja:'グリッツ製造時に分離される胚芽・皮・デンプン質を原料にした高エネルギー飼料・きのこ培地。', en:'A high-energy feed made from the germ, bran, and starch separated during grits production. Also used as mushroom cultivation substrate.'},
-  'home-card2-link': {ja:'詳しく見る →', en:'Learn more →'},
-  'home-card3-title': {ja:'姫路港サイロ・倉庫業', en:'Himeji Port Silo & Warehousing'},
-  'home-card3-text': {ja:'西播磨最大の穀物サイロを保有。保税蔵置場として輸入穀物の保管・通関・輸送をワンストップで対応。', en:"We operate the largest grain silo in the Nishi-Harima region, offering one-stop bonded warehouse services including storage, customs clearance, and transport."},
-  'home-card3-link': {ja:'詳しく見る →', en:'Learn more →'},
-  'home-nongmo-eyebrow': {ja:'NON-GMO', en:'NON-GMO'},
-  'home-nongmo-title': {ja:'遺伝子組み換えではないコーンを使用', en:'Using Non-GMO Corn'},
-  'home-nongmo-lead': {ja:'アメリカの契約農場にて生産された「分別生産流通管理済みコーン」のみを使用。様々な粒度でご用意し、オーダーメイドも承ります。', en:'We use only Identity Preserved (IP) corn grown at contracted farms in the United States. Available in various particle sizes, with custom orders accepted.'},
-  'home-nongmo-btn': {ja:'お気軽にご相談ください', en:'Contact Us'},
+  "nav-home-txt": {"ja":"ホーム","en":"Home","tw":"首頁"},
+  "nav-business-txt": {"ja":"事業内容","en":"Business","tw":"業務內容"},
+  "nav-company-txt": {"ja":"会社概要","en":"Company","tw":"公司概要"},
+  "nav-history-txt": {"ja":"沿革","en":"History","tw":"沿革"},
+  "nav-philosophy-txt": {"ja":"企業理念","en":"Philosophy","tw":"企業理念"},
+  "nav-factory-txt": {"ja":"工場・倉庫案内","en":"Factory & Warehouse","tw":"工廠・倉庫介紹"},
+  "nav-grits-txt": {"ja":"コーングリッツ","en":"Corn Grits","tw":"玉米粗粉"},
+  "nav-hominy-txt": {"ja":"ホミニーフィード","en":"Hominy Feed","tw":"玉米飼料"},
+  "nav-sustainability-txt": {"ja":"サステナビリティ","en":"Sustainability","tw":"永續發展"},
+  "nav-silo-txt": {"ja":"姫路港サイロ","en":"Himeji Port Silo","tw":"姬路港穀物筒倉"},
+  "nav-recruit-txt": {"ja":"採用情報","en":"Careers","tw":"招募資訊"},
+  "nav-contact-txt": {"ja":"お問い合わせ","en":"Contact","tw":"聯絡我們"},
+  "home-h1": {"ja":"GOOD CORN<br>FOR GOOD FOOD","en":"GOOD CORN<br>FOR GOOD FOOD","tw":"優質玉米<br>成就美味食品"},
+  "home-tagline": {"ja":"アメリカ産NON-GMOとうもろこしを原料に、<br>コーングリッツ・ホミニーフィードを製造。<br>食のおいしさの土台を、姫路から全国へ。","en":"Using 100% American NON-GMO corn,<br>we manufacture corn grits and hominy feed.<br>From Himeji, supporting the foundation of good food across Japan.","tw":"以美國產非基因改造玉米為原料，<br>製造玉米粗粉與玉米飼料。<br>從姬路出發，為日本全國食品美味奠定基礎。"},
+  "home-usage": {"ja":"スナック菓子 ／ ビール原料 ／ 焼酎・ウイスキー原料 ／ ピザ打ち粉 ／ 雑穀原料 ／ パン原料 ／ 唐揚げ粉・天ぷら粉 ／ コーンフラワー ／ ホミニーフィード","en":"Snacks / Beer / Shochu & Whisky / Pizza flour / Multigrain / Bread / Fried food coating / Corn flour / Hominy feed","tw":"零食 ／ 啤酒原料 ／ 燒酎・威士忌原料 ／ 披薩粉 ／ 雜穀原料 ／ 麵包原料 ／ 炸粉・天婦羅粉 ／ 玉米粉 ／ 玉米飼料"},
+  "home-about-title": {"ja":"穀物加工約90年の技術と誠実さ","en":"90 Years of Grain Processing Expertise","tw":"約90年的穀物加工技術與誠信"},
+  "home-about-lead": {"ja":"当社は創業以来、小麦製粉を事業の柱としてまいりました。時代の変化とともにコーングリッツ製造へと事業を転換し、約90年にわたり穀物加工に携わっております。信頼できる生産者から穀物を輸入し、当社の技術でひと手間加えることで、おいしさの可能性を広げています。","en":"Since our founding, we have been committed to grain processing. After transitioning from wheat flour milling to corn grits manufacturing, we have spent nearly 90 years refining our craft. By importing grain from trusted producers and adding our expertise, we continue to expand the possibilities of great taste.","tw":"自創業以來，本公司一直以小麥製粉為主要業務。隨著時代變遷，我們轉型為玉米粗粉製造，迄今已從事穀物加工約90年。從值得信賴的生產者進口穀物，憑藉本公司的技術精心加工，不斷擴展美味的可能性。"},
+  "home-card1-title": {"ja":"コーングリッツ製造","en":"Corn Grits Manufacturing","tw":"玉米粗粉製造"},
+  "home-card1-text": {"ja":"NON-GMOコーンをドライミリング製法で粉砕。用途別に様々な粒度の製品を製造しております。","en":"We grind NON-GMO corn using the dry milling process, producing products in various particle sizes for different applications.","tw":"以乾式研磨法研磨非基改玉米，依不同用途製造各種粒度的產品。"},
+  "home-card1-link": {"ja":"詳しく見る →","en":"Learn more →","tw":"了解更多 →"},
+  "home-card2-title": {"ja":"ホミニーフィード","en":"Hominy Feed","tw":"玉米飼料"},
+  "home-card2-text": {"ja":"グリッツ製造時に分離される胚芽・皮・デンプン質を原料にした高エネルギー飼料・きのこ培地。","en":"A high-energy feed made from the germ, bran, and starch separated during grits production. Also used as mushroom cultivation substrate.","tw":"以製造玉米粗粉時分離出的胚芽、外皮、澱粉質為原料，製成高能量飼料及菇類培養基。"},
+  "home-card2-link": {"ja":"詳しく見る →","en":"Learn more →","tw":"了解更多 →"},
+  "home-card3-title": {"ja":"姫路港サイロ・倉庫業","en":"Himeji Port Silo & Warehousing","tw":"姬路港穀物筒倉・倉儲業"},
+  "home-card3-text": {"ja":"西播磨最大の穀物サイロを保有。保税蔵置場として輸入穀物の保管・通関・輸送をワンストップで対応。","en":"We operate the largest grain silo in the Nishi-Harima region, offering one-stop bonded warehouse services including storage, customs clearance, and transport.","tw":"擁有西播磨地區最大的穀物筒倉，作為保稅倉庫，提供進口穀物保管、通關、運輸一站式服務。"},
+  "home-card3-link": {"ja":"詳しく見る →","en":"Learn more →","tw":"了解更多 →"},
+  "home-nongmo-title": {"ja":"遺伝子組み換えではないコーンを使用","en":"Using Non-GMO Corn","tw":"使用非基因改造玉米"},
+  "home-nongmo-lead": {"ja":"アメリカの契約農場にて生産された「分別生産流通管理済みコーン」のみを使用。様々な粒度でご用意し、オーダーメイドも承ります。","en":"We use only Identity Preserved (IP) corn grown at contracted farms in the United States. Available in various particle sizes, with custom orders accepted.","tw":"僅使用在美國契約農場生產的「身份保全玉米（非基改）」。備有各種粒度，亦接受客製化訂單。"},
+  "home-nongmo-btn": {"ja":"お気軽にご相談ください","en":"Contact Us","tw":"歡迎洽詢"},
+  "business-h2": {"ja":"事 業 内 容","en":"Business","tw":"業 務 內 容"},
+  "business-sub": {"ja":"コーングリッツ製造・ホミニーフィード製造・倉庫業","en":"Corn Grits / Hominy Feed / Warehousing","tw":"玉米粗粉製造・玉米飼料製造・倉儲業"},
+  "business-grits-h3": {"ja":"コーングリッツを作っています","en":"We Manufacture Corn Grits","tw":"我們製造玉米粗粉"},
+  "business-grits-p": {"ja":"コーングリッツとは、コーンを乾燥させた後に細かく粉砕したものです（ドライミリング）。主に、ビールやスナック菓子・食品添加物など様々な食品原料としてご使用いただいております。<br><br>当社では、アメリカ産分別生産流通管理済み（旧表記：非遺伝子組み換え）コーンを原料に使用しております。","en":"Corn grits are produced by drying and grinding corn (dry milling). They are widely used as ingredients in beer, snacks, food additives, and more.<br><br>We use Identity Preserved (IP) corn from the United States.","tw":"玉米粗粉是將玉米乾燥後細磨而成（乾式研磨）。主要用作啤酒、零食、食品添加劑等各種食品原料。<br><br>本公司使用美國產身份保全（非基因改造）玉米作為原料。"},
+  "business-hominy-h3": {"ja":"畜産用飼料としてホミニーフィード","en":"Hominy Feed for Livestock","tw":"作為畜牧用飼料的玉米飼料"},
+  "business-hominy-p": {"ja":"コーンは捨てるところの無い万能な穀物と言われています。グリッツ製造時に発生する胚芽・皮・デンプン質は飼料用として利用されております。<br><br>飼料価値も高く、多くの飼料会社様・畜産農家様にご愛用いただいております。また、きのこの培地としても広くご利用頂いております。","en":"Corn is a versatile grain with no waste. The germ, bran, and starch generated during grits production are used as feed.<br><br>Valued for its high nutritional content, it is widely used by feed manufacturers, livestock farmers, and mushroom growers.","tw":"玉米被稱為全身是寶的萬能穀物。製造玉米粗粉時產生的胚芽、外皮、澱粉質均可作為飼料使用。<br><br>飼料價值高，深受眾多飼料公司及畜牧農家愛用。亦被廣泛用作菇類的培養基。"},
+  "business-allergy-h3": {"ja":"コーンはアレルギー反応が極めて少ない穀物","en":"Corn: An Extremely Low-Allergen Grain","tw":"玉米是過敏反應極少的穀物"},
+  "business-allergy-p": {"ja":"食物アレルギーは、身体が食物に含まれるタンパク質を異物として認識し、過敏な反応を起こすことです。我が国における食物アレルギー体質をもつ方は全人口の１〜２％（乳児に限定すると約10％）と考えられています。そういった中で、とうもろこしに起因するアレルギーは例が極めて少なく、比較的安心して食べることのできる穀物といえます。","en":"Food allergies occur when the body recognizes proteins in food as foreign substances. In Japan, approximately 1-2% of the population has food allergies. Corn-related allergies are extremely rare, making it one of the safer grains to consume.","tw":"食物過敏是指身體將食物中含有的蛋白質視為異物並產生過敏反應。日本食物過敏體質的人口約佔全體的1〜2%。由玉米引起的過敏案例極少，可說是相對安心食用的穀物。"},
+  "company-h2": {"ja":"会 社 概 要","en":"Company Profile","tw":"公 司 概 要"},
+  "company-sub": {"ja":"山陽製粉株式会社について","en":"About Sanyo Seifun Co., Ltd.","tw":"關於山陽製粉株式會社"},
+  "history-h2": {"ja":"沿 革","en":"History","tw":"沿 革"},
+  "history-sub": {"ja":"昭和12年創業から現在まで","en":"From Our Founding in 1937 to the Present","tw":"從1937年創業至今"},
+  "phil-h2": {"ja":"「礎を研ぎ、<span>命を繋ぐ</span>」","en":"Refine the Foundation, <span>Connect Life</span>","tw":"「磨礪根基，<span>傳承生命</span>」"},
+  "phil-sub": {"ja":"企業理念","en":"Corporate Philosophy","tw":"企業理念"},
+  "phil-body": {"ja":"トウモロコシは、古来より人類が繋いできた命の源です。私たちは、その黄金の一粒一粒に宿る可能性を、プロの技術と感性で研ぎ澄まし、あらゆる食品の「おいしさの土台」へと昇華させます。<br><br>私たちが作るのは、主役ではありません。しかし、私たちが生み出す一袋がなければ、あのビールの喉越しも、あの菓子の軽やかな食感も生まれません。目立つことはなくとも、食の根幹を支える誇りを胸に。私たちは、自然の恵みと健やかな未来を繋ぐ、確かな架け橋であり続けます。","en":"Corn has been a source of life nurtured by humanity since ancient times. We refine the potential within each golden kernel through professional skill and sensibility, elevating it into the foundation of flavor for all kinds of food.<br><br>What we make is never the star of the show. Yet without the bags we produce, the crisp taste of that beer or the light texture of that snack would not exist. With quiet pride in supporting the heart of food, we remain a steadfast bridge connecting the gifts of nature to a healthy future.","tw":"玉米自古以來就是人類傳承的生命之源。我們以專業技術與感性，磨礪蘊藏在每一粒黃金穀粒中的可能性，昇華為各種食品「美味的基礎」。<br><br>我們製造的並非主角。然而，若沒有我們生產的每一袋產品，那啤酒的順滑口感、那點心的輕盈口感便無從誕生。雖不顯眼，卻以支撐食品根基的自豪，成為連結自然恩惠與健康未來的可靠橋樑。"},
+  "phil-eyebrow": {"ja":"Principles","en":"Principles","tw":"Principles"},
+  "phil-title": {"ja":"行 動 規 範","en":"Code of Conduct","tw":"行 動 規 範"},
+  "phil-p01-h3": {"ja":"感性を磨き、期待を超える","en":"Sharpen Our Senses, Exceed Expectations","tw":"磨礪感性，超越期待"},
+  "phil-p01-p": {"ja":"数値化できない「色・香り・手触り」を大切にします。機械に使われるのではなく、長年培った技術で機械を使いこなし、原料の個性を最大限に引き出します。","en":"We value what cannot be measured: color, aroma, and texture. Rather than being driven by machines, we master them with accumulated expertise to draw out the best from every ingredient.","tw":"我們重視無法數值化的「色澤、香氣、觸感」。不被機械所驅使，而是以多年積累的技術駕馭機械，最大限度地發揮原料的個性。"},
+  "phil-p02-h3": {"ja":"誠実な循環を築く","en":"Build Honest Relationships","tw":"建立誠實的循環"},
+  "phil-p02-p": {"ja":"産地からお客様まで、食のバトンを繋ぐすべての方々を大切なパートナーと考えます。透明性の高い対話と誠実な商いを通じて、永く信頼される関係を築きます。","en":"We regard everyone who passes the baton of food as a valued partner. Through transparent dialogue and honest business, we build lasting trust.","tw":"從產地到客戶，我們將傳遞食品接力棒的所有人視為重要夥伴。透過高透明度的對話與誠實的經營，建立長久值得信賴的關係。"},
+  "phil-p03-h3": {"ja":"互いの個性を尊重する","en":"Respect Each Individual","tw":"相互尊重個性"},
+  "phil-p03-p": {"ja":"障がいの有無や背景に関わらず、一人ひとりが持つ固有の才能を尊重します。適材適所を追求し、「誰もが主役になれる職場」を共創します。","en":"We respect the unique talents of each individual, regardless of disability or background. By placing the right people in the right roles, we co-create a workplace where everyone can shine.","tw":"無論是否有殘疾或背景如何，我們尊重每個人獨特的才能。追求適才適所，共同創造「人人皆能成為主角的職場」。"},
+  "phil-p04-h3": {"ja":"資源への畏敬と環境への配慮","en":"Respect for Resources and the Environment","tw":"敬畏資源與關懷環境"},
+  "phil-p04-p": {"ja":"皮一つ、粉塵一つに至るまで価値を見出し、無駄なく使い切る「全利用」を追求します。次世代に豊かな大地を引き継ぐため、環境負荷の低減に努めます。","en":"We find value in every husk and grain of dust, pursuing total utilization with zero waste. We strive to reduce our environmental impact and pass on a rich earth to future generations.","tw":"從每一片外皮到每一粒粉塵，我們都發現其價值，追求「全量利用」、物盡其用。為將豐饒的大地傳承給下一代，致力於降低環境負荷。"},
+  "phil-p05-h3": {"ja":"変化を恐れず、本質を守る","en":"Embrace Change, Protect Our Core","tw":"不懼變化，守護本質"},
+  "phil-p05-p": {"ja":"時代のニーズや技術の進化には柔軟に応えます。しかし、「誠実に作る」という根底の魂は、創業以来、そしてこれからも決して変えることはありません。","en":"We respond flexibly to evolving needs and technologies. Yet the spirit of making things with integrity will never change.","tw":"我們靈活回應時代需求與技術進步。然而，「誠實製造」這一根本之魂，自創業以來，未來也絕不改變。"},
+  "phil-p06-h3": {"ja":"働く仲間を、最大の財産として大切にする","en":"Cherish Our People as Our Greatest Asset","tw":"將工作夥伴視為最大財產"},
+  "phil-p06-p": {"ja":"会社の根幹を支えるのは、一人ひとりの従業員です。安心して長く働き続けられる環境を整えることが、経営者としての責務です。社員の成長が会社の成長であり、社員の喜びが会社の喜びであると信じています。","en":"Our employees are the foundation of our company. It is our duty to create an environment where people can work with confidence for the long term. The growth and happiness of our employees is the growth and happiness of our company.","tw":"支撐公司根基的是每一位員工。為員工創造能夠安心長期工作的環境，是身為經營者的責任。我們相信，員工的成長就是公司的成長，員工的喜悅就是公司的喜悅。"},
+  "grits-h2": {"ja":"コーングリッツ","en":"Corn Grits","tw":"玉米粗粉"},
+  "grits-sub": {"ja":"用途別にメッシュサイズ（粒度）を分けて製造しております","en":"Manufactured in various mesh sizes for different applications","tw":"依不同用途分別製造各種網目尺寸（粒度）"},
+  "grits-lead": {"ja":"お客様の用途に見合った、様々な種類のコーングリッツをご用意しております。オーダーメイドも可能です。原料はアメリカ産分別生産流通管理済み（NON-GMO）コーンを100%使用しております。","en":"We offer a wide range of corn grits tailored to your needs. Custom orders are also available. All products use 100% American Identity Preserved (NON-GMO) corn.","tw":"我們備有符合客戶用途的各種玉米粗粉。亦可接受客製化訂單。原料100%使用美國產身份保全（非基改）玉米。"},
+  "grits-btn": {"ja":"お問い合わせ","en":"Contact Us","tw":"聯絡我們"},
+  "hominy-h2": {"ja":"ホミニーフィード","en":"Hominy Feed","tw":"玉米飼料"},
+  "hominy-sub": {"ja":"コーン由来の高エネルギー飼料・きのこ培地","en":"High-energy corn-based feed and mushroom substrate","tw":"玉米來源的高能量飼料・菇類培養基"},
+  "hominy-lead": {"ja":"コーングリッツを製造する際に分離される胚芽、皮、デンプン部の混合物です。エネルギー価が高く、各種畜産の飼料へ使用することができます。また、きのこの培地としても多くの農家様にご利用頂いております。","en":"Hominy feed is a mixture of germ, bran, and starch separated during corn grits production. With high energy value, it is used as livestock feed and as a mushroom cultivation substrate.","tw":"這是製造玉米粗粉時分離出的胚芽、外皮、澱粉部分的混合物。能量價值高，可用作各種畜牧業的飼料。亦被眾多農家用作菇類的培養基。"},
+  "hominy-spec-h3": {"ja":"栄養成分","en":"Nutritional Content","tw":"營養成分"},
+  "hominy-shipping-h3": {"ja":"出荷形態","en":"Shipping Options","tw":"出貨形式"},
+  "hominy-shipping-p": {"ja":"バラ・20kg紙袋・500kgフレコンでの出荷が可能です。ご要望に応じてご対応いたします。","en":"Available in bulk, 20kg paper bags, or 500kg flexible containers.","tw":"可以散裝、20kg紙袋、500kg太空袋出貨。依客戶需求提供相應服務。"},
+  "hominy-btn": {"ja":"お問い合わせ・ご相談","en":"Contact Us","tw":"聯絡・諮詢"},
+  "silo-h2": {"ja":"姫路港サイロ株式会社","en":"Himeji Port Silo Co., Ltd.","tw":"姬路港穀物筒倉株式會社"},
+  "silo-sub": {"ja":"西播磨最大の穀物サイロ — 保管・輸送・通関をワンストップで","en":"Nishi-Harima region largest grain silo — one-stop storage, transport, and customs","tw":"西播磨最大的穀物筒倉 — 保管・運輸・通關一站式服務"},
+  "silo-lead": {"ja":"西播磨最大の穀物サイロを保有し、コーンをはじめ小麦・大麦・大豆・大豆ミール・粗飼料などを保管しております。グループ・提携企業と連携し、穀物の陸上輸送・海上輸送・通関業務など多様なオーダーにお応えします。常温・定温倉庫も保有しており、貨物の形態を問わず最適な状態での保管が可能です。","en":"We operate the largest grain silo in the Nishi-Harima region, storing corn, wheat, barley, soybeans, soybean meal, and roughage. We handle land and sea transport and customs clearance. Our ambient and temperature-controlled warehouses accommodate cargo of any type.","tw":"我們擁有西播磨最大的穀物筒倉，保管玉米、小麥、大麥、大豆、豆粕、粗飼料等。與集團及合作企業聯動，承接穀物陸上運輸、海上運輸、通關業務等多樣訂單。另備有常溫及定溫倉庫，無論何種貨物形態均可最佳狀態保管。"},
+  "sus-h2": {"ja":"サステナビリティ","en":"Sustainability","tw":"永續發展"},
+  "sus-sub": {"ja":"山陽製粉株式会社の持続可能な事業活動への取り組み","en":"Our commitment to sustainable business practices","tw":"山陽製粉株式會社對永續經營的承諾"},
+  "sus-title": {"ja":"私たちの取り組み","en":"Our Initiatives","tw":"我們的行動"},
+  "sus-lead": {"ja":"山陽製粉は創業以来、地域と共に歩んできた食品原材料メーカーです。食の安全・安心を守り、環境への負荷を低減しながら、次世代に豊かな社会を引き継ぐことが私たちの責務と考えています。","en":"Sanyo Seifun has walked alongside our community since our founding. We believe it is our responsibility to protect food safety, reduce environmental impact, and pass on a prosperous society to future generations.","tw":"山陽製粉自創業以來，一直與地區攜手並進。我們認為，守護食品安全、降低環境負荷，同時將豐裕的社會傳承給下一代，是我們的責任。"},
+  "recruit-h2": {"ja":"採 用 情 報","en":"Careers","tw":"招 募 資 訊"},
+  "recruit-sub": {"ja":"山陽製粉株式会社　採用情報","en":"Sanyo Seifun Co., Ltd. — Careers","tw":"山陽製粉株式會社　招募資訊"},
+  "recruit-none": {"ja":"現在、新規採用は行っておりません","en":"We are not currently hiring.","tw":"目前不進行新進人員招募。"},
+  "recruit-none-sub": {"ja":"募集が再開された際は、このページにてお知らせいたします。<br>ご関心をお持ちいただき、ありがとうございます。","en":"We will announce new openings on this page when recruitment resumes.<br>Thank you for your interest.","tw":"招募重新開始時，將在本頁面公告。<br>感謝您的關注。"},
+  "contact-h2": {"ja":"お問い合わせ","en":"Contact","tw":"聯 絡 我 們"},
+  "contact-sub": {"ja":"製品・採用・その他ご質問はこちらから","en":"For product inquiries, careers, and other questions","tw":"產品、招募及其他問題請由此聯絡"},
+  "contact-note": {"ja":"お電話でのお問い合わせは業務部（TEL：079-233-0022）まで。フォームからのお問い合わせは3営業日以内にご返信いたします。","en":"For phone inquiries, please contact our Operations Dept. (TEL: 079-233-0022). Form inquiries will be answered within 3 business days.","tw":"電話諮詢請聯絡業務部（TEL：079-233-0022）。表單諮詢將於3個工作日內回覆。"},
+  "contact-submit": {"ja":"送　信","en":"Send","tw":"送　出"},
+  "footer-copyright": {"ja":"© 山陽製粉株式会社 All Rights Reserved.","en":"© Sanyo Seifun Co., Ltd. All Rights Reserved.","tw":"© 山陽製粉株式會社 版權所有。"},
 
-  // ナビ
-  'nav-home-txt': {ja:'ホーム', en:'Home'},
-  'nav-business-txt': {ja:'事業内容', en:'Business'},
-  'nav-company-txt': {ja:'会社概要', en:'Company'},
-  'nav-history-txt': {ja:'沿革', en:'History'},
-  'nav-philosophy-txt': {ja:'企業理念', en:'Philosophy'},
-  'nav-factory-txt': {ja:'工場・倉庫案内', en:'Factory & Warehouse'},
-  'nav-grits-txt': {ja:'コーングリッツ', en:'Corn Grits'},
-  'nav-hominy-txt': {ja:'ホミニーフィード', en:'Hominy Feed'},
-  'nav-sustainability-txt': {ja:'サステナビリティ', en:'Sustainability'},
-  'nav-silo-txt': {ja:'姫路港サイロ', en:'Himeji Port Silo'},
-  'nav-recruit-txt': {ja:'採用情報', en:'Careers'},
-  'nav-contact-txt': {ja:'お問い合わせ', en:'Contact'},
+  // ホーム追加
+  "home-consult-btn": {"ja":"お気軽にご相談ください","en":"Contact Us","tw":"歡迎洽詢"},
+  "home-eyebrow-about": {"ja":"About Us","en":"About Us","tw":"關於我們"},
 
-  // 事業内容
-  'business-h2': {ja:'事 業 内 容', en:'Business'},
-  'business-sub': {ja:'コーングリッツ製造・ホミニーフィード製造・倉庫業', en:'Corn Grits / Hominy Feed / Warehousing'},
-  'business-grits-h3': {ja:'コーングリッツを作っています', en:'We Manufacture Corn Grits'},
-  'business-grits-p': {ja:'コーングリッツとは、コーンを乾燥させた後に細かく粉砕したものです（ドライミリング）。主に、ビールやスナック菓子・食品添加物など様々な食品原料としてご使用いただいております。<br><br>当社では、アメリカ産分別生産流通管理済み（旧表記：非遺伝子組み換え）コーンを原料に使用しております。', en:'Corn grits are produced by drying and grinding corn (dry milling). They are widely used as ingredients in beer, snacks, food additives, and more.<br><br>We use Identity Preserved (IP) corn from the United States — formerly labeled as non-GMO.'},
-  'business-hominy-h3': {ja:'畜産用飼料としてホミニーフィード', en:'Hominy Feed for Livestock'},
-  'business-hominy-p': {ja:'コーンは捨てるところの無い万能な穀物と言われています。グリッツ製造時に発生する胚芽・皮・デンプン質は飼料用として利用されております。<br><br>飼料価値も高く、多くの飼料会社様・畜産農家様にご愛用いただいております。また、きのこの培地としても広くご利用頂いております。', en:'Corn is often called a versatile grain with no waste. The germ, bran, and starch generated during grits production are used as feed.<br><br>Valued for its high nutritional content, it is widely used by feed manufacturers, livestock farmers, and mushroom growers.'},
-  'business-allergy-h3': {ja:'コーンはアレルギー反応が極めて少ない穀物', en:'Corn: An Extremely Low-Allergen Grain'},
-  'business-allergy-p': {ja:'食物アレルギーは、身体が食物に含まれるタンパク質を異物として認識し、過敏な反応を起こすことです。我が国における食物アレルギー体質をもつ方は全人口の１〜２％（乳児に限定すると約10％）と考えられています。そういった中で、とうもろこしに起因するアレルギーは例が極めて少なく、比較的安心して食べることのできる穀物といえます。', en:'Food allergies occur when the body recognizes proteins in food as foreign substances. In Japan, approximately 1-2% of the population (around 10% for infants) has food allergies. Among these, corn-related allergies are extremely rare, making it one of the safer grains to consume.'},
+  // 事業内容 本文
+  "business-grits-body": {"ja":"コーングリッツとは、コーンを乾燥させた後に細かく粉砕したものです（ドライミリング）。主に、ビールやスナック菓子・食品添加物など様々な食品原料としてご使用いただいております。<br><br>当社では、アメリカ産分別生産流通管理済み（旧表記：非遺伝子組み換え）コーンを原料に使用しております。","en":"Corn grits are produced by drying and grinding corn through dry milling. They are widely used as ingredients in beer, snacks, food additives, and more.<br><br>We use Identity Preserved (IP) corn from the United States — formerly labeled as non-GMO.","tw":"玉米粗粉是將玉米乾燥後細磨而成（乾式研磨）。主要用作啤酒、零食、食品添加劑等各種食品原料。<br><br>本公司使用美國產身份保全（非基因改造）玉米作為原料。"},
+  "business-hominy-body": {"ja":"コーンは捨てるところの無い万能な穀物と言われています。グリッツ製造時に発生する胚芽・皮・デンプン質は飼料用として利用されております。<br><br>飼料価値も高く、多くの飼料会社様・畜産農家様にご愛用いただいております。また、きのこの培地としても広くご利用頂いております。","en":"Corn is a versatile grain with no waste. The germ, bran, and starch generated during grits production are used as livestock feed.<br><br>Valued for its high nutritional content, it is widely used by feed manufacturers and livestock farmers. It is also widely used as a mushroom cultivation substrate.","tw":"玉米被稱為全身是寶的萬能穀物。製造玉米粗粉時產生的胚芽、外皮、澱粉質均可作為飼料使用。<br><br>飼料價值高，深受眾多飼料公司及畜牧農家愛用。亦被廣泛用作菇類的培養基。"},
+  "business-allergy-body": {"ja":"食物アレルギーは、身体が食物に含まれるタンパク質を異物として認識し、過敏な反応を起こすことです。我が国における食物アレルギー体質をもつ方は全人口の１〜２％（乳児に限定すると約10％）と考えられています。そういった中で、とうもろこしに起因するアレルギーは例が極めて少なく、比較的安心して食べることのできる穀物といえます。","en":"Food allergies occur when the body recognizes proteins in food as foreign substances and overreacts. In Japan, approximately 1-2% of the population has food allergies (about 10% for infants). Among these, corn-related allergies are extremely rare, making it one of the safer grains to consume.","tw":"食物過敏是指身體將食物中含有的蛋白質視為異物並產生過敏反應。日本食物過敏體質的人口約佔全體的1〜2%（嬰兒約10%）。在此情況下，由玉米引起的過敏案例極少，可說是相對安心食用的穀物。"},
 
-  // 会社概要
-  'company-h2': {ja:'会 社 概 要', en:'Company Profile'},
-  'company-sub': {ja:'山陽製粉株式会社について', en:'About Sanyo Seifun Co., Ltd.'},
-  'company-name-label': {ja:'商号', en:'Company Name'},
-  'company-name-val': {ja:'山陽製粉株式会社', en:'Sanyo Seifun Co., Ltd.'},
-  'company-founded-label': {ja:'設立', en:'Founded'},
-  'company-capital-label': {ja:'資本金', en:'Capital'},
-  'company-president-label': {ja:'代表者', en:'President'},
-  'company-hq-label': {ja:'本社所在地', en:'Head Office'},
-  'company-factory-label': {ja:'工場所在地', en:'Factory'},
-  'company-business-label': {ja:'事業内容', en:'Business'},
-  'company-bank-label': {ja:'取引銀行', en:'Banks'},
-  'company-org-label': {ja:'所属団体', en:'Memberships'},
-  'company-related-label': {ja:'関連会社', en:'Affiliates'},
+  // 会社概要テーブル
+  "co-name-th": {"ja":"商号","en":"Company Name","tw":"公司名稱"},
+  "co-name-td": {"ja":"山陽製粉株式会社","en":"Sanyo Seifun Co., Ltd.","tw":"山陽製粉株式會社"},
+  "co-founded-th": {"ja":"設立","en":"Founded","tw":"創立"},
+  "co-founded-td": {"ja":"昭和12年10月5日","en":"October 5, 1937","tw":"1937年10月5日"},
+  "co-capital-th": {"ja":"資本金","en":"Capital","tw":"資本額"},
+  "co-capital-td": {"ja":"2,000万円","en":"JPY 20 million","tw":"2,000萬日圓"},
+  "co-president-th": {"ja":"代表者","en":"President","tw":"代表人"},
+  "co-president-td": {"ja":"代表取締役　宮本義太郎","en":"President & CEO: Yoshitaro Miyamoto","tw":"代表取締役　宮本義太郎"},
+  "co-hq-th": {"ja":"本社所在地","en":"Head Office","tw":"本社所在地"},
+  "co-hq-access": {"ja":"<span data-i18n="co-hq-access">JR姫路駅より徒歩5分<br>お車でお越しの方は、隣接する立体駐車場をご利用ください。</span>","en":"5 min walk from JR Himeji Station<br>Parking available at adjacent multi-story car park.","tw":"距JR姬路站步行5分鐘<br>開車前來者請利用鄰近立體停車場。"},
+  "co-hq-map": {"ja":"📍 Googleマップで開く","en":"📍 Open in Google Maps","tw":"📍 在Google地圖開啟"},
+  "co-factory-th": {"ja":"工場所在地","en":"Factory","tw":"工廠所在地"},
+  "co-factory-access": {"ja":"<span data-i18n="co-factory-access">JR姫路駅より車で15分　山陽電車飾磨駅より車で10分</span>","en":"15 min by car from JR Himeji Station / 10 min by car from Sanyo Electric Railway Shikama Station","tw":"距JR姬路站開車15分鐘　距山陽電車飾磨站開車10分鐘"},
+  "co-factory-map": {"ja":"📍 Googleマップで開く","en":"📍 Open in Google Maps","tw":"📍 在Google地圖開啟"},
+  "co-business-th": {"ja":"事業内容","en":"Business","tw":"業務內容"},
+  "co-business-td": {"ja":"コーングリッツ及びその加工品の製造販売業<br>倉庫業（保税蔵置場指定）","en":"Manufacturing and sales of corn grits and processed products<br>Warehousing (bonded warehouse)","tw":"玉米粗粉及其加工品的製造銷售業<br>倉儲業（保稅倉庫指定）"},
+  "co-bank-th": {"ja":"取引銀行","en":"Banks","tw":"往來銀行"},
+  "co-bank-td": {"ja":"播州信用金庫　駅前支店<br>三井住友銀行　姫路支店","en":"Banshu Credit Union, Ekimae Branch<br>Sumitomo Mitsui Banking Corporation, Himeji Branch","tw":"播州信用金庫　駅前支店<br>三井住友銀行　姬路支店"},
+  "co-org-th": {"ja":"所属団体","en":"Memberships","tw":"所屬團體"},
+  "co-org-td": {"ja":"一般社団法人 日本コーングリッツ協会<br>一般社団法人 日本倉庫協会（兵庫県倉庫協会）<br>一般社団法人 姫路植物検疫協会<br>姫路商工会議所<br>飾磨港振興会","en":"Japan Corn Grits Association<br>Japan Warehousing Association (Hyogo Warehousing Association)<br>Himeji Plant Quarantine Association<br>Himeji Chamber of Commerce and Industry<br>Shikama Port Promotion Association","tw":"一般社團法人 日本玉米粗粉協會<br>一般社團法人 日本倉庫協會（兵庫縣倉庫協會）<br>一般社團法人 姬路植物檢疫協會<br>姬路商工會議所<br>飾磨港振興會"},
+  "co-related-th": {"ja":"関連会社","en":"Affiliates","tw":"關聯公司"},
+  "co-related-td": {"ja":"宮本産業株式会社","en":"Miyamoto Sangyo Co., Ltd.","tw":"宮本產業株式會社"},
+  "co-silo-link": {"ja":"姫路港サイロ株式会社 →","en":"Himeji Port Silo Co., Ltd. →","tw":"姬路港穀物筒倉株式會社 →"},
 
-  // 沿革
-  'history-h2': {ja:'沿 革', en:'History'},
-  'history-sub': {ja:'昭和12年創業から現在まで', en:'From Our Founding in 1937 to the Present'},
+  // 工場・倉庫
+  "factory-h2": {"ja":"工場・倉庫案内","en":"Factory & Warehouse","tw":"工廠・倉庫介紹"},
+  "factory-sub": {"ja":"姫路港に隣接した製粉工場・営業倉庫","en":"Flour mill and commercial warehouse adjacent to Himeji Port","tw":"緊鄰姬路港的製粉工廠・營業倉庫"},
+  "factory-lead": {"ja":"当工場は、古来より瀬戸内海の交通の要所として栄え、現在は国際拠点港湾に指定されている「姫路港」に隣接しています。陸上物流では山陽自動車道へのアクセスが容易です。海上物流では神戸港・大阪港を経由し、北海道から沖縄まで全国へのお届けが可能です。","en":"Our factory is adjacent to Himeji Port, designated as an international hub port. We have easy access to the Sanyo Expressway for land logistics, and via Kobe and Osaka ports, we can deliver nationwide from Hokkaido to Okinawa.","tw":"本工廠緊鄰自古以來作為瀨戶內海交通要衝而繁榮、現已被指定為國際樞紐港灣的「姬路港」。陸上物流可便捷連接山陽高速公路。海上物流則經由神戶港・大阪港，可配送至北海道至沖繩的全國各地。"},
+  "factory-mill-h3": {"ja":"製粉工場","en":"Flour Mill","tw":"製粉工廠"},
+  "factory-mill-body": {"ja":"<strong>敷地面積</strong>　5,491㎡<br><br>【構造】<br>工場本館　鉄筋コンクリート6階<br>包装棟　鉄骨ALC2階<br>製品倉庫　鉄骨平屋建<br><br>【設備】<br>原料タンク　鉄板製12基 750トン<br>製品タンク　鉄板製9基 350トン","en":"<strong>Site Area</strong>: 5,491㎡<br><br>[Structure]<br>Main Building: 6-story reinforced concrete<br>Packaging Building: 2-story steel ALC<br>Product Warehouse: Single-story steel<br><br>[Equipment]<br>Raw material tanks: 12 steel tanks, 750 tons<br>Product tanks: 9 steel tanks, 350 tons","tw":"<strong>佔地面積</strong>　5,491㎡<br><br>【構造】<br>工廠主館　鋼筋混凝土6樓<br>包裝棟　鋼骨ALC2樓<br>產品倉庫　鋼骨平房<br><br>【設備】<br>原料槽　鋼板製12基 750噸<br>產品槽　鋼板製9基 350噸"},
+  "factory-ware-h3": {"ja":"営業倉庫","en":"Commercial Warehouse","tw":"營業倉庫"},
+  "factory-ware-body": {"ja":"<strong>延床面積</strong>　3,309㎡<br><br>【構造】<br>鉄筋コンクリート造り3階建<br>1階　1,094㎡（燻蒸倉庫）<br>2階　1,094㎡（燻蒸倉庫）<br>3階　1,089㎡（一般倉庫）<br><br>【設備】<br>荷物専用エレベーター　4トン 1基","en":"<strong>Total Floor Area</strong>: 3,309㎡<br><br>[Structure]<br>3-story reinforced concrete<br>1F: 1,094㎡ (fumigation warehouse)<br>2F: 1,094㎡ (fumigation warehouse)<br>3F: 1,089㎡ (general warehouse)<br><br>[Equipment]<br>Cargo elevator: 4 tons, 1 unit","tw":"<strong>總樓板面積</strong>　3,309㎡<br><br>【構造】<br>鋼筋混凝土3層建築<br>1樓　1,094㎡（燻蒸倉庫）<br>2樓　1,094㎡（燻蒸倉庫）<br>3樓　1,089㎡（一般倉庫）<br><br>【設備】<br>貨物專用電梯　4噸 1台"},
+  "factory-truck-h3": {"ja":"グリッツ専用タンクローリー","en":"Dedicated Grits Tank Trucks","tw":"玉米粗粉專用槽車"},
+  "factory-truck-body": {"ja":"自社所有のグリッツ専用タンクローリーを2台保有しております。お客様のご要望に応じた安定した輸送体制を整えています。","en":"We own 2 dedicated tank trucks for corn grits. We maintain a stable transportation system to meet our customers' needs.","tw":"本公司自有2台玉米粗粉專用槽車。我們建立了穩定的運輸體制，以滿足客戶的各種需求。"},
 
-  // 企業理念
-  'phil-h2': {ja:'「礎を研ぎ、命を繋ぐ」', en:'"Refine the Foundation, Connect Life"'},
-  'phil-sub': {ja:'企業理念', en:'Corporate Philosophy'},
-  'phil-body': {ja:'トウモロコシは、古来より人類が繋いできた命の源です。私たちは、その黄金の一粒一粒に宿る可能性を、プロの技術と感性で研ぎ澄まし、あらゆる食品の「おいしさの土台」へと昇華させます。<br><br>私たちが作るのは、主役ではありません。しかし、私たちが生み出す一袋がなければ、あのビールの喉越しも、あの菓子の軽やかな食感も生まれません。目立つことはなくとも、食の根幹を支える誇りを胸に。私たちは、自然の恵みと健やかな未来を繋ぐ、確かな架け橋であり続けます。', en:'Corn has been a source of life nurtured by humanity since ancient times. We refine the potential within each golden kernel through professional skill and sensibility, elevating it into the foundation of flavor for all kinds of food.<br><br>What we make is never the star of the show. Yet without the bags we produce, the crisp taste of that beer or the light texture of that snack would not exist. With quiet pride in supporting the heart of food, we remain a steadfast bridge connecting nature's gifts to a healthy future.'},
-  'phil-eyebrow': {ja:'Principles', en:'Principles'},
-  'phil-title': {ja:'行 動 規 範', en:'Code of Conduct'},
-  'phil-p01-num': {ja:'01', en:'01'},
-  'phil-p01-h3': {ja:'感性を磨き、期待を超える', en:'Sharpen Our Senses, Exceed Expectations'},
-  'phil-p01-p': {ja:'数値化できない「色・香り・手触り」を大切にします。機械に使われるのではなく、長年培った技術で機械を使いこなし、原料の個性を最大限に引き出します。', en:'We value what cannot be measured — color, aroma, and texture. Rather than being driven by machines, we master them with our accumulated expertise to draw out the best from every ingredient.'},
-  'phil-p02-h3': {ja:'誠実な循環を築く', en:'Build Honest Relationships'},
-  'phil-p02-p': {ja:'産地からお客様まで、食のバトンを繋ぐすべての方々を大切なパートナーと考えます。透明性の高い対話と誠実な商いを通じて、永く信頼される関係を築きます。', en:'We regard everyone who passes the baton of food — from producers to customers — as valued partners. Through transparent dialogue and honest business, we build lasting trust.'},
-  'phil-p03-h3': {ja:'互いの個性を尊重する', en:'Respect Each Individual'},
-  'phil-p03-p': {ja:'障がいの有無や背景に関わらず、一人ひとりが持つ固有の才能を尊重します。適材適所を追求し、「誰もが主役になれる職場」を共創します。', en:'We respect the unique talents of each individual, regardless of disability or background. By placing the right people in the right roles, we co-create a workplace where everyone can shine.'},
-  'phil-p04-h3': {ja:'資源への畏敬と環境への配慮', en:'Respect for Resources and the Environment'},
-  'phil-p04-p': {ja:'皮一つ、粉塵一つに至るまで価値を見出し、無駄なく使い切る「全利用」を追求します。次世代に豊かな大地を引き継ぐため、環境負荷の低減に努めます。', en:'We find value in every husk and every grain of dust, pursuing total utilization with zero waste. We strive to reduce our environmental impact and pass on a rich earth to future generations.'},
-  'phil-p05-h3': {ja:'変化を恐れず、本質を守る', en:'Embrace Change, Protect Our Core'},
-  'phil-p05-p': {ja:'時代のニーズや技術の進化には柔軟に応えます。しかし、「誠実に作る」という根底の魂は、創業以来、そしてこれからも決して変えることはありません。', en:'We respond flexibly to evolving needs and technologies. Yet the spirit of making things with integrity — the soul of our founding — will never change.'},
-  'phil-p06-h3': {ja:'働く仲間を、最大の財産として大切にする', en:'Cherish Our People as Our Greatest Asset'},
-  'phil-p06-p': {ja:'会社の根幹を支えるのは、一人ひとりの従業員です。安心して長く働き続けられる環境を整えることが、経営者としての責務です。社員の成長が会社の成長であり、社員の喜びが会社の喜びであると信じています。', en:'Our employees are the foundation of our company. It is our duty as management to create an environment where people can work with confidence for the long term. We believe that the growth and happiness of our employees is the growth and happiness of our company.'},
-
-  // コーングリッツ
-  'grits-h2': {ja:'コーングリッツ', en:'Corn Grits'},
-  'grits-sub': {ja:'用途別にメッシュサイズ（粒度）を分けて製造しております', en:'Manufactured in various mesh sizes for different applications'},
-  'grits-lead': {ja:'お客様の用途に見合った、様々な種類のコーングリッツをご用意しております。オーダーメイドも可能です。原料はアメリカ産分別生産流通管理済み（NON-GMO）コーンを100%使用しております。', en:'We offer a wide range of corn grits tailored to your needs. Custom orders are also available. All products use 100% American Identity Preserved (NON-GMO) corn.'},
-  'grits-btn': {ja:'お問い合わせ', en:'Contact Us'},
+  // コーングリッツ製品
+  "grits-nozomih-mesh": {"ja":"8-12 mesh pass","en":"8-12 mesh pass","tw":"8-12目通過"},
+  "grits-nozomih-name": {"ja":"のぞみH","en":"Nozomi H","tw":"Nozomi H"},
+  "grits-nozomih-desc": {"ja":"主にお菓子や食品添加物の原料としてご使用いただいております。","en":"Mainly used as an ingredient for snacks and food additives.","tw":"主要用作零食及食品添加劑的原料。"},
+  "grits-nozomih-size": {"ja":"中心粒度：約2〜3mm","en":"Particle size: approx. 2-3mm","tw":"中心粒度：約2〜3mm"},
+  "grits-nozomi-mesh": {"ja":"12-20 mesh pass","en":"12-20 mesh pass","tw":"12-20目通過"},
+  "grits-nozomi-name": {"ja":"のぞみ","en":"Nozomi","tw":"Nozomi"},
+  "grits-nozomi-desc": {"ja":"主にお菓子やコーンパフの原料としてご使用いただいております。","en":"Mainly used as an ingredient for snacks and corn puffs.","tw":"主要用作零食及玉米泡芙的原料。"},
+  "grits-nozomi-size": {"ja":"中心粒度：約1〜1.5mm","en":"Particle size: approx. 1-1.5mm","tw":"中心粒度：約1〜1.5mm"},
+  "grits-speed-mesh": {"ja":"22-26 mesh pass","en":"22-26 mesh pass","tw":"22-26目通過"},
+  "grits-speed-name": {"ja":"SPEED","en":"SPEED","tw":"SPEED"},
+  "grits-speed-desc": {"ja":"主にお菓子や食品添加物の原料としてご使用いただいております。","en":"Mainly used as an ingredient for snacks and food additives.","tw":"主要用作零食及食品添加劑的原料。"},
+  "grits-speed-size": {"ja":"中心粒度：約0.5〜1mm","en":"Particle size: approx. 0.5-1mm","tw":"中心粒度：約0.5〜1mm"},
+  "grits-hikari-mesh": {"ja":"28-48 mesh pass","en":"28-48 mesh pass","tw":"28-48目通過"},
+  "grits-hikari-name": {"ja":"ひかり","en":"Hikari","tw":"Hikari"},
+  "grits-hikari-desc": {"ja":"主にビール・ウイスキー・焼酎の醸造用原料としてご使用いただいております。","en":"Mainly used as a brewing ingredient for beer, whisky, and shochu.","tw":"主要用作啤酒、威士忌、燒酎的釀造原料。"},
+  "grits-hikari-size": {"ja":"中心粒度：約0.3〜0.5mm","en":"Particle size: approx. 0.3-0.5mm","tw":"中心粒度：約0.3〜0.5mm"},
+  "grits-cf-mesh": {"ja":"100 mesh pass","en":"100 mesh pass","tw":"100目通過"},
+  "grits-cf-name": {"ja":"コーンフラワー","en":"Corn Flour","tw":"玉米粉"},
+  "grits-cf-desc": {"ja":"食品添加物等の原料にご使用いただいております。粒度は微粉体となります。","en":"Used as an ingredient for food additives and more. Very fine powder.","tw":"用作食品添加劑等的原料。粒度為微粉體。"},
+  "grits-cf-size": {"ja":"微粉体","en":"Fine powder","tw":"微粉體"},
+  "grits-contact-txt": {"ja":"ご不明な点・オーダーメイドのご相談はお気軽にどうぞ","en":"For questions or custom order inquiries, please feel free to contact us.","tw":"如有疑問或客製化訂單諮詢，歡迎隨時與我們聯繫。"},
 
   // ホミニーフィード
-  'hominy-h2': {ja:'ホミニーフィード', en:'Hominy Feed'},
-  'hominy-sub': {ja:'コーン由来の高エネルギー飼料・きのこ培地', en:'High-energy corn-based feed and mushroom substrate'},
-  'hominy-lead': {ja:'コーングリッツを製造する際に分離される胚芽、皮、デンプン部の混合物です。エネルギー価が高く、各種畜産の飼料へ使用することができます。また、きのこの培地としても多くの農家様にご利用頂いております。', en:'Hominy feed is a mixture of germ, bran, and starch separated during corn grits production. With high energy value, it is used as livestock feed across various farming operations, and is also widely used as a mushroom cultivation substrate.'},
-  'hominy-spec-h3': {ja:'栄養成分', en:'Nutritional Content'},
-  'hominy-shipping-h3': {ja:'出荷形態', en:'Shipping Options'},
-  'hominy-shipping-p': {ja:'バラ・20kg紙袋・500kgフレコンでの出荷が可能です。ご要望に応じてご対応いたします。', en:'Available in bulk, 20kg paper bags, or 500kg flexible containers. We accommodate your specific requirements.'},
-  'hominy-btn': {ja:'お問い合わせ・ご相談', en:'Contact Us'},
+  "hominy-moisture": {"ja":"水　分","en":"Moisture","tw":"水　分"},
+  "hominy-protein": {"ja":"粗タンパク質","en":"Crude Protein","tw":"粗蛋白質"},
+  "hominy-fat": {"ja":"粗脂肪","en":"Crude Fat","tw":"粗脂肪"},
+  "hominy-fiber": {"ja":"粗繊維","en":"Crude Fiber","tw":"粗纖維"},
+  "hominy-tdn": {"ja":"TDN（牛）","en":"TDN (Cattle)","tw":"TDN（牛）"},
+  "hominy-source": {"ja":"【日本標準飼料成分表2001より】","en":"[Source: Japan Standard Feed Composition Table 2001]","tw":"【日本標準飼料成分表2001】"},
 
-  // 採用
-  'recruit-h2': {ja:'採 用 情 報', en:'Careers'},
-  'recruit-sub': {ja:'山陽製粉株式会社　採用情報', en:'Sanyo Seifun Co., Ltd. — Careers'},
-  'recruit-none': {ja:'現在、新規採用は行っておりません', en:'We are not currently hiring.'},
-  'recruit-none-sub': {ja:'募集が再開された際は、このページにてお知らせいたします。<br>ご関心をお持ちいただき、ありがとうございます。', en:'We will announce new openings on this page when recruitment resumes.<br>Thank you for your interest.'},
-
-  // お問い合わせ
-  'contact-h2': {ja:'お問い合わせ', en:'Contact'},
-  'contact-sub': {ja:'製品・採用・その他ご質問はこちらから', en:'For product inquiries, careers, and other questions'},
-  'contact-note': {ja:'お電話でのお問い合わせは業務部（TEL：079-233-0022）まで。フォームからのお問い合わせは3営業日以内にご返信いたします。', en:'For phone inquiries, please contact our Operations Dept. (TEL: 079-233-0022). Form inquiries will be answered within 3 business days.'},
-  'contact-name': {ja:'お名前', en:'Name'},
-  'contact-company': {ja:'会社名', en:'Company'},
-  'contact-email': {ja:'メールアドレス', en:'Email'},
-  'contact-tel': {ja:'電話番号', en:'Phone'},
-  'contact-type': {ja:'お問い合わせ種別', en:'Inquiry Type'},
-  'contact-msg': {ja:'お問い合わせ内容', en:'Message'},
-  'contact-submit': {ja:'送　信', en:'Send'},
-  'contact-type-select': {ja:'選択してください', en:'Please select'},
-  'contact-type-product': {ja:'製品について', en:'About Products'},
-  'contact-type-silo': {ja:'姫路港サイロについて', en:'About Himeji Port Silo'},
-  'contact-type-recruit': {ja:'求人について', en:'About Careers'},
-  'contact-type-other': {ja:'その他', en:'Other'},
-
-  // サイロ
-  'silo-h2': {ja:'姫路港サイロ株式会社', en:'Himeji Port Silo Co., Ltd.'},
-  'silo-sub': {ja:'西播磨最大の穀物サイロ — 保管・輸送・通関をワンストップで', en:"Nishi-Harima's largest grain silo — one-stop storage, transport, and customs"},
-  'silo-lead': {ja:'西播磨最大の穀物サイロを保有し、コーンをはじめ小麦・大麦・大豆・大豆ミール・粗飼料などを保管しております。グループ・提携企業と連携し、穀物の陸上輸送・海上輸送・通関業務など多様なオーダーにお応えします。常温・定温倉庫も保有しており、貨物の形態を問わず最適な状態での保管が可能です。', en:'We operate the largest grain silo in the Nishi-Harima region, storing corn, wheat, barley, soybeans, soybean meal, and roughage. In cooperation with group and partner companies, we handle land/sea transport and customs clearance. Our ambient and temperature-controlled warehouses accommodate cargo of any type.'},
+  // 沿革
+  "history-1937": {"ja":"山陽興業株式会社を設立（素麺穀物小麦粉販売）","en":"Founded Sanyo Kogyo Co., Ltd. (selling somen noodle grain and wheat flour)","tw":"設立山陽興業株式會社（銷售素麵穀物及小麥粉）"},
+  "history-1946": {"ja":"小麦製粉の製造へ進出","en":"Entered wheat flour milling business","tw":"進軍小麥製粉製造業"},
+  "history-1954": {"ja":"商号を山陽製粉株式会社へ変更。代表取締役に宮本義郎が就任","en":"Changed company name to Sanyo Seifun Co., Ltd. Yoshiro Miyamoto became President","tw":"商號更名為山陽製粉株式會社。宮本義郎就任代表取締役"},
+  "history-1958": {"ja":"農林省より飼料小麦加工専門工場に指定","en":"Designated as a specialized feed wheat processing factory by the Ministry of Agriculture","tw":"獲農林省指定為飼料小麥加工專門工廠"},
+  "history-1960": {"ja":"本社ビル竣工","en":"Head office building completed","tw":"本社大樓竣工"},
+  "history-1967": {"ja":"資本金を2,000万円とする","en":"Capital increased to JPY 20 million","tw":"資本金設為2,000萬日圓"},
+  "history-1969": {"ja":"姫路製粉サイロ株式会社の設立に参画（現在の姫路港サイロ株式会社）","en":"Participated in founding Himeji Seifun Silo Co., Ltd. (now Himeji Port Silo Co., Ltd.)","tw":"參與設立姬路製粉穀物筒倉株式會社（現姬路港穀物筒倉株式會社）"},
+  "history-1981": {"ja":"神戸海運局より営業倉庫（保税蔵置場）の運営許可","en":"Obtained permission from Kobe Maritime Bureau to operate commercial warehouse (bonded warehouse)","tw":"獲神戶海運局許可運營營業倉庫（保稅倉庫）"},
+  "history-1982": {"ja":"製粉工場及び営業倉庫を移転、竣工","en":"Flour mill and commercial warehouse relocated and completed","tw":"製粉工廠及營業倉庫遷址竣工"},
+  "history-1984": {"ja":"代表取締役に宮本義人が就任","en":"Yoshito Miyamoto became President","tw":"宮本義人就任代表取締役"},
+  "history-2005": {"ja":"小麦粉製造業から現在のコーングリッツ製造業へ転換","en":"Transitioned from wheat flour manufacturing to corn grits manufacturing","tw":"從小麥粉製造業轉型為現在的玉米粗粉製造業"},
+  "history-2007": {"ja":"色彩選別機を導入","en":"Introduced color sorting machine","tw":"引進色彩選別機"},
+  "history-2008": {"ja":"乾燥設備を導入","en":"Introduced drying equipment","tw":"引進乾燥設備"},
+  "history-2010": {"ja":"自社所有タンクローリーを2台体制に","en":"Expanded company-owned tank truck fleet to 2 vehicles","tw":"自有槽車擴充為2台體制"},
+  "history-2014": {"ja":"色彩選別機を更新し製造品質を強化","en":"Updated color sorting machine to enhance manufacturing quality","tw":"更新色彩選別機，強化製造品質"},
+  "history-2019": {"ja":"全フォークリフトをエンジン車からバッテリー車へ更新","en":"Replaced all forklifts from engine-powered to battery-powered","tw":"將全部堆高機由引擎車更換為電動車"},
+  "history-2022": {"ja":"代表取締役に宮本義太郎が就任","en":"Yoshitaro Miyamoto became President","tw":"宮本義太郎就任代表取締役"},
+  "history-2024": {"ja":"製品倉庫リニューアル","en":"Product warehouse renovated","tw":"產品倉庫翻新"},
+  "history-2026": {"ja":"グリッツ包装設備リニューアル","en":"Grits packaging equipment renewed","tw":"玉米粗粉包裝設備更新"},
 
   // サステナビリティ
-  'sus-h2': {ja:'サステナビリティ', en:'Sustainability'},
-  'sus-sub': {ja:'山陽製粉株式会社の持続可能な事業活動への取り組み', en:'Our commitment to sustainable business practices'},
-  'sus-eyebrow': {ja:'Sustainability', en:'Sustainability'},
-  'sus-title': {ja:'私たちの取り組み', en:'Our Initiatives'},
-  'sus-lead': {ja:'山陽製粉は創業以来、地域と共に歩んできた食品原材料メーカーです。食の安全・安心を守り、環境への負荷を低減しながら、次世代に豊かな社会を引き継ぐことが私たちの責務と考えています。', en:'Sanyo Seifun has walked alongside our community since our founding. We believe it is our responsibility to protect food safety, reduce environmental impact, and pass on a prosperous society to future generations.'},
+  "sus-01-num": {"ja":"01　食の安全・安心","en":"01  Food Safety & Security","tw":"01　食品安全・安心"},
+  "sus-01-h3": {"ja":"安全で高品質な製品の安定供給","en":"Stable Supply of Safe, High-Quality Products","tw":"安全高品質產品的穩定供應"},
+  "sus-01-p": {"ja":"お客様に安心してお使いいただける製品をお届けすることが、私たちの最も重要な使命です。アメリカ産の分別生産流通管理済み（NON-GMO）コーンのみを原料として使用し、製造工程における品質管理を徹底しています。<br><br>アレルギー反応が極めて少ないとうもろこしを原料とした製品は、食品メーカー・醸造メーカー・飼料メーカーなど幅広いお取引先に安定してお届けできるよう、生産体制の維持・強化に継続して取り組んでいます。","en":"Our most important mission is to deliver products that customers can use with confidence. We use only American Identity Preserved (NON-GMO) corn and maintain strict quality control throughout our manufacturing process.<br><br>We continuously work to maintain and strengthen our production system so that we can stably deliver our low-allergen corn-based products to food manufacturers, brewers, feed manufacturers, and a wide range of other customers.","tw":"向客戶提供可安心使用的產品，是我們最重要的使命。我們僅使用美國產身份保全（非基改）玉米作為原料，並在製造過程中徹底執行品質管理。<br><br>為能穩定向食品製造商、釀造商、飼料製造商等廣泛客戶提供過敏反應極少的玉米原料產品，我們持續致力於維持並強化生產體制。"},
+  "sus-01-tag": {"ja":"<strong>主な取り組み：</strong>NON-GMO原料の使用 ／ 製造工程の品質管理徹底 ／ 色彩選別機による異物除去","en":"<strong>Key initiatives:</strong> Use of NON-GMO ingredients / Thorough quality control / Foreign matter removal by color sorter","tw":"<strong>主要行動：</strong>使用非基改原料 ／ 徹底執行製造過程品質管理 ／ 色彩選別機除去異物"},
+  "sus-02-num": {"ja":"02　持続可能な原料調達","en":"02  Sustainable Sourcing","tw":"02　永續原料採購"},
+  "sus-02-h3": {"ja":"責任ある原材料の調達","en":"Responsible Raw Material Procurement","tw":"負責任的原料採購"},
+  "sus-02-p": {"ja":"原料となるとうもろこしはアメリカの契約農場にて生産された分別生産流通管理済みコーンを使用しています。調達先との長期的な信頼関係を築きながら、安定的かつ持続可能な原料確保に努めています。<br><br>気候変動や地政学リスクが原料調達に影響を与える可能性を認識しており、複数の調達ルートの確保と在庫管理の最適化により、お客様への安定供給体制を維持しています。","en":"We use Identity Preserved corn grown at contracted farms in the United States. We work to build long-term relationships of trust with our suppliers while ensuring stable and sustainable procurement.<br><br>We recognize that climate change and geopolitical risks may affect raw material procurement. We maintain a stable supply system for our customers through securing multiple procurement routes and optimizing inventory management.","tw":"原料玉米使用在美國契約農場生產的身份保全玉米。我們在與採購方建立長期信賴關係的同時，致力於穩定且永續的原料確保。<br><br>我們認識到氣候變化及地緣政治風險可能影響原料採購，透過確保多元採購管道及最佳化庫存管理，維持對客戶的穩定供應體制。"},
+  "sus-02-tag": {"ja":"<strong>主な取り組み：</strong>NON-GMO認証原料の選定 ／ 調達先との長期取引関係の構築 ／ 在庫管理の最適化","en":"<strong>Key initiatives:</strong> Selection of NON-GMO certified ingredients / Long-term supplier relationships / Inventory optimization","tw":"<strong>主要行動：</strong>選用非基改認證原料 ／ 建立與採購方的長期交易關係 ／ 最佳化庫存管理"},
+  "sus-03-num": {"ja":"03　環境への配慮","en":"03  Environmental Consideration","tw":"03　環境關懷"},
+  "sus-03-h3": {"ja":"廃棄物ゼロへの挑戦と省エネ推進","en":"Zero Waste Challenge and Energy Conservation","tw":"挑戰零廢棄物與推進節能"},
+  "sus-03-p": {"ja":"とうもろこしはすべての部位を活用できる穀物です。コーングリッツの製造で生じる胚芽・皮・デンプン質はホミニーフィードとして飼料に活用しており、廃棄物をほぼ出さない製造体制を実現しています。<br><br>また、全フォークリフトのバッテリー車への転換（令和元年完了）を皮切りに、省エネ設備の導入・更新を継続的に推進しています。","en":"Corn is a grain where every part can be utilized. The germ, bran, and starch produced during corn grits manufacturing are used as hominy feed, achieving a nearly zero-waste production system.<br><br>Starting with the conversion of all forklifts to battery-powered vehicles (completed in 2019), we continuously promote the introduction and renewal of energy-saving equipment.","tw":"玉米是可利用所有部位的穀物。製造玉米粗粉時產生的胚芽、外皮、澱粉質作為玉米飼料利用，實現了幾乎零廢棄物的製造體制。<br><br>以將全部堆高機轉換為電動車（令和元年完成）為契機，持續推進節能設備的引進與更新。"},
+  "sus-03-tag": {"ja":"<strong>主な取り組み：</strong>コーン全量活用（ホミニーフィード化）／ フォークリフト電動化（令和元年完了）／ 省エネ設備の継続導入","en":"<strong>Key initiatives:</strong> Total corn utilization (as hominy feed) / Forklift electrification (completed 2019) / Continuous introduction of energy-saving equipment","tw":"<strong>主要行動：</strong>玉米全量利用（玉米飼料化）／ 堆高機電動化（令和元年完成）／ 持續引進節能設備"},
+  "sus-04-num": {"ja":"04　地域社会との共生","en":"04  Coexistence with Local Community","tw":"04　與地區社會共生"},
+  "sus-04-h3": {"ja":"姫路・播磨地域の産業と食を支える","en":"Supporting Industry and Food in the Himeji/Harima Region","tw":"支撐姬路・播磨地區的產業與食品"},
+  "sus-04-p": {"ja":"昭和12年の創業以来、兵庫県姫路市に根ざした企業として、地域経済・雇用・産業の維持発展に貢献してまいりました。姫路港に隣接する立地を活かした物流体制と、姫路港サイロ株式会社を通じた穀物保管・通関機能は、西播磨地域の食品産業を支えるインフラの一翼を担っています。","en":"Since our founding in 1937, as a company rooted in Himeji, Hyogo Prefecture, we have contributed to the maintenance and development of the local economy, employment, and industry. Our logistics system utilizing our location adjacent to Himeji Port, and our grain storage and customs clearance functions through Himeji Port Silo Co., Ltd., play a role in the infrastructure supporting the food industry of the Nishi-Harima region.","tw":"自1937年創業以來，作為紮根於兵庫縣姬路市的企業，我們持續為地區經濟、就業及產業的維持發展做出貢獻。利用緊鄰姬路港的地理優勢建立的物流體制，以及透過姬路港穀物筒倉株式會社的穀物保管・通關功能，承擔著支撐西播磨地區食品產業基礎設施的一環。"},
+  "sus-04-tag": {"ja":"<strong>主な取り組み：</strong>姫路港サイロ運営による地域物流インフラ支援 ／ 業界団体への参加 ／ 地元雇用の維持","en":"<strong>Key initiatives:</strong> Regional logistics infrastructure support through Himeji Port Silo / Industry association participation / Maintaining local employment","tw":"<strong>主要行動：</strong>透過姬路港穀物筒倉運營支援地區物流基礎設施 ／ 參與業界團體 ／ 維持在地就業"},
+  "sus-05-num": {"ja":"05　従業員への責任","en":"05  Responsibility to Employees","tw":"05　對員工的責任"},
+  "sus-05-h3": {"ja":"働きがいのある職場づくり","en":"Creating a Fulfilling Workplace","tw":"打造有意義的職場"},
+  "sus-05-p": {"ja":"平均勤続年数約25年という実績が示すように、山陽製粉は従業員が長く安心して働き続けられる職場環境の整備に取り組んでいます。残業ゼロ・充実した福利厚生・永年勤続表彰制度など、従業員の生活と健康を大切にする制度を整備しています。<br><br>障がいの有無や背景に関わらず、一人ひとりの個性と能力を尊重する「誰もが主役になれる職場」の実現を目指し、適材適所の人材配置と相互補完のできる組織づくりを推進しています。","en":"As evidenced by our average tenure of approximately 25 years, Sanyo Seifun works to maintain a workplace environment where employees can work with peace of mind for a long time. We have established systems that value the lives and health of employees, including zero overtime, comprehensive benefits, and a long-service award system.<br><br>Regardless of disability or background, we aim to realize a workplace where everyone can shine by respecting each individual's personality and abilities, and promote appropriate placement and organizational development that allows for mutual complementation.","tw":"正如平均勤續年數約25年的實績所示，山陽製粉致力於整備讓員工能長期安心工作的職場環境。我們建立了重視員工生活與健康的制度，包括零加班、充實的福利待遇及永年勤續表彰制度等。<br><br>無論是否有殘疾或背景如何，我們以實現尊重每個人個性與能力的「人人皆能成為主角的職場」為目標，推進適才適所的人才配置及可相互補充的組織建設。"},
+  "sus-05-tag": {"ja":"<strong>主な取り組み：</strong>残業ゼロの推進 ／ 永年勤続表彰制度 ／ 多様な人材の活躍推進 ／ 充実した福利厚生","en":"<strong>Key initiatives:</strong> Zero overtime promotion / Long-service award system / Promoting diverse talent / Comprehensive benefits","tw":"<strong>主要行動：</strong>推進零加班 ／ 永年勤續表彰制度 ／ 推進多元人才活躍 ／ 充實的福利待遇"},
+  "sus-sdgs-h3": {"ja":"SDGsへの貢献","en":"Contributing to the SDGs","tw":"對SDGs的貢獻"},
+  "sus-sdgs-p": {"ja":"山陽製粉は、国連が定める持続可能な開発目標（SDGs）の達成に向け、事業活動を通じて特に以下の目標への貢献を意識しています。","en":"Sanyo Seifun is conscious of contributing particularly to the following goals toward achieving the UN Sustainable Development Goals (SDGs) through its business activities.","tw":"山陽製粉透過業務活動，有意識地為實現聯合國制定的永續發展目標（SDGs）做出貢獻，特別關注以下目標。"},
+  "sus-sdgs-eyebrow": {"ja":"SDGs Declaration","en":"SDGs Declaration","tw":"SDGs宣言"},
+  "sus-sdgs-declaration-title": {"ja":"姫路市SDGs宣言","en":"Himeji City SDGs Declaration","tw":"姬路市SDGs宣言"},
+  "sus-declaration-badge": {"ja":"気候変動に<br>具体的な対策を","en":"Climate<br>Action","tw":"氣候<br>行動"},
+  "sus-declaration-text": {"ja":"コーングリッツ製造工程の省エネ化により、CO₂排出削減に取り組みます。<br>製造現場から気候変動対策を推進し、持続可能な産業の実現を目指します。","en":"We will work to reduce CO₂ emissions by improving energy efficiency in our corn grits manufacturing process.<br>We will promote climate change countermeasures from the manufacturing floor and aim to realize sustainable industry.","tw":"透過玉米粗粉製造工程的節能化，致力於削減CO₂排放量。<br>從製造現場推進氣候變化對策，目標實現永續產業。"},
+  "sus-declaration-date": {"ja":"２０２６年６月１７日　　山陽製粉株式会社　代表取締役　宮本義太郎","en":"June 17, 2026　　Sanyo Seifun Co., Ltd.　President: Yoshitaro Miyamoto","tw":"2026年6月17日　　山陽製粉株式會社　代表取締役　宮本義太郎"},
+
+  // 姫路港サイロ テーブル
+  "silo-founded-th": {"ja":"創立","en":"Founded","tw":"創立"},
+  "silo-founded-td": {"ja":"昭和44年3月27日","en":"March 27, 1969","tw":"1969年3月27日"},
+  "silo-capital-th": {"ja":"資本金","en":"Capital","tw":"資本額"},
+  "silo-capital-td": {"ja":"6,000万円","en":"JPY 60 million","tw":"6,000萬日圓"},
+  "silo-president-th": {"ja":"代表者","en":"President","tw":"代表人"},
+  "silo-president-td": {"ja":"代表取締役　宮本義太郎","en":"President & CEO: Yoshitaro Miyamoto","tw":"代表取締役　宮本義太郎"},
+  "silo-hq-th": {"ja":"本社","en":"Head Office","tw":"本社"},
+  "silo-silo-th": {"ja":"サイロ","en":"Silo","tw":"穀物筒倉"},
+  "silo-cold-th": {"ja":"定温倉庫","en":"Temperature-controlled Warehouse","tw":"定溫倉庫"},
+  "silo-shareholder-th": {"ja":"株主","en":"Shareholders","tw":"股東"},
+  "silo-shareholder-td": {"ja":"山陽製粉株式会社","en":"Sanyo Seifun Co., Ltd.","tw":"山陽製粉株式會社"},
+  "silo-bank-th": {"ja":"取引銀行","en":"Banks","tw":"往來銀行"},
+  "silo-bank-td": {"ja":"播州信用金庫　駅前支店<br>三井住友銀行　姫路支店","en":"Banshu Credit Union, Ekimae Branch<br>Sumitomo Mitsui Banking Corporation, Himeji Branch","tw":"播州信用金庫　駅前支店<br>三井住友銀行　姬路支店"},
+  "silo-org-th": {"ja":"所属団体","en":"Memberships","tw":"所屬團體"},
+  "silo-org-td": {"ja":"一般社団法人 日本倉庫協会（兵庫県倉庫協会）<br>一般社団法人 姫路植物検疫協会<br>姫路商工会議所<br>飾磨港振興会","en":"Japan Warehousing Association (Hyogo Warehousing Association)<br>Himeji Plant Quarantine Association<br>Himeji Chamber of Commerce and Industry<br>Shikama Port Promotion Association","tw":"一般社團法人 日本倉庫協會（兵庫縣倉庫協會）<br>一般社團法人 姬路植物檢疫協會<br>姬路商工會議所<br>飾磨港振興會"},
+  "silo-items-th": {"ja":"取扱品目","en":"Handled Items","tw":"處理品項"},
+  "silo-items-td": {"ja":"食品穀物・飼料穀物・食品原材料・肥料等","en":"Food grains, feed grains, food raw materials, fertilizers, etc.","tw":"食品穀物・飼料穀物・食品原材料・肥料等"},
+  "silo-capacity-th": {"ja":"保管能力","en":"Storage Capacity","tw":"保管能力"},
+  "silo-capacity-td": {"ja":"サイロ：52,784トン　／　常温倉庫：1,800トン　／　定温倉庫：9,200トン","en":"Silo: 52,784 tons / Ambient warehouse: 1,800 tons / Temperature-controlled warehouse: 9,200 tons","tw":"穀物筒倉：52,784噸　／　常溫倉庫：1,800噸　／　定溫倉庫：9,200噸"},
+  "silo-facility1-h3": {"ja":"サイロ事業所","en":"Silo Facility","tw":"穀物筒倉事業所"},
+  "silo-facility1-body": {"ja":"<strong>コンクリートサイロ</strong>　46基（24,012t）<br><strong>鋼板サイロ</strong>　50基（28,772t）<br><strong>常温倉庫</strong>　延床 983㎡（1,800t）<br><br><span style="font-size:13px;">付属設備：サイロ冷却装置 / ニューマ式アンローダー / 粗飼料粉砕機 / 選別精選機械 / くん蒸設備（検疫くん蒸）/ 集塵設備 / 強制換気設備</span>","en":"<strong>Concrete silos</strong>: 46 units (24,012t)<br><strong>Steel silos</strong>: 50 units (28,772t)<br><strong>Ambient warehouse</strong>: 983㎡ (1,800t)<br><br><span style="font-size:13px;">Equipment: Silo cooling system / Pneumatic unloader / Roughage crusher / Sorting machine / Fumigation (quarantine) / Dust collector / Forced ventilation</span>","tw":"<strong>混凝土筒倉</strong>　46基（24,012t）<br><strong>鋼板筒倉</strong>　50基（28,772t）<br><strong>常溫倉庫</strong>　總樓板 983㎡（1,800t）<br><br><span style="font-size:13px;">附屬設備：筒倉冷卻裝置 / 氣動式卸料機 / 粗飼料粉碎機 / 選別精選機械 / 燻蒸設備（檢疫燻蒸）/ 集塵設備 / 強制換氣設備</span>"},
+  "silo-facility2-h3": {"ja":"中島定温倉庫","en":"Nakashima Temperature-controlled Warehouse","tw":"中島定溫倉庫"},
+  "silo-facility2-body": {"ja":"<strong>延床面積</strong>　4,927.230㎡<br><strong>建築構造</strong>　1・2階 鉄筋コンクリート、3階 鉄骨構造<br><strong>冷却設備</strong>　定温（10〜15℃）/ 冷蔵（-2℃）<br><strong>くん蒸設備</strong>　特A級 短時間くん蒸（検疫くん蒸）<br><br><span style="font-size:13px;">付属設備：超音波式加湿設備 / オムニリフター</span>","en":"<strong>Total Floor Area</strong>: 4,927.230㎡<br><strong>Structure</strong>: 1F & 2F reinforced concrete, 3F steel<br><strong>Cooling</strong>: Temperature-controlled (10-15°C) / Refrigerated (-2°C)<br><strong>Fumigation</strong>: Special Grade A short-time fumigation (quarantine)<br><br><span style="font-size:13px;">Equipment: Ultrasonic humidifier / Omni-lifter</span>","tw":"<strong>總樓板面積</strong>　4,927.230㎡<br><strong>建築構造</strong>　1・2樓 鋼筋混凝土、3樓 鋼骨構造<br><strong>冷卻設備</strong>　定溫（10〜15℃）/ 冷藏（-2℃）<br><strong>燻蒸設備</strong>　特A級 短時間燻蒸（檢疫燻蒸）<br><br><span style="font-size:13px;">附屬設備：超音波式加濕設備 / 升降機</span>"},
+  "silo-map1-btn": {"ja":"📍 サイロをGoogleマップで開く","en":"📍 Open Silo in Google Maps","tw":"📍 在Google地圖開啟穀物筒倉"},
+  "silo-map2-btn": {"ja":"📍 定温倉庫をGoogleマップで開く","en":"📍 Open Warehouse in Google Maps","tw":"📍 在Google地圖開啟定溫倉庫"},
+
+  // お問い合わせ
+  "contact-warn-title": {"ja":"【重要：営業・勧誘メールについて】","en":"[IMPORTANT: Sales & Solicitation Emails]","tw":"【重要：關於業務・招攬郵件】"},
+  "contact-warn-body": {"ja":"当フォームへの営業・勧誘・サービス紹介を目的としたお問い合わせは、固くお断りいたします。<br>該当するお問い合わせへの返信は一切行いません。また、送信者情報を記録・保管する場合があります。","en":"We firmly decline any inquiries made for the purpose of sales, solicitation, or service promotion through this form.<br>We will not reply to any such inquiries. We may also record and retain sender information.","tw":"我們嚴正拒絕透過本表單進行業務・招攬・服務介紹為目的的問詢。<br>對於此類問詢，我們將不予回覆。我們亦可能記錄並保存發件人資訊。"},
+  "contact-warn-other": {"ja":"【その他注意事項】","en":"[Other Notes]","tw":"【其他注意事項】"},
+  "contact-note1": {"ja":"内容確認のためにお電話させていただく場合もありますので、お電話番号のご記入をお願いします。","en":"We may contact you by phone to confirm the content of your inquiry, so please provide your phone number.","tw":"我們可能會致電確認問詢內容，請務必填寫您的電話號碼。"},
+  "contact-note2": {"ja":"内容によりましては、ご返事までにお時間がかかる場合、またはご返事を差し上げられない場合がございますのでご了承下さい。","en":"Please note that depending on the content, it may take some time to respond, or we may not be able to respond at all.","tw":"請注意，視問詢內容而定，可能需要一些時間回覆，或可能無法回覆，敬請見諒。"},
+  "contact-note3": {"ja":"弊社からの返信を転載・二次利用することはお断り致します。","en":"We do not permit the reproduction or secondary use of our replies.","tw":"我們不允許轉載或二次利用本公司的回覆。"},
+  "contact-success": {"ja":"お問い合わせありがとうございます。内容を確認の上、ご連絡いたします。","en":"Thank you for your inquiry. We will review your message and contact you shortly.","tw":"感謝您的問詢。我們將確認內容後與您聯繫。"},
+  "contact-name-req": {"ja":"必須","en":"Required","tw":"必填"},
+  "contact-placeholder-name": {"ja":"山陽　太郎","en":"John Smith","tw":"山陽　太郎"},
+  "contact-placeholder-company": {"ja":"株式会社○○","en":"Company Name","tw":"○○股份有限公司"},
+  "contact-placeholder-email": {"ja":"info@example.com","en":"info@example.com","tw":"info@example.com"},
+  "contact-placeholder-tel": {"ja":"079-000-0000","en":"079-000-0000","tw":"079-000-0000"},
+  "contact-placeholder-msg": {"ja":"お問い合わせ内容をご記入ください。","en":"Please enter your message here.","tw":"請填寫您的問詢內容。"},
 
   // フッター
-  'footer-copyright': {ja:'© 山陽製粉株式会社 All Rights Reserved.', en:'© Sanyo Seifun Co., Ltd. All Rights Reserved.'},
+  "footer-nav-title": {"ja":"Navigation","en":"Navigation","tw":"導覽"},
+  "footer-contact-title": {"ja":"Contact","en":"Contact","tw":"聯絡方式"},
+  "footer-factory-dept": {"ja":"【工場・業務部】","en":"[Factory / Operations Dept.]","tw":"【工廠・業務部】"},
+  "footer-hq": {"ja":"【本社】","en":"[Head Office]","tw":"【本社】"},
+  "footer-silo": {"ja":"【姫路港サイロ】","en":"[Himeji Port Silo]","tw":"【姬路港穀物筒倉】"},
+  "footer-privacy": {"ja":"プライバシーポリシー","en":"Privacy Policy","tw":"隱私權政策"},
+  "footer-disclaimer": {"ja":"免責事項","en":"Disclaimer","tw":"免責聲明"},
+  "footer-sitemap": {"ja":"サイトマップ","en":"Site Map","tw":"網站地圖"}
 };
 
 let currentLang = 'ja';
@@ -1296,7 +1412,7 @@ let currentLang = 'ja';
 function setLang(lang) {
   currentLang = lang;
   // ボタンのスタイル切替
-  ['btn-ja','btn-en'].forEach(id => {
+  ['btn-ja','btn-en','btn-tw'].forEach(id => {
     const el = document.getElementById(id);
     if (!el) return;
     if (id.includes(lang)) {
@@ -1342,6 +1458,12 @@ function submitForm(){
     document.getElementById('successMsg').style.display='block';
   });
 }
+// グローバル登録
+window.setLang = setLang;
+window.showPage = showPage;
+window.nav = nav;
+window.toggleMenu = toggleMenu;
+window.submitForm = submitForm;
 </script>
 </body>
 </html>
