@@ -242,6 +242,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
           <a onclick="showPage('company')">会社概要</a>
           <a onclick="showPage('history')">沿革</a>
           <a onclick="showPage('philosophy')">企業理念</a>
+          <a onclick="showPage('factory')">工場・倉庫案内</a>
         </div>
       </div>
       <div class="nav-dropdown">
@@ -265,6 +266,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
   <a onclick="nav('company')">会社概要</a>
   <a class="sub" onclick="nav('history')">沿革</a>
   <a class="sub" onclick="nav('philosophy')">企業理念</a>
+  <a class="sub" onclick="nav('factory')">工場・倉庫案内</a>
   <a onclick="nav('grits')">コーングリッツ</a>
   <a onclick="nav('hominy')">ホミニーフィード</a>
   <a onclick="nav('silo')">姫路港サイロ</a>
@@ -397,6 +399,67 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
       <tr><th>所属団体</th><td>一般社団法人 日本コーングリッツ協会<br>一般社団法人 日本倉庫協会（兵庫県倉庫協会）<br>一般社団法人 姫路植物検疫協会<br>姫路商工会議所</td></tr>
       <tr><th>関連会社</th><td>宮本産業株式会社<br><a onclick="showPage('silo')" style="color:var(--gold);cursor:pointer;text-decoration:underline;">姫路港サイロ株式会社 →</a></td></tr>
     </table>
+  </div>
+</div>
+
+<!-- ======== FACTORY ======== -->
+<div id="page-factory" class="page">
+  <div class="page-header">
+    <img class="page-header-img" src="sanyo factory.avif" alt="工場・倉庫案内">
+    <div class="page-header-inner"><h2>工場・倉庫案内</h2><p>姫路港に隣接した製粉工場・営業倉庫</p></div>
+  </div>
+  <div class="section">
+    <p class="section-lead">当工場は、古来より瀬戸内海の交通の要所として栄え、現在は国際拠点港湾に指定されている「姫路港」に隣接しています。陸上物流では山陽自動車道へのアクセスが容易です。海上物流では神戸港・大阪港を経由し、北海道から沖縄まで全国へのお届けが可能です。</p>
+
+    <div class="content-block">
+      <div class="content-text">
+        <h3>製粉工場</h3>
+        <p>
+          <strong>敷地面積</strong>　5,491㎡<br><br>
+          【構造】<br>
+          工場本館　鉄筋コンクリート6階<br>
+          包装棟　鉄骨ALC2階<br>
+          製品倉庫　鉄骨平屋建<br><br>
+          【設備】<br>
+          原料タンク　鉄板製12基 750トン<br>
+          製品タンク　鉄板製9基 350トン
+        </p>
+      </div>
+      <div class="content-img">
+        <!-- 差し替え: src="images/factory.jpg" -->
+        <img src="sanyo factory2.avif" alt="製粉工場">
+      </div>
+    </div>
+
+    <div class="content-block rev">
+      <div class="content-text">
+        <h3>営業倉庫</h3>
+        <p>
+          <strong>延床面積</strong>　3,309㎡<br><br>
+          【構造】<br>
+          鉄筋コンクリート造り3階建<br>
+          1階　1,094㎡（燻蒸倉庫）<br>
+          2階　1,094㎡（燻蒸倉庫）<br>
+          3階　1,089㎡（一般倉庫）<br><br>
+          【設備】<br>
+          荷物専用エレベーター　4トン 1基
+        </p>
+      </div>
+      <div class="content-img">
+        <!-- 差し替え: src="images/warehouse.jpg" -->
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=80" alt="営業倉庫">
+      </div>
+    </div>
+
+    <div style="margin-bottom:72px;">
+      <h3 style="font-family:'Noto Serif JP',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:16px;border-left:3px solid var(--gold);padding-left:14px;">グリッツ専用タンクローリー</h3>
+      <p style="font-size:14.5px;color:var(--text-light);line-height:2.1;margin-bottom:24px;">自社所有のグリッツ専用タンクローリーを2台保有しております。お客様のご要望に応じた安定した輸送体制を整えています。</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <img src="bulk1.JPG" alt="タンクローリー1" style="width:100%;height:240px;object-fit:cover;display:block;">
+        <img src="tank2.JPG" alt="タンクローリー2" style="width:100%;height:240px;object-fit:cover;display:block;">
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -764,6 +827,7 @@ footer{background:var(--navy);padding:52px 24px 28px;border-top:2px solid var(--
         <li><a onclick="showPage('company')">会社概要</a></li>
         <li><a onclick="showPage('history')">沿革</a></li>
         <li><a onclick="showPage('philosophy')">企業理念</a></li>
+        <li><a onclick="showPage('factory')">工場・倉庫案内</a></li>
         <li><a onclick="showPage('grits')">コーングリッツ</a></li>
         <li><a onclick="showPage('hominy')">ホミニーフィード</a></li>
         <li><a onclick="showPage('silo')">姫路港サイロ</a></li>
