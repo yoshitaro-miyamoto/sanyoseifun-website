@@ -24,10 +24,10 @@
   gtag('config', 'G-15167001006');
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 @font-face {
-  font-family: 'BIZ UDPGothic';
+  font-family: 'Noto Sans JP';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -51,16 +51,16 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;background:var(--cream);color:var(--text);line-height:1.8;font-weight:400;-webkit-font-smoothing:antialiased;}
+body{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;background:var(--cream);color:var(--text);line-height:1.8;font-weight:400;-webkit-font-smoothing:antialiased;}
 
 /* HEADER */
 header{background:var(--navy);position:fixed;top:0;left:0;right:0;z-index:1000;border-bottom:2px solid var(--gold);box-shadow:0 2px 20px rgba(0,0,0,0.25);}
 .header-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:80px;}
 .logo{display:flex;flex-direction:row;align-items:center;cursor:pointer;text-decoration:none;white-space:nowrap;}
-.logo-ja{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:700;color:var(--white);letter-spacing:.04em;white-space:nowrap;}
+.logo-ja{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:20px;font-weight:700;color:var(--white);letter-spacing:.04em;white-space:nowrap;}
 .logo-en{display:none;}
-nav{display:flex;align-items:center;gap:2px;}
-nav a{color:rgba(255,255,255,.95);text-decoration:none;font-size:12.5px;padding:6px 10px;border-radius:3px;transition:color .2s;cursor:pointer;white-space:nowrap;font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;}
+nav{display:flex;align-items:center;gap:2px;line-height:1;}
+nav a{color:rgba(255,255,255,.95);text-decoration:none;font-size:12.5px;padding:6px 10px;border-radius:3px;transition:color .2s;cursor:pointer;white-space:nowrap;font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;display:flex;align-items:center;line-height:1;vertical-align:middle;}
 nav a:hover{color:var(--gold-light);}
 .nav-dropdown{position:relative;}
 .nav-dropdown>a::after{content:' ▾';font-size:10px;}
@@ -82,7 +82,7 @@ main{padding-top:80px;min-height:100vh;}
 .hero-grad{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,39,68,.1),rgba(26,39,68,.5));}
 .hero-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;}
 .hero-eyebrow{display:inline-block;font-size:11px;letter-spacing:.35em;color:var(--gold-light);border:1px solid rgba(200,146,10,.5);padding:5px 20px;margin-bottom:24px;text-transform:uppercase;}
-.hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(28px,5vw,52px);font-weight:700;color:var(--white);line-height:1.35;margin-bottom:28px;letter-spacing:.1em;text-shadow:0 2px 8px rgba(0,0,0,0.3);}
+.hero h1{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:clamp(28px,5vw,52px);font-weight:700;color:var(--white);line-height:1.35;margin-bottom:28px;letter-spacing:.1em;text-shadow:0 2px 8px rgba(0,0,0,0.3);}
 .hero-tagline{font-size:clamp(13px,2vw,15px);color:rgba(255,255,255,.95);margin-bottom:36px;line-height:2;}
 .hero-cta{display:inline-flex;gap:14px;flex-wrap:wrap;justify-content:center;}
 
@@ -90,13 +90,13 @@ main{padding-top:80px;min-height:100vh;}
 .page-header{position:relative;height:260px;overflow:hidden;}
 .page-header-img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.55);}
 .page-header-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
-.page-header-inner h2{font-family:'Noto Serif JP',serif;font-size:clamp(24px,4vw,36px);font-weight:700;color:var(--white);letter-spacing:.2em;margin-bottom:10px;text-shadow:0 2px 8px rgba(0,0,0,0.3);}
+.page-header-inner h2{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:700;color:var(--white);letter-spacing:.2em;margin-bottom:10px;text-shadow:0 2px 8px rgba(0,0,0,0.3);}
 .page-header-inner p{font-size:13px;color:rgba(255,255,255,.9);letter-spacing:.1em;}
 
 /* BUTTONS */
-.btn-primary{background:var(--gold);color:var(--white);border:none;padding:14px 36px;font-size:14px;font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-weight:500;cursor:pointer;letter-spacing:.12em;transition:all .2s;box-shadow:0 2px 8px rgba(200,146,10,0.3);}
+.btn-primary{background:var(--gold);color:var(--white);border:none;padding:14px 36px;font-size:14px;font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-weight:500;cursor:pointer;letter-spacing:.12em;transition:all .2s;box-shadow:0 2px 8px rgba(200,146,10,0.3);}
 .btn-primary:hover{background:var(--gold-light);box-shadow:0 4px 12px rgba(200,146,10,0.4);transform:translateY(-1px);}
-.btn-outline{background:transparent;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.4);padding:13px 32px;font-size:14px;font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;cursor:pointer;letter-spacing:.1em;transition:all .2s;}
+.btn-outline{background:transparent;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.4);padding:13px 32px;font-size:14px;font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;cursor:pointer;letter-spacing:.1em;transition:all .2s;}
 .btn-outline:hover{border-color:var(--gold-light);color:var(--gold-light);}
 
 /* USAGE STRIP */
@@ -106,7 +106,7 @@ main{padding-top:80px;min-height:100vh;}
 /* SECTION */
 .section{max-width:1000px;margin:0 auto;padding:72px 24px;}
 .section-eyebrow{font-size:11px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:10px;display:block;}
-.section-title{font-family:'Noto Serif JP',serif;font-size:clamp(22px,3.5vw,30px);font-weight:700;color:var(--navy);margin-bottom:20px;line-height:1.5;letter-spacing:.06em;}
+.section-title{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:clamp(22px,3.5vw,30px);font-weight:700;color:var(--navy);margin-bottom:20px;line-height:1.5;letter-spacing:.06em;}
 .section-title::after{content:'';display:block;width:48px;height:3px;background:var(--gold);margin-top:16px;border-radius:2px;}
 .section-lead{font-size:15.5px;color:var(--text-light);max-width:680px;margin-bottom:48px;line-height:2.2;}
 .divider-gold{height:1px;background:linear-gradient(to right,transparent,var(--gold),var(--gold),transparent);margin:0;opacity:.4;}
@@ -118,7 +118,7 @@ main{padding-top:80px;min-height:100vh;}
 .feature-card:hover::before{transform:scaleX(1);}
 .feature-card-img{width:100%;height:180px;object-fit:cover;display:block;}
 .feature-card-body{padding:28px 28px 28px;}
-.feature-card h3{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:12px;}
+.feature-card h3{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:12px;}
 .feature-card p{font-size:14px;color:var(--text-light);line-height:2;}
 .feature-link{display:inline-block;margin-top:14px;font-size:12px;color:var(--gold);letter-spacing:.1em;}
 
@@ -126,7 +126,7 @@ main{padding-top:80px;min-height:100vh;}
 .content-block{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:72px;}
 .content-block.rev{direction:rtl;}
 .content-block.rev>*{direction:ltr;}
-.content-text h3{font-family:'Noto Serif JP',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:18px;border-left:4px solid var(--gold);padding-left:16px;}
+.content-text h3{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:18px;border-left:4px solid var(--gold);padding-left:16px;}
 .content-text p{font-size:15px;color:var(--text);line-height:2.1;}
 .content-img img{width:100%;height:280px;object-fit:cover;display:block;}
 
@@ -142,7 +142,7 @@ main{padding-top:80px;min-height:100vh;}
 .timeline::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--border);}
 .tl-item{position:relative;margin-bottom:22px;display:flex;gap:20px;align-items:baseline;}
 .tl-item::before{content:'';position:absolute;left:-28px;top:8px;width:8px;height:8px;background:var(--gold);border-radius:50%;}
-.tl-year{font-family:'Noto Serif JP',serif;font-size:13.5px;font-weight:600;color:var(--navy);min-width:88px;flex-shrink:0;}
+.tl-year{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:13.5px;font-weight:600;color:var(--navy);min-width:88px;flex-shrink:0;}
 .tl-event{font-size:14.5px;color:var(--text);line-height:1.9;}
 
 /* PRODUCTS */
@@ -151,7 +151,7 @@ main{padding-top:80px;min-height:100vh;}
 .product-card img{width:100%;height:150px;object-fit:cover;display:block;}
 .product-card-body{padding:18px 20px 20px;}
 .product-mesh{display:inline-block;font-size:11px;letter-spacing:.15em;color:var(--gold);border:1px solid var(--gold);padding:2px 10px;margin-bottom:10px;}
-.product-card h3{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:8px;}
+.product-card h3{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:8px;}
 .product-card p{font-size:13.5px;color:var(--text);line-height:1.9;}
 .product-size{margin-top:10px;font-size:12px;color:var(--gold);}
 
@@ -166,20 +166,20 @@ main{padding-top:80px;min-height:100vh;}
 .phil-hero{position:relative;height:300px;overflow:hidden;}
 .phil-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(.5);}
 .phil-hero-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
-.phil-tagline{font-family:'Noto Serif JP',serif;font-size:clamp(22px,4vw,36px);font-weight:700;color:var(--white);letter-spacing:.15em;margin-bottom:10px;}
+.phil-tagline{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:clamp(22px,4vw,36px);font-weight:700;color:var(--white);letter-spacing:.15em;margin-bottom:10px;}
 .phil-tagline span{color:var(--gold-light);}
 .phil-sub{font-size:13px;color:rgba(255,255,255,.6);letter-spacing:.1em;}
 .phil-body{max-width:720px;margin:0 auto 56px;font-size:15.5px;color:var(--text-light);line-height:2.3;}
 .principle-list{display:grid;gap:18px;}
 .principle-item{background:var(--white);border-left:5px solid var(--gold);padding:24px 28px;box-shadow:var(--shadow);}
 .principle-num{font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:6px;}
-.principle-item h3{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:10px;}
+.principle-item h3{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:10px;}
 .principle-item p{font-size:14.5px;color:var(--text-light);line-height:2.1;}
 
 /* ACCESS */
 .access-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px;}
 .access-card{background:var(--white);border:1px solid var(--border);padding:28px;box-shadow:var(--shadow);}
-.access-card h3{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--gold-pale);}
+.access-card h3{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:15px;font-weight:600;color:var(--navy);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--gold-pale);}
 .access-info{font-size:14px;color:var(--text);line-height:2.2;}
 .access-info strong{color:var(--navy);font-weight:500;}
 .map-embed{margin-top:28px;border:1px solid var(--border);overflow:hidden;}
@@ -190,20 +190,20 @@ main{padding-top:80px;min-height:100vh;}
 .silo-card{background:var(--white);border:1px solid var(--border);overflow:hidden;}
 .silo-card img{width:100%;height:200px;object-fit:cover;display:block;}
 .silo-card-body{padding:22px 26px;}
-.silo-card h3{font-family:'Noto Serif JP',serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:12px;border-bottom:1px solid var(--gold-pale);padding-bottom:10px;}
+.silo-card h3{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:12px;border-bottom:1px solid var(--gold-pale);padding-bottom:10px;}
 .silo-card p{font-size:14px;color:var(--text);line-height:2;}
 .silo-card strong{color:var(--navy);font-weight:500;}
 
 /* ALLERGY BOX */
 .info-box{background:var(--white);border:1px solid var(--border);border-left:5px solid var(--gold);padding:28px 32px;margin-top:32px;box-shadow:var(--shadow);}
-.info-box h3{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:600;color:var(--navy);margin-bottom:12px;}
+.info-box h3{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:18px;font-weight:600;color:var(--navy);margin-bottom:12px;}
 .info-box p{font-size:14.5px;color:var(--text);line-height:2;}
 
 /* RECRUIT */
 .recruit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:36px;}
 .recruit-card{background:var(--white);border:1px solid var(--border);padding:28px;box-shadow:var(--shadow);}
 .recruit-tag{display:inline-block;font-size:11px;letter-spacing:.15em;color:var(--white);background:var(--navy);padding:3px 12px;margin-bottom:12px;}
-.recruit-card h3{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:14px;}
+.recruit-card h3{font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:14px;}
 .recruit-detail{font-size:14px;color:var(--text);line-height:2;}
 .recruit-detail strong{color:var(--navy);font-weight:500;}
 .recruit-note{margin-top:36px;padding:22px 26px;background:var(--gold-pale);border-left:4px solid var(--gold);font-size:14px;color:var(--text-light);line-height:2;}
@@ -214,10 +214,10 @@ main{padding-top:80px;min-height:100vh;}
 .form-group{display:grid;gap:8px;}
 .form-label{font-size:13px;color:var(--navy);font-weight:500;letter-spacing:.05em;}
 .form-label span{color:var(--gold);margin-left:4px;font-size:11px;}
-.form-input,.form-textarea,.form-select{width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--white);font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color .2s,box-shadow .2s;border-radius:0;-webkit-appearance:none;}
+.form-input,.form-textarea,.form-select{width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--white);font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color .2s,box-shadow .2s;border-radius:0;-webkit-appearance:none;}
 .form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,146,10,0.1);}
 .form-textarea{resize:vertical;min-height:160px;}
-.form-submit{background:var(--navy);color:var(--white);border:none;padding:16px 48px;font-family:'BIZ UDPGothic','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:14px;font-weight:500;letter-spacing:.15em;cursor:pointer;transition:background .2s;}
+.form-submit{background:var(--navy);color:var(--white);border:none;padding:16px 48px;font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:14px;font-weight:500;letter-spacing:.15em;cursor:pointer;transition:background .2s;}
 .form-submit:hover{background:var(--navy-light);}
 .contact-note{font-size:13px;color:var(--text-light);line-height:2;padding:18px 22px;background:var(--gold-pale);border-left:3px solid var(--gold);margin-bottom:32px;}
 .success-msg{display:none;background:#e8f5e9;border:1px solid #66bb6a;border-left:4px solid #2e7d32;padding:20px 24px;margin-bottom:24px;font-size:14px;color:#1b5e20;}
@@ -225,7 +225,7 @@ main{padding-top:80px;min-height:100vh;}
 /* FOOTER */
 footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--gold);}
 .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:44px;margin-bottom:36px;}
-.footer-logo-ja{color:#fff;font-family:'Noto Serif JP',serif;font-size:18px;font-weight:700;letter-spacing:.06em;}
+.footer-logo-ja{color:#fff;font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:18px;font-weight:700;letter-spacing:.06em;}
 .footer-logo-en{font-size:10px;color:var(--gold-light);letter-spacing:.2em;margin-top:4px;display:block;}
 .footer-tagline{font-size:12px;color:rgba(255,255,255,.7);margin-top:10px;line-height:1.9;}
 .footer-col h4{font-size:11px;letter-spacing:.2em;color:var(--gold-light);margin-bottom:14px;text-transform:uppercase;}
@@ -513,7 +513,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
     </div>
 
     <div style="margin-bottom:72px;">
-      <h3 style="font-family:'Noto Serif JP',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:16px;border-left:3px solid var(--gold);padding-left:14px;" data-i18n="factory-truck-h3">グリッツ専用タンクローリー</h3>
+      <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:16px;border-left:3px solid var(--gold);padding-left:14px;" data-i18n="factory-truck-h3">グリッツ専用タンクローリー</h3>
       <p style="font-size:14.5px;color:var(--text-light);line-height:2.1;margin-bottom:24px;" data-i18n="factory-truck-body">自社所有のグリッツ専用タンクローリーを2台保有しております。お客様のご要望に応じた安定した輸送体制を整えています。</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
         <img src="bulk1.JPG" alt="タンクローリー1" style="width:100%;height:240px;object-fit:cover;display:block;">
@@ -704,7 +704,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
 
       <div style="background:var(--white);border:1px solid var(--border);border-top:4px solid var(--gold);padding:28px;box-shadow:var(--shadow);">
         <div style="font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:8px;">CORN GRITS</div>
-        <h3 style="font-family:'Noto Serif JP',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:12px;">コーングリッツ</h3>
+        <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:12px;">コーングリッツ</h3>
         <p style="font-size:14px;color:var(--text-light);line-height:2;margin-bottom:16px;">パン屋様・洋菓子屋様・クラフト醸造所様などにご利用いただいております。NON-GMOとうもろこしを原料とした安心・安全な製品です。荷姿：25kg紙袋、最小1袋から発送可能です。</p>
         <div style="background:var(--cream);padding:14px 16px;font-size:13px;color:var(--text);">
           <strong>対象：</strong>パン屋様・洋菓子屋様・クラフトビール醸造所様・クラフト焼酎醸造所様・ピザ店様 など
@@ -713,7 +713,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
 
       <div style="background:var(--white);border:1px solid var(--border);border-top:4px solid var(--navy);padding:28px;box-shadow:var(--shadow);">
         <div style="font-size:11px;letter-spacing:.2em;color:var(--navy);margin-bottom:8px;">HOMINY FEED</div>
-        <h3 style="font-family:'Noto Serif JP',serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:12px;">ホミニーフィード</h3>
+        <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:12px;">ホミニーフィード</h3>
         <p style="font-size:14px;color:var(--text-light);line-height:2;margin-bottom:16px;">肥育農家様・きのこ農家様向けにお届けします。高エネルギーで飼料価値の高いコーン副産物です。荷姿：20kg紙袋、最小1袋から発送可能です。</p>
         <div style="background:var(--cream);padding:14px 16px;font-size:13px;color:var(--text);">
           <strong>対象：</strong>肥育農家様・きのこ農家様
@@ -727,16 +727,16 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
     <h2 class="section-title">お客様の声</h2>
 
     <!-- コーングリッツ -->
-    <h3 style="font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;color:var(--navy);border-left:4px solid var(--gold);padding-left:14px;margin-bottom:20px;">コーングリッツをご利用のお客様</h3>
+    <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:17px;font-weight:600;color:var(--navy);border-left:4px solid var(--gold);padding-left:14px;margin-bottom:20px;">コーングリッツをご利用のお客様</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-bottom:40px;">
 
       <div style="background:var(--white);border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden;">
         <div style="height:200px;overflow:hidden;">
-          <img src="corn p1.avif" alt="静岡 ブラジル料理店" style="width:100%;height:100%;object-fit:cover;">
+          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80" alt="ブラジル料理店" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div style="padding:24px 28px;">
           <div style="font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:12px;">SHIZUOKA / ブラジル料理店</div>
-          <p style="font-size:14.5px;font-family:'Noto Serif JP',serif;color:var(--navy);line-height:1.9;margin-bottom:16px;">
+          <p style="font-size:14.5px;font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;color:var(--navy);line-height:1.9;margin-bottom:16px;">
             「ブラジル料理には欠かせないコーングリッツをずっと探していました。山陽製粉さんのグリッツは粒度が均一で、本場の食感に近い仕上がりになります。少量から対応していただけるので、小さな店でも助かっています。」
           </p>
           <p style="font-size:13px;color:var(--text-light);">ブラジル料理店　オーナーシェフ S様</p>
@@ -745,11 +745,11 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
 
       <div style="background:var(--white);border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden;">
         <div style="height:200px;overflow:hidden;">
-          <img src="corn3.jpg" alt="東京 ピザ店" style="width:100%;height:100%;object-fit:cover;">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="ピザ店" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div style="padding:24px 28px;">
           <div style="font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:12px;">TOKYO / ピザ店</div>
-          <p style="font-size:14.5px;font-family:'Noto Serif JP',serif;color:var(--navy);line-height:1.9;margin-bottom:16px;">
+          <p style="font-size:14.5px;font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;color:var(--navy);line-height:1.9;margin-bottom:16px;">
             「ピザ生地の打ち粉の代わりに使い始めてから、底のパリッとした食感が格段に良くなりました。粒度の種類が豊富なので、用途に合わせて選べるのが嬉しいです。NON-GMOというのもお客様への説明に使えて助かっています。」
           </p>
           <p style="font-size:13px;color:var(--text-light);">ピザ店　オーナー K様</p>
@@ -759,7 +759,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
     </div>
 
     <!-- ホミニーフィード -->
-    <h3 style="font-family:'Noto Serif JP',serif;font-size:17px;font-weight:600;color:var(--navy);border-left:4px solid var(--navy);padding-left:14px;margin-bottom:20px;">ホミニーフィードをご利用のお客様</h3>
+    <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:17px;font-weight:600;color:var(--navy);border-left:4px solid var(--navy);padding-left:14px;margin-bottom:20px;">ホミニーフィードをご利用のお客様</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-bottom:48px;">
 
       <div style="background:var(--white);border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden;">
@@ -768,7 +768,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
         </div>
         <div style="padding:24px 28px;">
           <div style="font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:12px;">KAGOSHIMA / 肥育農家</div>
-          <p style="font-size:14.5px;font-family:'Noto Serif JP',serif;color:var(--navy);line-height:1.9;margin-bottom:16px;">
+          <p style="font-size:14.5px;font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;color:var(--navy);line-height:1.9;margin-bottom:16px;">
             「山陽製粉さんのホミニーは油分が高く、枝肉のオレイン酸比率を高める効果があります。牛の食いつきも良く、肉質にも良い変化が出ています。小ロットから対応してもらえるので、在庫の無駄が出ないのも助かっています。」
           </p>
           <p style="font-size:13px;color:var(--text-light);">肥育農家 T様</p>
@@ -777,11 +777,11 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
 
       <div style="background:var(--white);border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden;">
         <div style="height:200px;overflow:hidden;">
-          <img src="HF.avif" alt="長野 きのこ農家" style="width:100%;height:100%;object-fit:cover;">
+          <img src="https://images.unsplash.com/photo-1504545102780-26774c1bb073?w=600&q=80" alt="きのこ農家" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div style="padding:24px 28px;">
           <div style="font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:12px;">NAGANO / きのこ農家</div>
-          <p style="font-size:14.5px;font-family:'Noto Serif JP',serif;color:var(--navy);line-height:1.9;margin-bottom:16px;">
+          <p style="font-size:14.5px;font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;color:var(--navy);line-height:1.9;margin-bottom:16px;">
             「ホミニーフィードをきのこの培地に混ぜるようになってから、収量と品質が上がりました。栄養価が高く、菌の活着も良好です。定期的にまとめて発注できるので、栽培のスケジュールに合わせやすく、とても助かっています。」
           </p>
           <p style="font-size:13px;color:var(--text-light);">きのこ農家 K様</p>
@@ -994,8 +994,8 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(200,146,10,.08) 1px,transparent 1px);background-size:24px 24px;"></div>
       <div style="position:relative;z-index:1;">
         <p style="font-size:12px;letter-spacing:.25em;color:var(--gold-light);margin-bottom:12px;" data-i18n="sus-sdgs-eyebrow">SDGs Declaration</p>
-        <p style="font-family:'Noto Serif JP',serif;font-size:clamp(20px,3vw,28px);font-weight:700;color:#fff;letter-spacing:.15em;margin-bottom:8px;" data-i18n="sus-sdgs-declaration-title">姫路市SDGs宣言</p>
-        <p style="font-family:'Noto Serif JP',serif;font-size:clamp(16px,2.5vw,22px);font-weight:600;color:var(--gold-light);letter-spacing:.1em;margin-bottom:32px;" data-i18n="sus-sdgs-declare">山陽製粉株式会社　はＳＤＧｓ宣言します</p>
+        <p style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:clamp(20px,3vw,28px);font-weight:700;color:#fff;letter-spacing:.15em;margin-bottom:8px;" data-i18n="sus-sdgs-declaration-title">姫路市SDGs宣言</p>
+        <p style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:clamp(16px,2.5vw,22px);font-weight:600;color:var(--gold-light);letter-spacing:.1em;margin-bottom:32px;" data-i18n="sus-sdgs-declare">山陽製粉株式会社　はＳＤＧｓ宣言します</p>
 
         <!-- SDGs13バッジ -->
         <div style="display:inline-block;background:#3F7E44;padding:20px 32px;margin-bottom:32px;">
@@ -1096,7 +1096,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
   </div>
   <div class="section">
     <div class="info-box" style="margin-top:0;text-align:center;padding:48px 32px;">
-      <p style="font-size:22px;font-family:'Noto Serif JP',serif;font-weight:600;color:var(--navy);margin-bottom:16px;" data-i18n="recruit-none">現在、新規採用は行っておりません</p>
+      <p style="font-size:22px;font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-weight:600;color:var(--navy);margin-bottom:16px;" data-i18n="recruit-none">現在、新規採用は行っておりません</p>
       <p style="font-size:14px;color:var(--text-light);line-height:2;" data-i18n="recruit-none-sub">募集が再開された際は、このページにてお知らせいたします。<br>ご関心をお持ちいただき、ありがとうございます。</p>
     </div>
   </div>
@@ -1274,21 +1274,21 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;">
 
       <div>
-        <h3 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">ホーム</h3>
+        <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">ホーム</h3>
         <ul style="list-style:none;font-size:14px;line-height:2.4;">
           <li><a onclick="showPage('home')" style="color:var(--gold);cursor:pointer;text-decoration:none;">▸ ホーム</a></li>
         </ul>
       </div>
 
       <div>
-        <h3 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">事業内容</h3>
+        <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">事業内容</h3>
         <ul style="list-style:none;font-size:14px;line-height:2.4;">
           <li><a onclick="showPage('business')" style="color:var(--gold);cursor:pointer;text-decoration:none;">▸ 事業内容</a></li>
         </ul>
       </div>
 
       <div>
-        <h3 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">会社概要</h3>
+        <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">会社概要</h3>
         <ul style="list-style:none;font-size:14px;line-height:2.4;">
           <li><a onclick="showPage('company')" style="color:var(--gold);cursor:pointer;text-decoration:none;">▸ 会社概要</a></li>
           <li><a onclick="showPage('history')" style="color:var(--gold);cursor:pointer;text-decoration:none;">▸ 沿革</a></li>
@@ -1298,7 +1298,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       </div>
 
       <div>
-        <h3 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">製品紹介</h3>
+        <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">製品紹介</h3>
         <ul style="list-style:none;font-size:14px;line-height:2.4;">
           <li><a onclick="showPage('grits')" style="color:var(--gold);cursor:pointer;text-decoration:none;">▸ コーングリッツ</a></li>
           <li><a onclick="showPage('hominy')" style="color:var(--gold);cursor:pointer;text-decoration:none;">▸ ホミニーフィード</a></li>
@@ -1306,21 +1306,21 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       </div>
 
       <div>
-        <h3 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">サステナビリティ</h3>
+        <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">サステナビリティ</h3>
         <ul style="list-style:none;font-size:14px;line-height:2.4;">
           <li><a onclick="showPage('sustainability')" style="color:var(--gold);cursor:pointer;text-decoration:none;">▸ サステナビリティ</a></li>
         </ul>
       </div>
 
       <div>
-        <h3 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">姫路港サイロ</h3>
+        <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">姫路港サイロ</h3>
         <ul style="list-style:none;font-size:14px;line-height:2.4;">
           <li><a onclick="showPage('silo')" style="color:var(--gold);cursor:pointer;text-decoration:none;">▸ 姫路港サイロ株式会社</a></li>
         </ul>
       </div>
 
       <div>
-        <h3 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">採用・お問い合わせ</h3>
+        <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">採用・お問い合わせ</h3>
         <ul style="list-style:none;font-size:14px;line-height:2.4;">
           <li><a onclick="showPage('recruit')" style="color:var(--gold);cursor:pointer;text-decoration:none;">▸ 採用情報</a></li>
           <li><a onclick="showPage('contact')" style="color:var(--gold);cursor:pointer;text-decoration:none;">▸ お問い合わせ</a></li>
@@ -1328,7 +1328,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
       </div>
 
       <div>
-        <h3 style="font-family:'Noto Serif JP',serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">サイト情報</h3>
+        <h3 style="font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic UI',sans-serif;font-size:15px;font-weight:600;color:var(--navy);border-left:3px solid var(--gold);padding-left:12px;margin-bottom:16px;">サイト情報</h3>
         <ul style="list-style:none;font-size:14px;line-height:2.4;">
           <li><a onclick="showPage('privacy')" style="color:var(--gold);cursor:pointer;text-decoration:none;">▸ プライバシーポリシー</a></li>
           <li><a onclick="showPage('disclaimer')" style="color:var(--gold);cursor:pointer;text-decoration:none;">▸ 免責事項</a></li>
