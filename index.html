@@ -50,7 +50,7 @@ header{background:var(--navy);position:fixed;top:0;left:0;right:0;z-index:1000;b
 .logo-ja{font-family:'Noto Serif JP',serif;font-size:28px;font-weight:700;color:var(--white);letter-spacing:.06em;}
 .logo-en{font-size:11px;color:var(--gold-light);letter-spacing:.2em;}
 nav{display:flex;align-items:center;gap:2px;}
-nav a{color:rgba(255,255,255,.95);text-decoration:none;font-size:12.5px;padding:6px 10px;border-radius:3px;transition:color .2s;cursor:pointer;white-space:nowrap;}
+nav a{color:rgba(255,255,255,.95);text-decoration:none;font-size:12.5px;padding:6px 10px;border-radius:3px;transition:color .2s;cursor:pointer;white-space:nowrap;font-family:'Noto Sans JP','Yu Gothic','Hiragino Sans',sans-serif;}
 nav a:hover{color:var(--gold-light);}
 .nav-dropdown{position:relative;}
 .nav-dropdown>a::after{content:' ▾';font-size:10px;}
@@ -279,7 +279,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
           <a onclick="showPage('hominy')" data-i18n="nav-hominy-txt">ホミニーフィード</a>
         </div>
       </div>
-      <a onclick="showPage('directsales')" data-i18n="nav-directsales-txt" style="color:var(--gold-light);font-weight:600;">小口直販</a></li>
+      <a onclick="showPage('directsales')" data-i18n="nav-directsales-txt">直販</a></li>
         <li><a onclick="showPage('sustainability')" data-i18n="nav-sustainability-txt">サステナビリティ</a></li>
       <a onclick="showPage('silo')" data-i18n="nav-silo-txt">姫路港サイロ</a>
       <a onclick="showPage('recruit')" data-i18n="nav-recruit-txt">採用情報</a>
@@ -1350,7 +1350,7 @@ footer{background:var(--navy);padding:60px 24px 32px;border-top:3px solid var(--
         <li><a onclick="showPage('factory')" data-i18n="nav-factory-txt">工場・倉庫案内</a></li>
         <li><a onclick="showPage('grits')" data-i18n="nav-grits-txt">コーングリッツ</a></li>
         <li><a onclick="showPage('hominy')" data-i18n="nav-hominy-txt">ホミニーフィード</a></li>
-        <li><a onclick="showPage('directsales')" data-i18n="nav-directsales-txt">小口直販</a></li>
+        <li><a onclick="showPage('directsales')" data-i18n="nav-directsales-txt">直販</a></li>
         <li><a onclick="showPage('sustainability')" data-i18n="nav-sustainability-txt">サステナビリティ</a></li></li>
         <li><a onclick="showPage('silo')" data-i18n="nav-silo-txt">姫路港サイロ</a></li>
         <li><a onclick="showPage('recruit')" data-i18n="nav-recruit-txt">採用情報</a></li>
@@ -1387,7 +1387,7 @@ const translations = {
   "nav-contact-txt": {"ja":"お問い合わせ","en":"Contact","tw":"聯絡我們"},
   "nav-products-txt": {"ja":"製品紹介","en":"Products","tw":"產品介紹"},
   "nav-access-txt": {"ja":"ACCESS","en":"ACCESS","tw":"ACCESS"},
-  "nav-directsales-txt": {"ja":"小口直販","en":"Direct Sales","tw":"小量直販"},
+  "nav-directsales-txt": {"ja":"直販","en":"Direct Sales","tw":"直販"},
   "home-card4-title": {"ja":"ホミニーフィード直販","en":"Hominy Feed Direct Sales","tw":"玉米飼料直販"},
   "home-card4-text": {"ja":"肥育農家様・きのこ農家様向けに20kg紙袋単位で直販しております。1〜50袋からお気軽にご相談ください。","en":"Direct sales for livestock and mushroom farmers. Available in 20kg bags, from 1 to 50 bags.","tw":"面向肥育農家・菇類農家，以20kg紙袋為單位直售。1〜50袋歡迎洽詢。"},
   "home-card4-link": {"ja":"ご注文はこちら →","en":"Order here →","tw":"點此訂購 →"},
@@ -1742,7 +1742,7 @@ const translations = {
   "sus-sdgs-declare": {"ja":"山陽製粉株式会社　はＳＤＧｓ宣言します","en":"Sanyo Seifun Co., Ltd. declares its commitment to the SDGs","tw":"山陽製粉株式會社　宣言支持SDGs"},
   "nav-products-txt": {"ja":"製品紹介","en":"Products","tw":"產品介紹"},
   "nav-access-txt": {"ja":"ACCESS","en":"ACCESS","tw":"ACCESS"},
-  "nav-directsales-txt": {"ja":"小口直販","en":"Direct Sales","tw":"小量直販"},
+  "nav-directsales-txt": {"ja":"直販","en":"Direct Sales","tw":"直販"},
   "home-card4-title": {"ja":"ホミニーフィード直販","en":"Hominy Feed Direct Sales","tw":"玉米飼料直販"},
   "home-card4-text": {"ja":"肥育農家様・きのこ農家様向けに20kg紙袋単位で直販しております。1〜50袋からお気軽にご相談ください。","en":"Direct sales for livestock and mushroom farmers. Available in 20kg bags, from 1 to 50 bags.","tw":"面向肥育農家・菇類農家，以20kg紙袋為單位直售。1〜50袋歡迎洽詢。"},
   "home-card4-link": {"ja":"ご注文はこちら →","en":"Order here →","tw":"點此訂購 →"},
