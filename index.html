@@ -1860,6 +1860,8 @@ function showPage(id){
   var t=document.getElementById('page-'+id);
   if(t){t.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
   document.getElementById('mobileNav').classList.remove('open');
+  // URLハッシュを更新
+  var hash = id === 'home' ? history.pushState(null,'','/') : history.pushState(null,'','/#'+id);
 }
 function nav(id){showPage(id);}
 function toggleMenu(){document.getElementById('mobileNav').classList.toggle('open');}
@@ -1987,6 +1989,22 @@ window.showPage = showPage;
 window.nav = nav;
 window.toggleMenu = toggleMenu;
 window.submitForm = submitForm;
+
+// URLハッシュからページを復元
+(function(){
+  var hash = window.location.hash.replace('#','');
+  if(hash && document.getElementById('page-'+hash)){
+    showPage(hash);
+  }
+  // ブラウザの戻る・進むに対応
+  window.addEventListener('popstate',function(){
+    var h = window.location.hash.replace('#','');
+    document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+    var target = (h && document.getElementById('page-'+h)) ? 'page-'+h : 'page-home';
+    document.getElementById(target).classList.add('active');
+    window.scrollTo(0,0);
+  });
+})();
 </script>
 </body>
 </html>
